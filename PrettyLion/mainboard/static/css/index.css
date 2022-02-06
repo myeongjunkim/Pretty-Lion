@@ -90,7 +90,7 @@ section{
 
 /* about us */
 .aboutus_section{
-    width:500px;
+    width:100%;
     display:flex;
     justify-content: center;
     align-items:center;
@@ -101,11 +101,11 @@ section{
     color:black;
     display: flex;
     justify-content: center;
-    width : 50vw;
-    height : 50vw;
+    width : 600px;
+    height : 600px;
     background-color: white;
     border-radius: 50%;
-    margin-top: 120px;
+    margin-top: 150px;
     box-shadow: 0 1px 20px 0 rgb(255, 255, 255);
 
 }
