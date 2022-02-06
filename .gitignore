@@ -141,7 +141,7 @@ myvenv
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
+# mkdocs documentationn
 /site
 
 # mypy
