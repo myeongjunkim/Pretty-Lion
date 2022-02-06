@@ -30,3 +30,8 @@ class Room(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.mentor if hasattr(self, 'mentor') else 'None'})"
+
+
+class Mentee(models.Model):
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    mentee = models.OneToOneField(get_user_model(), on_delete=models.CASCADE)

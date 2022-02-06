@@ -1,13 +1,29 @@
 from django.contrib import admin, messages
 
-from .models import Room
+from .models import Room, Mentee
 
 import logging
 logger = logging.getLogger('django.server')
 
 
+class MenteeReadOnlyInline(admin.TabularInline):
+    model = Mentee
+    readonly_fields = ('mentee', 'room')
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
 class RoomAdmin(admin.ModelAdmin):
+    model = Room
     readonly_fields = ('mentor', 'limit')
+    inlines = (MenteeReadOnlyInline,)
 
     def save_model(self, request, obj, form, change):
         # update
