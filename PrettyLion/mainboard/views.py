@@ -6,3 +6,6 @@ def view_index(request):
 
 def view_aboutus(request):
     return render(request, 'aboutus.html')
+
+def create_aboutus(request):
+    pass
