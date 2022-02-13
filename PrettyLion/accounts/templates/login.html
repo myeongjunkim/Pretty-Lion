@@ -5,8 +5,11 @@
 {% endblock %}
 
 {% block content %}
+
 <div class = "login-form">
     <form>
+        {% csrf_token %}
+
         <label for = "username">아이디 </label>
         <input type = "text" id = "username">
 
