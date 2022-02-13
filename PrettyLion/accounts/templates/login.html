@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<div class = "login-form">
+    <form>
+        <label for = "username">아이디 </label>
+        <input type = "text" id = "username">
+
+        <label for = "password">비밀번호 </label>
+        <input type = "password" id = "password">
+
+    </form>
+</div>
+
+{% endblock %}
