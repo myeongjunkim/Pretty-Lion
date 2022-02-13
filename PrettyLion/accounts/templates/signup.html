@@ -10,6 +10,18 @@
 
     {% block contents %}
 <p> 회원가입</p>
+
+{% if password_error %}
+<p class = "password-error-message" style = "display: none">  </p>
+{% endif %}
+
+<script>
+const errorMessage = document.querySelector(".password-error-message");
+if (errorMessage.style.display == 'none') {
+    alert("비밀번호가 틀렸습니다.");
+}
+</script>
+
 <div class = "signup_box" style = "width: 50vh; height: 100vh; display: flex; align-content: center; align-items: center" >
 <form action="{% url 'signup' %}" method="POST" enctype="multipart/form-data">
 
@@ -28,7 +40,7 @@
     <input type = "text" id= "nickname" name ="nickname" class = "input_box">
 
     <label for = "profile_photo"> 프로필 사진</label>
-    <input type = "file" id= "profile_photo" name = "profile_photo" class = "input_box" alt = "...">
+    <input type = "file" id= "profile_photo" accept = "image/*" name = "profile_photo" class = "input_box" alt = "...">
 
     <label for = "mento_selection" name="mento_selection">
         멘토, 멘티 선택
