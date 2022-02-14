@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block header %}
-<link rel="stylesheet" href="../static/css/index.css">
-<script type="text/JavaScript" src="../static/js/index.js"></script>
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<script type="text/JavaScript" src="{% static 'js/index.js' %}"></script>
 
 {% endblock %}
 
@@ -19,7 +19,7 @@
         <div class="create_modal">
             <form class="aboutus_form" action="{% url 'create_aboutus' %}" method="POST" enctype="multipart/form-data">
                 <label for="aboutus_img">
-                    <img src="../static/img/aboutus_plus.png" id="aboutus_plus" alt="X">
+                    <img src="{% static 'img/aboutus_plus.png' %}" id="aboutus_plus" alt="X">
                 </label>
                 <input id="aboutus_img" type="file" onchange="changeImg(event,'aboutus_plus')" />
                 <input id="aboutus_name" type="text" placeholder="name">
