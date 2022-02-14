@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     
     {% block header %}
     <!-- Need a title -->
@@ -18,12 +18,12 @@
     <nav>
         <div class="nav-wrap">
             <div class="nav-left">
-                <a href="#"><img class="nav-logo" src="../static/img/likelion.jpeg" alt=""></a>
+                <a href="#"><img class="nav-logo" src="{% static 'img/likelion-mark.png' %}" alt=""></a>
                 <a href="#">멋쟁이 사자처럼</a>
             </div>
             <div class="nav-right">
                 <a href="#">Story</a>
-                <a href="#">Playground</a>
+                <a href="{% url 'playground-intro' %}">Playground</a>
                 <a href="#">FAQ</a>
                 <a href="#">Apply</a>
             </div>
