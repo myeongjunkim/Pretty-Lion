@@ -2,19 +2,25 @@
 {% load static %}
 
 {% block header %}
-{% endblock %}
+<title>
+로그인 페이지
+</title>
+<link rel = "stylesheet" href="{% static 'css/login.css' %}">
 
+
+{% endblock %}
 {% block content %}
 
 <div class = "login-form">
+    <h2> 로그인</h2>
     <form>
         {% csrf_token %}
 
-        <label for = "username">아이디 </label>
-        <input type = "text" id = "username">
+        <label for = "username" class = "login-form__label">아이디 </label>
+        <input type = "text" id = "username" class = "login-form__username__input">
 
-        <label for = "password">비밀번호 </label>
-        <input type = "password" id = "password">
+        <label for = "password" class = "login-form__label">비밀번호 </label>
+        <input type = "password" id = "password" class = "login-form__password_input">
 
     </form>
 </div>

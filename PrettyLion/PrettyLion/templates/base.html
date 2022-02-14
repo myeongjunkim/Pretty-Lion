@@ -13,22 +13,24 @@
     {% endblock %}
 </head>
 
-
-<body>
-    <nav>
+<header>
+       <nav>
         <div class="nav-wrap">
             <div class="nav-left">
-                <a href="#"><img class="nav-logo" src="../static/img/likelion.jpeg" alt=""></a>
-                <a href="#">멋쟁이 사자처럼</a>
+                <a href="{% url 'index' %}" class ="nav__nav-left__logo"><img class="nav-logo" src="../static/img/likelion.jpeg" alt=""></a>
+                <a href="{% url 'index' %}" class="nav__nav-left__a">멋쟁이 사자처럼</a>
             </div>
             <div class="nav-right">
-                <a href="#">Story</a>
-                <a href="#">Playground</a>
-                <a href="#">FAQ</a>
-                <a href="{% url 'signup' %}">Apply</a>
+                <a href="#" class="nav__nav-right__a">Playground</a>
+                <a href="#" class="nav__nav-right__a">FAQ</a>
+                <a href="{% url 'signup' %}" class="nav__nav-right__a" }">Apply</a>
             </div>
         </div>
     </nav>
+</header>
+
+<body>
+
   
     {% block contents %}
 

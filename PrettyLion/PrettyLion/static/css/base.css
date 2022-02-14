@@ -1,15 +1,9 @@
-* {
-    margin:0px;
-    padding:0px;
-}
-
-body{
+body {
     background-color: #000;
     color: #fff;
-    /* overflow-x: hidden; */
 }
 
-nav{
+nav {
     position:fixed;
     top:0px;
     left: 0;
