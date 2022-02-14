@@ -13,11 +13,11 @@
     {% endblock %}
 </head>
 
-
-<body>
-    <nav>
+<header>
+       <nav>
         <div class="nav-wrap">
             <div class="nav-left">
+
                 <a href="#"><img class="nav-logo" src="{% static 'img/likelion-mark.png' %}" alt=""></a>
                 <a href="#">멋쟁이 사자처럼</a>
             </div>
@@ -26,9 +26,14 @@
                 <a href="{% url 'playground-intro' %}">Playground</a>
                 <a href="#">FAQ</a>
                 <a href="#">Apply</a>
+
             </div>
         </div>
     </nav>
+</header>
+
+<body>
+
   
     {% block contents %}
 
