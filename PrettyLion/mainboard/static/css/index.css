@@ -2,8 +2,7 @@ section{
     display:flex;
     justify-content: center;
     width:100vw;
-    height:600px;
-
+    margin-bottom: 150px;
 }
 
 .main-section{
@@ -70,7 +69,6 @@ section{
     height:auto;
 }
 
-
 /*sub section */
 .sub-section{
     width:100%;
@@ -85,57 +83,92 @@ section{
 
 .right-text{
     text-align: right;
+    animation: slide-right 5s ease-out;
+    position:absolute;
+    right:500px;
+    bottom:-440px;
+}
+.left-text--top{
+    animation: slide-left--top 5s ease-out;
+    position: absolute;
+    left:500px;
+}
+.left-text--bottom{
+    animation: slide-left--bottom 5s ease-out;
+    position: absolute;
+    left:400px;
+}
+/* triangle section */
+.triangle-section{
+    padding: 150px;
+}
+hr{
+    width:300px;
+    background-color:#0075BC;
+    padding:1px;
+    color:#0075BC;
+    border-color: #0075BC;
+}
+.triangle-line--left{
+    transform: rotate( 60deg );
+    margin-left: 175px;
+}
+.triangle-line--right{
+    transform: rotate( -60deg );
+    margin-right: 175px
+}
+.triangle-line--bottom{
+    margin-top: 145px;
+    margin-left: 85px;
+}
+.talent-text--top{
+    position: absolute;
+    left: 600px;
+    margin-top: -175px;
+    font-size: 25px;
+    text-align: center;
+}
+.talent-text--left{
+    position: absolute;
+    font-size: 25px;
+    margin-top: -15px;
+    left: 410px;
+}
+.talent-text--right{
+    position: absolute;
+    font-size: 25px;
+    margin-top: -15px;
+    right: 375px;
 }
 
-
-/* about us */
-.aboutus_section{
-    width:100%;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    padding: 0px 100px 0px 100px;
+@keyframes slide-left--top{
+    from{
+        left:-100px;
+        opacity: 0;
+    }
+    to{
+        left:500px;
+        opacity: 1;
+    }
+}
+@keyframes slide-left--bottom{
+    from{
+        left:-100px;
+        opacity: 0;
+    }
+    to{
+        left:400px;
+        opacity: 1;
+    }
 }
 
-.create_modal{
-    color:black;
-    display: flex;
-    justify-content: center;
-    width : 600px;
-    height : 600px;
-    background-color: white;
-    border-radius: 50%;
-    margin-top: 150px;
-    box-shadow: 0 1px 20px 0 rgb(255, 255, 255);
-
-}
-
-.aboutus_form{
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    flex-direction: column;
-}
-
-.aboutus_form img{
-    border-radius: 10px;
-    width:200px;
-    cursor: pointer;
-}
-
-#aboutus_name{
-    width:200px;
-    height:20px;
-    margin:10px;
-}
-
-.aboutus_form textarea{
-    margin:10px;
-    margin-top:0px;
-}
-
-.aboutus_form button{
-    width:100px;
-    border-radius: 50px;
-    background-color: orange;
+@keyframes slide-right{
+    from{
+        right:-100px;
+        opacity: 0;
+    }
+    to{
+        right:500px;
+        opacity: 1;
+    }
 }

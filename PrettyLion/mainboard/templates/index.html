@@ -2,7 +2,9 @@
 {% load static %}
 
 {% block header %}
-<link rel="stylesheet" href="../static/css/index.css">
+<link rel="stylesheet" href="{%static 'css/index.css' %}">
+<script type="text/JavaScript" src="{%static 'js/landing.js' %}"></script>
+
 {% endblock %}
 
 
@@ -30,9 +32,21 @@
 
 <section>
     <div class="sub-section">
-        <div class="sentence left-text">다양한 아이디어들를 뽐낼 수 있는 분</div>
-        <div class="sentence right-text">적극적으로 프로젝트에 참여할 수 있는 분</div>
-        <div class="sentence left-text">팀원들과 커뮤니케이션을 원활하게 할 수 있는 분</div>
+        <h1 class="sentence left-text--top">다양한 아이디어들를 뽐낼 수 있는 분</div><br><br><br><br><br><br><br>
+        <h1 class="sentence right-text">적극적으로 프로젝트에 참여할 수 있는 분</div><br><br><br><br><br>
+        <h1 class="sentence left-text--bottom">팀원들과 커뮤니케이션을 원활하게 할 수 있는 분</div>
+    </div>
+</section>
+
+<br><br><br><br><br>
+<section>
+    <div class="triangle-section">
+        <div class="talent-text--top">창의력</div>
+        <div class="triangle-line--left"><hr></div>
+        <div class="triangle-line--right"><hr></div>
+        <div class="triangle-line--bottom"><hr></div>
+        <div class="talent-text--left">열정</div>
+        <div class="talent-text--right">팀워크</div>
     </div>
 </section>
 {% endblock %}
