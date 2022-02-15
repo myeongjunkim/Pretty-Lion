@@ -84,15 +84,33 @@ section{
 
 .right-text{
     text-align: right;
-    animation: slide-right 2s ease-out;
+    animation: slide-right 3s ease-out;
+    position:absolute;
+    right:500px;
 }
-.left-text{
-    animation: slide-left 2s ease-out;
+.left-text--top{
+    animation: slide-left--top 3s ease-out;
+    position: absolute;
+    left:500px;
+}
+.left-text--bottom{
+    animation: slide-left--bottom 3s ease-out;
+    position: absolute;
+    left:400px;
 }
 
-@keyframes slide-left{
+@keyframes slide-left--top{
     from{
-        /* 시작부분 */
+        left:-100px;
+        opacity: 0;
+    }
+    to{
+        left:500px;
+        opacity: 1;
+    }
+}
+@keyframes slide-left--bottom{
+    from{
         left:-100px;
         opacity: 0;
     }
@@ -101,66 +119,14 @@ section{
         opacity: 1;
     }
 }
+
 @keyframes slide-right{
     from{
-        /* 시작부분 */
         right:-100px;
         opacity: 0;
     }
     to{
-        right:400px;
+        right:500px;
         opacity: 1;
     }
-}
-
-/* about us */
-.aboutus_section{
-    width:100%;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    padding: 0px 100px 0px 100px;
-}
-
-.create_modal{
-    color:black;
-    display: flex;
-    justify-content: center;
-    width : 600px;
-    height : 600px;
-    background-color: white;
-    border-radius: 50%;
-    margin-top: 150px;
-    box-shadow: 0 1px 20px 0 rgb(255, 255, 255);
-
-}
-
-.aboutus_form{
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    flex-direction: column;
-}
-
-.aboutus_form img{
-    border-radius: 10px;
-    width:200px;
-    cursor: pointer;
-}
-
-#aboutus_name{
-    width:200px;
-    height:20px;
-    margin:10px;
-}
-
-.aboutus_form textarea{
-    margin:10px;
-    margin-top:0px;
-}
-
-.aboutus_form button{
-    width:100px;
-    border-radius: 50px;
-    background-color: orange;
 }
