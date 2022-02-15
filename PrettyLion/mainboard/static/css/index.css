@@ -2,8 +2,7 @@ section{
     display:flex;
     justify-content: center;
     width:100vw;
-    height:600px;
-
+    margin-bottom: 150px;
 }
 
 .main-section{
@@ -97,6 +96,29 @@ section{
     animation: slide-left--bottom 3s ease-out;
     position: absolute;
     left:400px;
+}
+/* triangle section */
+.triangle-section{
+    padding: 150px;
+}
+hr{
+    width:300px;
+    background-color:#0075BC;
+    padding:1px;
+    color:#0075BC;
+    border-color: #0075BC;
+}
+.triangle-line--left{
+    transform: rotate( 60deg );
+    margin-left: 175px;
+}
+.triangle-line--right{
+    transform: rotate( -60deg );
+    margin-right: 175px
+}
+.triangle-line--bottom{
+    margin-top: 145px;
+    margin-left: 85px;
 }
 
 @keyframes slide-left--top{
