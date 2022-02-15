@@ -108,7 +108,7 @@ section{
 
 .survey-wrap__input-wrap input{
     height:20px;
-    width: 100%;
+    width:100%;
     background-color:#F39927;
     color:white;
     padding:10px;
@@ -135,4 +135,11 @@ section{
     color:white;
     cursor:pointer;
 
+}
+
+/* qna */
+
+.survey-wrap__form-cards{
+    display:inline-block;
+    
 }
