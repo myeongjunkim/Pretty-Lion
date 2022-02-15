@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/playground.css' %}">
+
+{% endblock %}
+
+{% block contents %}
+<section>
+    <div class="survey-wrap">
+        <div class="survey-wrap__back" onClick="javascript:history.go(-1);"><</div>
+        <h4>{{Question.num}}</h4>
+        <h4>{{Question.title}}</h4>
+        <form class="survey-wrap__form" action="">
+            <div class="survey-wrap__form-cards">
+                <div class="form-cards__card">
+
+                </div>
+                <div class="form-cards__card">
+
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</section>
+{% endblock %}

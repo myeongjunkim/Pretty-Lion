@@ -17,50 +17,50 @@ section{
 
 }
 
-.welcome_section{
-    width:50%;
-    height:450px;
+.survey-wrap{
+    width:40%;
+    height:500px;
     display:flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    padding-top: 50px;
-    margin: 120px 100px 0px 100px;
+    padding: 20px 50px 20px 50px;
+    margin: 100px 100px 0px 100px;
     background-color:#FFF5DD;
     border-radius: 5px;
 
 }
 
-.welcome_section h2 {
-    margin-bottom:30px;
+.survey-wrap h2 {
+    margin:30px;
 }
 
-.welcome_text{
+.survey-wrap__intro{
     text-align: center;
     font-size: 10px;
     font-weight: 700;
 }
 
-.welcome_text p, .explain_text p{
+.survey-wrap__intro p, .survey-wrap__explain p{
     margin-bottom:5px;
 }
 
-.welcome_section img{
+.survey-wrap img{
     margin:10px;
     width:180px;
 }
 
-.explain_text{
+.survey-wrap__explain{
     text-align: center;
     font-size: 10px;
-    margin-bottom:20px;
+    margin-bottom:40px;
 }
 
-.explain_text span{
+.survey-wrap__explain span{
     font-weight: 700;
 }
 
-.welcome_buttom{
+.survey-wrap__button{
     text-align: center;
     width:250px;
     height: 30px;
@@ -68,4 +68,78 @@ section{
     font-size: 12px;
     border-radius: 5px;
     background-color:#F39927;
+}
+
+/* info */
+.survey-wrap__back{
+    cursor: pointer;
+    font-size: 30px;
+    color:gray;
+    align-self: flex-start;
+}
+
+.survey-wrap > h4{
+    margin-left: 30px;
+    align-self: flex-start;
+    margin-bottom: 20px;
+
+
+}
+
+.survey-wrap__form{
+    width:100%;
+    align-self:flex-start;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.survey-wrap__input-wrap{
+    display:inline-block;
+    width: 50%;
+    margin-bottom:20px;
+}
+
+
+
+
+.survey-wrap__input-wrap input{
+    height:20px;
+    width:100%;
+    background-color:#F39927;
+    color:white;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+    margin-bottom:20px;
+
+}
+
+.survey-wrap__input-wrap input::placeholder{
+    color:white;
+}
+
+.survey-wrap__input-wrap h5{
+    margin-bottom:10px;
+}
+
+.survey-wrap__form__button{
+    border:none;
+    border-radius: 5px;
+    width:15%;
+    height:30px;
+    background-color:#F39927;
+    color:white;
+    cursor:pointer;
+
+}
+
+/* qna */
+
+.survey-wrap__form-cards{
+    display:inline-block;
+    
 }
