@@ -120,6 +120,25 @@ hr{
     margin-top: 145px;
     margin-left: 85px;
 }
+.talent-text--top{
+    position: absolute;
+    left: 600px;
+    margin-top: -175px;
+    font-size: 25px;
+    text-align: center;
+}
+.talent-text--left{
+    position: absolute;
+    font-size: 25px;
+    margin-top: -15px;
+    left: 410px;
+}
+.talent-text--right{
+    position: absolute;
+    font-size: 25px;
+    margin-top: -15px;
+    right: 375px;
+}
 
 @keyframes slide-left--top{
     from{
