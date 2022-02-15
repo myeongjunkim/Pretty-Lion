@@ -83,17 +83,18 @@ section{
 
 .right-text{
     text-align: right;
-    animation: slide-right 3s ease-out;
+    animation: slide-right 5s ease-out;
     position:absolute;
     right:500px;
+    bottom:-440px;
 }
 .left-text--top{
-    animation: slide-left--top 3s ease-out;
+    animation: slide-left--top 5s ease-out;
     position: absolute;
     left:500px;
 }
 .left-text--bottom{
-    animation: slide-left--bottom 3s ease-out;
+    animation: slide-left--bottom 5s ease-out;
     position: absolute;
     left:400px;
 }
