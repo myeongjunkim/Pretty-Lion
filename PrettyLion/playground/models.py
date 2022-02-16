@@ -5,13 +5,13 @@ from .constants import NUMBER_OF_MENTEE, NUMBER_OF_MENTO
 
 
 def set_limit():
-    if Room.is_extra_room_left():
-        return Room.CAPACITY + 1
+    if MentorRoom.is_extra_mentor_room_left():
+        return MentorRoom.CAPACITY + 1
     else:
-        return Room.CAPACITY
+        return MentorRoom.CAPACITY
 
 
-class Room(models.Model):
+class MentorRoom(models.Model):
     CAPACITY = NUMBER_OF_MENTEE // NUMBER_OF_MENTO
     EXTRA_ROOM = NUMBER_OF_MENTEE % NUMBER_OF_MENTO
 
@@ -24,9 +24,14 @@ class Room(models.Model):
         super().delete(using, keep_parents)
 
     @staticmethod
-    def is_extra_room_left():
-        count = Room.objects.filter(limit=Room.CAPACITY + 1).count()
-        return True if Room.EXTRA_ROOM > count else False
+    def is_extra_mentor_room_left():
+        count = MentorRoom.objects.filter(limit=MentorRoom.CAPACITY + 1).count()
+        return True if MentorRoom.EXTRA_ROOM > count else False
 
     def __str__(self):
         return f"{self.name} ({self.mentor if hasattr(self, 'mentor') else 'None'})"
+
+
+class Mentee(models.Model):
+    mentor_room = models.ForeignKey(MentorRoom, on_delete=models.CASCADE)
+    user = models.OneToOneField(get_user_model(), on_delete=models.CASCADE)

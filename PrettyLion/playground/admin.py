@@ -1,13 +1,29 @@
 from django.contrib import admin, messages
 
-from .models import Room
+from .models import MentorRoom, Mentee
 
 import logging
 logger = logging.getLogger('django.server')
 
 
-class RoomAdmin(admin.ModelAdmin):
+class MenteeReadOnlyInline(admin.TabularInline):
+    model = Mentee
+    readonly_fields = ('user', 'mentor_room')
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
+class MentorRoomAdmin(admin.ModelAdmin):
+    model = MentorRoom
     readonly_fields = ('mentor', 'limit')
+    inlines = (MenteeReadOnlyInline,)
 
     def save_model(self, request, obj, form, change):
         # update
@@ -15,13 +31,13 @@ class RoomAdmin(admin.ModelAdmin):
             super().save_model(request, obj, form, change)
         # create
         else:
-            room = Room.objects.filter(mentor=request.user).exists()
-            if room:
+            mentor_room = MentorRoom.objects.filter(mentor=request.user).exists()
+            if mentor_room:
                 messages.add_message(request, messages.ERROR, "이미 만든 방이 있어요. >_^")
             else:
-                logger.info(f'[New Room Info] name: {obj.name} limit: {obj.limit}')
+                logger.info(f'[New MentorRoom Info] name: {obj.name} limit: {obj.limit}')
                 obj.mentor = request.user
                 super().save_model(request, obj, form, change)
 
 
-admin.site.register(Room, RoomAdmin)
+admin.site.register(MentorRoom, MentorRoomAdmin)

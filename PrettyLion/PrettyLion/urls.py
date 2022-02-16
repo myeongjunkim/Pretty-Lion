@@ -20,8 +20,6 @@ from django.conf.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('mainboard.urls')),
-
     path("accounts/", include("accounts.urls")),
     path('playground/', include('playground.urls')),
-
 ]
