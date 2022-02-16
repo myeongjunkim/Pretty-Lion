@@ -1,7 +1,8 @@
 from django.urls import path
 
-from .views import RoomDetailView
+from .views import MentorRoomDetailView, MentorRoomMatchView
 
 urlpatterns = [
-    path('room/<int:pk>/', RoomDetailView.as_view(), name='room-detail'),
+    path('mentor-rooms/<int:pk>/', MentorRoomDetailView.as_view(), name='mentor-room-detail'),
+    path('mentor-rooms/match/', MentorRoomMatchView.as_view(), name='mentor-room-match'),
 ]
