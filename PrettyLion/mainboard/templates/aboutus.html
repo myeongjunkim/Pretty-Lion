@@ -14,9 +14,13 @@
 <section>
     <div class="aboutus_section">
         <div class="cards_wrap">
+            {% for aboutus in aboutus_data reversed%}
             <div class="aboutus_card">
-
+                <img class="card_img" src="{{aboutus.image.url}}" alt="">
+                <div class="card_name">{{aboutus.name}}</div>
+                <div class="card_aboutu">{{aboutus.aboutu}}</div>
             </div>
+            {% endfor %}
         </div>
         <div class="create_modal">
             <form class="aboutus_form" action="{% url 'create_aboutus' %}" method="POST" enctype="multipart/form-data">
@@ -24,9 +28,9 @@
                 <label for="aboutus_img">
                     <img src="{% static 'img/aboutus_plus.png' %}" id="aboutus_plus" alt="X">
                 </label>
-                <input id="aboutus_img" type="file" onchange="changeImg(event,'aboutus_plus')" />
-                <input id="aboutus_name" type="text" placeholder="name">
-                <textarea name="" id="" cols="30" rows="10" placeholder="About U"></textarea>
+                <input id="aboutus_img" type="file" onchange="changeImg(event,'aboutus_plus')" name="aboutus_image" />
+                <input id="aboutus_name" type="text" placeholder="name" name="aboutus_name">
+                <textarea id="" cols="30" rows="10" placeholder="About U" name="aboutus_aboutu"></textarea>
                 <button type="submit"><span>join</span><img src="{% static 'img/lion_img.png' %}" alt=""></button>
             </form>
         </div>

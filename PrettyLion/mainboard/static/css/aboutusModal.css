@@ -8,6 +8,46 @@
     /* padding: 0px 100px 0px 100px; */
 }
 
+.cards_wrap{
+    width:400px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutus_card{
+    width: 200px;
+    height : 200px;
+    color:black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    box-shadow: 0 1px 20px 0 rgb(255, 255, 255);
+    text-align: center;
+
+
+}
+
+.card_img{
+    border-radius: 10px;
+    width:60px;
+    margin-bottom:10px;
+
+}
+
+.card_name{
+    width:80px;
+    margin-bottom:10px;
+}
+
+.card_aboutu{
+    width:80px;
+    margin-bottom:10px;
+}
+
 .create_modal{
     color:black;
     display: flex;
@@ -20,6 +60,8 @@
     box-shadow: 0 1px 20px 0 rgb(255, 255, 255);
 
 }
+
+
 
 .aboutus_form{
     display: flex;
@@ -67,6 +109,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    cursor:pointer;
 
 }
 
