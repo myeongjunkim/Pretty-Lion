@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+
+<link rel="stylesheet" href="{% static 'css/aboutusModal.css' %}">
+<script type="text/JavaScript" src="{% static 'js/index.js' %}"></script>
+
+
+{% endblock %}
+
+{% block contents %}
+
+<section>
+    <div class="aboutus_section">
+        <div class="create_modal">
+            <form class="aboutus_form" action="{% url 'update_aboutus' aboutus.id %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label for="aboutus_img">
+                    <img src="{{aboutus.image.url}}" id="aboutus_plus" alt="X">
+                </label>
+                <input id="aboutus_img" type="file" onchange="changeImg(event,'aboutus_plus')" name="aboutus_image" />
+                <input id="aboutus_name" type="text" value="{{aboutus.name}}" placeholder="name" name="aboutus_name">
+                <textarea id="" cols="30" rows="10" placeholder="About U" name="aboutus_aboutu">{{aboutus.aboutu}}</textarea>
+                <button type="submit"><span>Update</span><img src="{% static 'img/lion_img.png' %}" alt=""></button>
+                <a class="aboutus_form-delete" href="{% url 'delete_aboutus' aboutus.id %}">Delete</a>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

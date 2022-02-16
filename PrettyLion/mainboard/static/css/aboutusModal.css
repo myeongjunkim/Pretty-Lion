@@ -32,9 +32,9 @@
 }
 
 .card_img{
-    border-radius: 10px;
-    width:60px;
-    margin-bottom:10px;
+    border-radius: 50%;
+    width:120px;
+    margin:20px;
 
 }
 
@@ -98,7 +98,7 @@
     border-radius:5px;
 }
 
-.aboutus_form > button{
+.aboutus_form > button, .aboutus_form-delete{
     width:150px;
     height:40px;
     border:none;
@@ -110,9 +110,13 @@
     justify-content: center;
     align-items: center;
     cursor:pointer;
-
+    margin-bottom: 10px;
 }
 
 .aboutus_form > button > img{
     width:40px;
+}
+
+{
+    color:black;
 }

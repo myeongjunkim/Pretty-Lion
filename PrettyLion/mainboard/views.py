@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import AboutUs
 
 # Create your views here.
@@ -20,8 +20,21 @@ def create_aboutus(request):
         return redirect('aboutus')
 
 def delete_aboutus(request, id):
-    delete_aboutus = AboutUs().objects.get(id= id)
+    delete_aboutus = get_object_or_404(AboutUs, pk = id)
     delete_aboutus.delete()
     return redirect('aboutus')
 
+def update_aboutus(request, id):
+    update_aboutus = get_object_or_404(AboutUs, pk = id)
+    if request.method == "POST":
+        if request.FILES:
+            update_aboutus.image = request.FILES['aboutus_image']
+        update_aboutus.name = request.POST['aboutus_name']
+        update_aboutus.aboutu = request.POST['aboutus_aboutu']
+        update_aboutus.save()
+        return redirect('aboutus')
+
+def detail_aboutus(request, id):
+    aboutus = get_object_or_404(AboutUs, pk = id)
+    return render(request, 'aboutus_detail.html', {"aboutus":aboutus})
     

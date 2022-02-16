@@ -15,11 +15,10 @@
     <div class="aboutus_section">
         <div class="cards_wrap">
             {% for aboutus in aboutus_data reversed%}
-            <div class="aboutus_card">
+            <a class="aboutus_card" href="{% url 'detail_aboutus' aboutus.id %}">
                 <img class="card_img" src="{{aboutus.image.url}}" alt="">
                 <div class="card_name">{{aboutus.name}}</div>
-                <div class="card_aboutu">{{aboutus.aboutu}}</div>
-            </div>
+            </a>
             {% endfor %}
         </div>
         <div class="create_modal">
