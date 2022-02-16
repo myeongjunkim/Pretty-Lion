@@ -1,0 +1,52 @@
+
+/* about us */
+.aboutus_section{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding: 0px 100px 0px 100px;
+}
+
+.create_modal{
+    color:black;
+    display: flex;
+    justify-content: center;
+    width : 600px;
+    height : 600px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 150px;
+    box-shadow: 0 1px 20px 0 rgb(255, 255, 255);
+
+}
+
+.aboutus_form{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.aboutus_form img{
+    border-radius: 10px;
+    width:200px;
+    cursor: pointer;
+}
+
+#aboutus_name{
+    width:200px;
+    height:20px;
+    margin:10px;
+}
+
+.aboutus_form textarea{
+    margin:10px;
+    margin-top:0px;
+}
+
+.aboutus_form button{
+    width:100px;
+    border-radius: 50px;
+    background-color: orange;
+}

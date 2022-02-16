@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block header %}
+<link rel = "stylesheet" href = "{% static 'css/signup.css' %}">
+<title> 회원가입 페이지</title>
+{% endblock %}
+
+{% block contents %}
+<p> 회원가입</p>
+
+{% if password_error %}
+<p class = "password-error-message" style = "display: none">  </p>
+{% endif %}
+
+<script>
+const errorMessage = document.querySelector(".password-error-message");
+if (errorMessage.style.display == 'none') {
+    alert("비밀번호가 틀렸습니다.");
+}
+</script>
+
+<div class = "signup-box">
+<form action="{% url 'signup' %}" method="POST" enctype="multipart/form-data" class = "signup__form">
+
+
+    <br>
+    <label for = "username" class="signup-form__label"> 아이디 </label><br>
+    <input type="email" id= "username" name = "username" class = "signup-form__input"><br>
+
+    <label for = "password" class = "signup-form__label"> 비밀번호</label><br>
+    <input type ="password" id= "password" name = "password" class = "signup-form__input"><br>
+
+    <label for = "password_check" class = "signup-form__label"> 비밀번호 확인</label><br>
+    <input type = "password" id= "password_check" name = "password_check"  class = "signup-form__input"><br>
+
+  <label for="nickname" class = "signup-form__label"> 닉네임 </label><br>
+    <input type = "text" id= "nickname" name ="nickname" class = "signup-form__input"><br>
+
+    <label for = "profile_photo" class = "signup-form__label"> 프로필 사진등록</label><br>
+    <input type = "file" id= "profile_photo" accept = "image/*" name = "profile_photo" class = "signup-form__input__image" alt = "..."><br>
+   
+    <label for = "mento_selection" name="mento_selection" class = "signup-form__label">
+        멘토, 멘티 선택
+    </label>
+    <select id = "mento_selection" class="signup-form__select">
+        <option value = "mento" id= "mento" name ="mento" class = "signup-form__select__option"> 멘토</option>
+            <option value = "mentee"id= "mentee" name="mentee" class = "signup-form__select__option"> 멘티</option>
+
+    </select>
+<br>
+    <label for = "bio" class = "signup-form__label"> 자기소개</label><br>
+    <input type = "text" id= "bio" name = "bio" class = "signup-form__input">
+
+<br>
+    <input type = "submit" value = "회원가입 완료하기" class="signup-form__submit">
+</form>
+</div>
+{% endblock %}
