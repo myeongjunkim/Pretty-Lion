@@ -72,103 +72,122 @@ section{
 /*sub section */
 .sub-section{
     width:100%;
+    height: 480px;
     padding: 0px 100px 0px 100px;
-    margin-top:120px;
+}
+
+.sentence-box{
+    overflow-x: hidden;
+    width:100%;
+    height:100%;
 }
 
 .sentence{
     font-size:30px;
-    margin-bottom:150px;
+    font-weight:900;
+    position:relative;
+    margin: 90px 0;
+}
+
+.left-text--top{
+    animation: slide-left--top 3s ease-out;
+    margin-left:15vw;
 }
 
 .right-text{
     text-align: right;
-    animation: slide-right 5s ease-out;
-    position:absolute;
-    right:500px;
-    bottom:-440px;
+    animation: slide-right 3s ease-out;
+    margin-right:15vw;
 }
-.left-text--top{
-    animation: slide-left--top 5s ease-out;
-    position: absolute;
-    left:500px;
-}
+
 .left-text--bottom{
-    animation: slide-left--bottom 5s ease-out;
-    position: absolute;
-    left:400px;
+    animation: slide-left--bottom 3s ease-out;
+    margin-left:25vw;
 }
 /* triangle section */
 .triangle-section{
-    padding: 150px;
+    height:300px;
+    width:50%;
+    position:relative;
 }
 hr{
-    width:300px;
     background-color:#0075BC;
     padding:1px;
     color:#0075BC;
     border-color: #0075BC;
+    margin:auto;
 }
-.triangle-line--left{
-    transform: rotate( 60deg );
-    margin-left: 175px;
+
+svg{
+    width:100%;
+    height:100%;
+    position:absolute;
 }
-.triangle-line--right{
-    transform: rotate( -60deg );
-    margin-right: 175px
+/* #triangle-line--left{
+    position: relative;
 }
-.triangle-line--bottom{
-    margin-top: 145px;
-    margin-left: 85px;
+#triangle-line--right{
+    position: relative;
 }
-.talent-text--top{
-    position: absolute;
-    left: 600px;
-    margin-top: -175px;
+#triangle-line--bottom{
+    position: relative; 
+} */
+
+.talent-text-box{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#talent-text--top{
+    position: relative;
+    margin-left: 350px;
     font-size: 25px;
-    text-align: center;
+    width:fit-content;
 }
-.talent-text--left{
-    position: absolute;
+#talent-text--left{
+    position: relative;
+    margin-left: 100px;
+    margin-top: 150px;
     font-size: 25px;
-    margin-top: -15px;
-    left: 410px;
+    width:fit-content;
 }
-.talent-text--right{
-    position: absolute;
+#talent-text--right{
+    position: relative;
+    margin-left: 600px;
+    margin-top: 20px;
     font-size: 25px;
-    margin-top: -15px;
-    right: 375px;
+    width:fit-content;
 }
 
 @keyframes slide-left--top{
     from{
-        left:-100px;
+        margin-left:0vw;
         opacity: 0;
     }
     to{
-        left:500px;
+        margin-left:15vw;
         opacity: 1;
     }
 }
 @keyframes slide-left--bottom{
     from{
-        left:-100px;
+        margin-left:0px;
         opacity: 0;
     }
     to{
-        left:400px;
+        margin-left:25vw;
         opacity: 1;
     }
 }
 
 @keyframes slide-right{
     from{
-        right:-100px;
+        margin-right:0vw;
         opacity: 0;
     }
     to{
-        right:500px;
+        margin-right:15vw;
         opacity: 1;
     }
 }
