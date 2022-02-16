@@ -13,18 +13,15 @@ section{
     display:flex;
     justify-content: center;
     width:100vw;
-    height:700px;
-
 }
 
 .survey-wrap{
     width:40%;
-    height:500px;
     display:flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    padding: 20px 50px 20px 50px;
+    padding: 20px 50px 50px 50px;
     margin: 100px 100px 0px 100px;
     background-color:#FFF5DD;
     border-radius: 5px;
@@ -45,7 +42,7 @@ section{
     margin-bottom:5px;
 }
 
-.survey-wrap img{
+.survey-wrap > img{
     margin:10px;
     width:180px;
 }
@@ -139,7 +136,62 @@ section{
 
 /* qna */
 
+
+
 .survey-wrap__form-cards{
-    display:inline-block;
-    
+    width:80%;
+    text-align: center;
+    margin-bottom: 20px;
 }
+
+.form__card{
+    display:inline-block;
+    width:150px;
+    height:150px;
+    position:relative;
+    background-color: white;
+    border-radius: 5px;
+    margin:10px;
+    text-align:center;
+    font-size:12px;
+}
+
+/* .form__card:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  
+.inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
+
+.form__card > img{
+    width:50px;
+    height:50px;
+    margin-top:50px;
+    margin-bottom: 20px;
+}
+
+
+.survey-wrap__progress {
+    border: 0;
+    height: 10px;
+    border-radius: 20px;
+  }
+  
+  .survey-wrap__progress::-webkit-progress-bar {
+    border: 0;
+    height: 10px;
+    border-radius: 20px;
+    background-color:white;
+  }
+  
+  ::-webkit-progress-value {
+    border: 0;
+    height: 10px;
+    border-radius: 20px;
+    background-color: #121211;
+  }
