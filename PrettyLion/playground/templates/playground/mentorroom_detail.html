@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block contents %}
+<h2>방 이름: {{object.name}}</h2>
+<h4>10기 ({{object.mentee_set.count}}/{{object.limit}})</h4>
+<h4>멘토: {{object.mentor}}</h4>
+<ul>
+    {% for mentee in object.mentee_set.all %}
+        <li>{{ mentee.user }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
