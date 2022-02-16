@@ -17,9 +17,9 @@ def signup(request):
                 username =request.POST["username"],
                 password =request.POST['password'],
                 nickname =request.POST['nickname'],
-                bio=request.POST['bio'])
+                bio=request.POST['bio'],
                 profile_photo =request.FILES['profile_photo'],
-                is_staff  =is_mento,
+                is_staff  =is_mento)
 
                 auth.login(request, user)
                 return redirect('index')
@@ -38,7 +38,7 @@ def login(request):
             auth.login(request, user)
             return redirect('index')
         else:
-            return render(request, 'login.html')
+            return render(request, 'login.html', {"login_error" : "error"})
     else:
         return render(request, 'login.html')
 
