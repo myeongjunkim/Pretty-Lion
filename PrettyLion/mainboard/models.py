@@ -1,7 +1,8 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-
 # Create your models here.
+
+
 class AboutUs(models.Model):
     image = models.ImageField(null=True, upload_to="aboutus/", blank=True)
     name = models.CharField(max_length=20)
