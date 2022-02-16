@@ -7,6 +7,9 @@ nav, body{
     background-color:#F39927;
 }
 
+h4, h5 {
+    margin:0px;
+}
 /* intro */
 
 section{
