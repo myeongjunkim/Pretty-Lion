@@ -27,15 +27,12 @@ const triangleLine = (elemA, elemB, elemC) => {
 
     topPosX = (topRect.left + topRect.right)/2 - textBox.left;
     topPosY = (topRect.bottom + topRect.top)/2 - textBox.top;
-    console.log(textBox.left);
     
     leftPosX = (leftRect.right + leftRect.left)/2 - textBox.left ;
     leftPosY = (leftRect.top + leftRect.bottom)/2 - textBox.top;
-    console.log(leftPosX, leftPosY);
 
     rightPosX = (rightRect.left + rightRect.right)/2 - textBox.left;
     rightPosY = (rightRect.top + rightRect.bottom)/2 - textBox.top;
-    console.log(rightPosX, rightPosY);
 
     let topleftLine = document.getElementById('line--left');
     let toprightLine = document.getElementById('line--right');
@@ -61,3 +58,29 @@ const triangleLine = (elemA, elemB, elemC) => {
 }
 
 triangleLine('talent-text--top', 'talent-text--left', 'talent-text--right')
+
+
+// triangle rotation part
+let rotationAngle = 0;
+let mainSection = document.getElementById('triangle-section');
+let textTop = document.getElementById('talent-text--top');
+let textLeft = document.getElementById('talent-text--left');
+let textRight = document.getElementById('talent-text--right');
+console.log(mainSection, textTop)
+const rotateTriangle = () => {
+    rotationAngle += 0.2;
+    mainSection.style.transform = `rotate(${rotationAngle}deg)`;
+    textTop.style.transform = `rotate(${-rotationAngle}deg)`;
+    textLeft.style.transform = `rotate(${-rotationAngle}deg)`;
+    textRight.style.transform = `rotate(${-rotationAngle}deg)`;
+    setTimeout(() => {
+        rotateTriangle(rotationAngle);
+    }, 1)
+}
+
+rotateTriangle();
+
+mainSection.style.transform = `rotate)`;
+textTop.style.transform = `rotate(45deg)`
+textLeft.style.transform = `rotate(45deg)`
+textRight.style.transform = `rotate(45deg)`

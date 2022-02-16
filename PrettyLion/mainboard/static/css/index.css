@@ -104,12 +104,18 @@ section{
     animation: slide-left--bottom 3s ease-out;
     margin-left:25vw;
 }
+
 /* triangle section */
-.triangle-section{
-    height:300px;
+#triangle-rotation {
+    height:500px;
+}
+
+#triangle-section{
+    height:350px;
     width:50%;
     position:relative;
 }
+
 hr{
     background-color:#0075BC;
     padding:1px;
@@ -120,31 +126,26 @@ hr{
 
 svg{
     width:100%;
-    height:100%;
+    height:330px;
     position:absolute;
 }
-/* #triangle-line--left{
-    position: relative;
-}
-#triangle-line--right{
-    position: relative;
-}
-#triangle-line--bottom{
-    position: relative; 
-} */
 
 .talent-text-box{
     width: 100%;
-    height: 100%;
+    height: 330px;
     overflow-x: hidden;
+    padding-top:20px;
 }
 
 #talent-text--top{
     position: relative;
+    /* padding-top:50px; */
     margin-left: 350px;
     font-size: 25px;
     width:fit-content;
 }
+
+
 #talent-text--left{
     position: relative;
     margin-left: 100px;
