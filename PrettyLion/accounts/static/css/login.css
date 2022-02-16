@@ -9,6 +9,9 @@
     margin-left : auto;
     margin-right: auto;
 }
+.login-form {
+    height: 40vh;
+}
 
 .login-form__label {
     color : #ffffff;
@@ -28,9 +31,9 @@
     width: 30vw;
     height: 5vh;
     background-color: #000000;
-    margin-bottom: 6vh;
     margin-top: 1vh;
     color:#ffffff;
+    margin-bottom: 0.5vh;
 
 
 }
@@ -40,8 +43,10 @@
     height: 5vh;
     background-color: #F39927;
     color : #000000;
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
     font-size: 13px;
+    margin-top: 6vh;
+    padding: 0;
 }
 
 .login-form__login__submit:hover {
@@ -51,14 +56,21 @@
 
 .login-box__signup__btn {
     width: 30vw;
-    height: 5vh;
+    height: 4.5vh;
     background-color: #4e4e4e;
     text-align: center;
     font-size: 13px;
     padding-top: 2vh;
+    margin-right: 1vw;
+
 
 }
 
-.login-form__error__message{
-    color: red;
+.login-form__error-message {
+
+    height: 2vh;
+    color : red;
+    font-size: 10px;
+    z-index: 6;
+    margin-top: 1.5vh;
 }
