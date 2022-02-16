@@ -1,6 +1,6 @@
 from django.contrib import admin, messages
 
-from .models import MentorRoom, Mentee
+from .models import MentorRoom, Mentee, Question, Choice
 
 import logging
 logger = logging.getLogger('django.server')
@@ -40,4 +40,13 @@ class MentorRoomAdmin(admin.ModelAdmin):
                 super().save_model(request, obj, form, change)
 
 
+class ChoiceInline(admin.TabularInline):
+    model = Choice
+
+
+class QuestionAdmin(admin.ModelAdmin):
+    inlines = (ChoiceInline,)
+
+
 admin.site.register(MentorRoom, MentorRoomAdmin)
+admin.site.register(Question, QuestionAdmin)

@@ -35,3 +35,28 @@ class MentorRoom(models.Model):
 class Mentee(models.Model):
     mentor_room = models.ForeignKey(MentorRoom, on_delete=models.CASCADE)
     user = models.OneToOneField(get_user_model(), on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"mentor: {self.mentor_room.mentor} mentee: {self.user}"
+
+
+class Question(models.Model):
+    text = models.CharField(max_length=128)
+    order = models.PositiveSmallIntegerField(unique=True)
+
+    def __str__(self):
+        return f"{self.order}. {self.text}"
+
+
+class Choice(models.Model):
+    text = models.CharField(max_length=128)
+    emoji = models.CharField(max_length=32)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.text}"
+
+
+class Answer(models.Model):
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    choice = models.ForeignKey(Choice, on_delete=models.CASCADE)
