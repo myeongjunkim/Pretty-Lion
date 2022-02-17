@@ -163,6 +163,40 @@ svg{
     width:fit-content;
 }
 
+
+/* aboutus 10th orbiting ball css */
+#aboutus-10th{
+    margin-top:100px;
+}
+
+#canvas {
+    position: relative;
+    background-color: #000000;
+    margin: 1em auto;
+}
+
+.carrier {
+    background-color: #000000;
+    position: absolute;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.ball {
+    background-color: #f7f7f7;
+    position: absolute;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: bottom;
+}
+
+.member_img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+
 @keyframes slide-left--top{
     from{
         margin-left:0vw;
