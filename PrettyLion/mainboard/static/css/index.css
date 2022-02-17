@@ -1,8 +1,7 @@
 section{
     display:flex;
     justify-content: center;
-    width:100vw;
-    margin-bottom: 150px;
+    width:100%;
 }
 
 .main-section{
@@ -70,6 +69,10 @@ section{
 }
 
 /*sub section */
+#value-section{
+    margin-top: 150px;
+}
+
 .sub-section{
     width:100%;
     height: 480px;
@@ -89,31 +92,35 @@ section{
     margin: 90px 0;
 }
 
-.left-text--top{
-    animation: slide-left--top 3s ease-out;
+#left-text--top{
     margin-left:15vw;
 }
 
-.right-text{
+#right-text{
     text-align: right;
-    animation: slide-right 3s ease-out;
     margin-right:15vw;
+
 }
 
-.left-text--bottom{
-    animation: slide-left--bottom 3s ease-out;
+#left-text--bottom{
     margin-left:25vw;
 }
 
+
 /* triangle section */
 #triangle-rotation {
-    height:500px;
+    height: 32vw;
 }
 
 #triangle-section{
-    height:350px;
-    width:50%;
+    height: 100%;
+    width: 60vw;
     position:relative;
+}
+
+#triangle-line {
+    height:100%;
+    width: 100%;
 }
 
 hr{
@@ -125,39 +132,34 @@ hr{
 }
 
 svg{
-    width:100%;
-    height:330px;
     position:absolute;
 }
 
 .talent-text-box{
     width: 100%;
-    height: 330px;
+    height: 100%;
     overflow-x: hidden;
-    padding-top:20px;
 }
 
 #talent-text--top{
     position: relative;
-    /* padding-top:50px; */
-    margin-left: 350px;
     font-size: 25px;
+    font-weight: 900;
     width:fit-content;
 }
 
 
 #talent-text--left{
     position: relative;
-    margin-left: 100px;
-    margin-top: 150px;
     font-size: 25px;
+    font-weight: 900;
     width:fit-content;
 }
+
 #talent-text--right{
     position: relative;
-    margin-left: 600px;
-    margin-top: 20px;
     font-size: 25px;
+    font-weight: 900;
     width:fit-content;
 }
 
