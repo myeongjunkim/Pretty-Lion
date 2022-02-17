@@ -1,16 +1,21 @@
+header {
+    font-family : 'Roboto';
+    font-weight : bold;
+    background-color : black;
+}
+
 body {
     background-color: #000;
     color: #fff;
 }
 
 nav {
-    position:fixed;
+    position:relative;
     top:0px;
     left: 0;
     right: 0;
     height:40px;
-    padding:20px 20px 0px 20px;
-    z-index:5;
+    padding:20px 20px 20px 20px;
     background-color: black;
 }
 
@@ -20,9 +25,10 @@ a {
 }
 
 .nav-wrap{
-    width:100%;
+    margin-left : auto;
+    margin-right : auto;
+    width:75%;
     height:100%;
-    border-bottom: 1px solid gray;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -31,19 +37,31 @@ a {
 .nav-left{
     display:flex;
     align-items: center;
-    font-size:24px;
+    font-size:27px;
 }
 
 .nav-logo{
-    width:40px;
+    width:60px;
     height:auto;
 }
 
 .nav-right{
-    font-size:16px;
+    font-size:20px;
 }
 
 .nav-right a{
     margin:0 10px 0 10px;
 }
 
+.nav-login {
+    width:75%;
+    height:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: right;
+    font-size : 13px;
+}
+
+.nav-login a{
+    margin:0 10px 0 10px;
+}
