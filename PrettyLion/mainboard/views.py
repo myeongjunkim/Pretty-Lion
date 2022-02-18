@@ -6,10 +6,17 @@ def view_index(request):
     return render(request, 'index.html')
 
 def view_aboutus(request):
+    
     aboutus_data = AboutUs.objects.all()
     return render(request, 'aboutus.html', {"aboutus_data":aboutus_data})
 
 def create_aboutus(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
+    if AboutUs.objects.filter(user=request.user).exists():
+        print("중복 생성 금지")
+        return redirect('aboutus')
+    
     if request.method == "POST":
         new_aboutus = AboutUs()
         new_aboutus.image = request.FILES['aboutus_image']
