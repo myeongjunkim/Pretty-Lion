@@ -54,9 +54,7 @@
     padding-top: 430px;
     padding-left: 1400px;
 }
-.project-section{
 
-}
 ul{
     margin-left:-3vw;
 }
@@ -64,9 +62,10 @@ ul, li{
     list-style: none;
 }
 .project-section .project-card strong{
-    font-size: 16px;
+    font-size: 25px;
 }
 .project-section .project-card p{
+    font-size: 15px;;
 }
 .project-section .project-card hr{
     color: #0075BC;
@@ -81,7 +80,7 @@ ul, li{
     width:30vw;
     display:inline-block;
     margin-left:5vw;
-    margin-top:40px;
+    margin-top:20px;
 }
 .project-card:nth-child(3n-2){
     margin-left:0;
@@ -93,5 +92,5 @@ ul, li{
     width: 30vw;
     height: 20vw;
     border-radius: 10px;
-    object-fit: fill;
+    object-fit: cover;
 }
