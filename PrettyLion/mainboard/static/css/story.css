@@ -79,14 +79,10 @@ ul, li{
     /* 3장씩 들어가도록 */
     width:30vw;
     display:inline-block;
-    margin-left:5vw;
-    margin-top:20px;
+    margin-left:3vw;
 }
 .project-card:nth-child(3n-2){
     margin-left:0;
-}
-.project-card:nth-child(-n+3){
-    margin-top: 0;
 }
 .project-card-img{
     width: 30vw;
