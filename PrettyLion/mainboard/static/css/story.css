@@ -18,7 +18,7 @@
     text-align: center;
     float:left;
 }
-p{
+.history-section p{
     font-size:xxx-large;
     margin:0px;
 }
@@ -53,4 +53,15 @@ p{
 .text-eighth{
     padding-top: 430px;
     padding-left: 1400px;
+}
+.project-section{
+
+}
+.project-card{
+
+}
+.project-section hr{
+    color:#0075BC;
+    background-color: #0075BC;
+    width:300px;
 }
