@@ -67,3 +67,6 @@ class Choice(models.Model):
 class Answer(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     choice = models.ForeignKey(Choice, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.user}: {self.choice.question.order}-{self.choice.text}"

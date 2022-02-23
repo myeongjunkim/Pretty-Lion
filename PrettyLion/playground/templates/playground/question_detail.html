@@ -10,11 +10,17 @@
 <div>
     <h4>Q{{object.order}}</h4>
     <h4>{{object.text}}</h4>
-    {% for choice in object.choice_set.all %}
-        <div>
-            <h4>{{ choice.emoji }}</h4>
-            <h4>{{ choice.text }}</h4>
+    <form class="survey-wrap__form" action="{% url 'answer-edit' %}", method="post">
+        {% csrf_token %}
+        <div class="survey-wrap__form-cards">
+            {% for choice in object.choice_set.all %}
+            <div class="form__card">
+                <h4>{{ choice.emoji }}</h4>
+                <div>{{ choice }}</div>
+            </div>
+            {% endfor %}
         </div>
-    {% endfor %}
+    </form>
+
 </div>
 {% endblock %}
