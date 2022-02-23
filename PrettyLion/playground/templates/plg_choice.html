@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/playground.css' %}">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+{% endblock %}
+
+{% block contents %}
+<section>
+    <div class="survey-wrap choice-wrap">
+        <div class="survey-wrap__choiceIntro">
+            <div><span class="choiceIntro-nameSpan">김땡땡</span> 10기와</div>
+            <div>찰떡궁합인 깐부들이에요</div>
+            <div>마음에 드는 깐부를 픽 해주세요!</div>
+            <hr>
+        </div>
+
+        <form class="survey-wrap__choiceMain" method="POST" action="">
+            {% csrf_token %}
+            <div class="choiceMain-title">멘토 추천</div>
+            <div class="choiceMain-cards">
+                <div class="choiceMain-cards__card">
+                    <div class="card-title">
+                        <div>안녕 내 이름을 소개하지</div>
+                        <div>나는 뷰맛집 포토그래퍼 김멋사야!</div>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-wrap__profile"> 
+                            <img src="{% static 'img/lion_img.png' %}" alt="xx">
+                            <div class="profile-name">프로열정러</div>
+                        </div>
+                        <div class="card-wrap__character">
+                            <div><ion-icon name="moon"></ion-icon></ion-icon>새벽형 인간</div>
+                            <div><ion-icon name="location"></ion-icon>서울대입구</div>
+                            <div><ion-icon name="accessibility"></ion-icon>기타치기</div>
+                        </div>
+                    </div>
+                    <div class="card-temperature">
+                        <div>궁합온도 {{persent}}90.2 도 </div>
+                        <progress class="survey-wrap__progress choiceProgress" value="90" max="100"></progress>
+                    </div>
+                    <button class="survey-wrap__form__button choiceBtn" type="submit">깐부 맺기</button>
+                </div>
+
+                <div class="choiceMain-cards__card">
+                    <div class="card-title">
+                        <div>안녕 내 이름을 소개하지</div>
+                        <div>나는 뷰맛집 포토그래퍼 김멋사야!</div>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-wrap__profile"> 
+                            <img src="{% static 'img/lion_img.png' %}" alt="xx">
+                            <div class="profile-name">프로열정러</div>
+                        </div>
+                        <div class="card-wrap__character">
+                            <div><ion-icon name="moon"></ion-icon></ion-icon>새벽형 인간</div>
+                            <div><ion-icon name="location"></ion-icon>서울대입구</div>
+                            <div><ion-icon name="accessibility"></ion-icon>기타치기</div>
+                        </div>
+                    </div>
+                    <div class="card-temperature">
+                        <div>궁합온도 {{persent}}90.2 도 </div>
+                        <progress class="survey-wrap__progress choiceProgress" value="90" max="100"></progress>
+                    </div>
+                    <button class="survey-wrap__form__button choiceBtn" type="submit">깐부 맺기</button>
+                </div>
+                <div class="choiceMain-cards__card">
+                    <div class="card-title">
+                        <div>안녕 내 이름을 소개하지</div>
+                        <div>나는 뷰맛집 포토그래퍼 김멋사야!</div>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-wrap__profile"> 
+                            <img src="{% static 'img/lion_img.png' %}" alt="xx">
+                            <div class="profile-name">프로열정러</div>
+                        </div>
+                        <div class="card-wrap__character">
+                            <div><ion-icon name="moon"></ion-icon></ion-icon>새벽형 인간</div>
+                            <div><ion-icon name="location"></ion-icon>서울대입구</div>
+                            <div><ion-icon name="accessibility"></ion-icon>기타치기</div>
+                        </div>
+                    </div>
+                    <div class="card-temperature">
+                        <div>궁합온도 {{persent}}90.2 도 </div>
+                        <progress class="survey-wrap__progress choiceProgress" value="90" max="100"></progress>
+                    </div>
+                    <button class="survey-wrap__form__button choiceBtn" type="submit">깐부 맺기</button>
+                </div>
+
+                
+
+            </div>
+
+        </form>
+        <button class="survey-wrap__form__button" type="submit">재추천</button>
+
+    </div>
+    
+</section>
+{% endblock %}

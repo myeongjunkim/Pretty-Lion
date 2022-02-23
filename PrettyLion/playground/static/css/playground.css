@@ -24,8 +24,8 @@ section{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    padding: 20px 50px 50px 50px;
-    margin: 100px 100px 0px 100px;
+    padding: 20px 50px 20px 50px;
+    margin: 20px 80px 0px 80px;
     background-color:#FFF5DD;
     border-radius: 5px;
 
@@ -68,6 +68,8 @@ section{
     font-size: 12px;
     border-radius: 5px;
     background-color:#F39927;
+    margin-bottom:20px;
+
 }
 
 /* info */
@@ -108,7 +110,7 @@ section{
 
 .survey-wrap__input-wrap input{
     height:20px;
-    width:100%;
+    width:90%;
     background-color:#F39927;
     color:white;
     padding:10px;
@@ -135,6 +137,7 @@ section{
     background-color:#F39927;
     color:white;
     cursor:pointer;
+    margin-bottom:20px;
 
 }
 
@@ -183,6 +186,8 @@ section{
     border: 0;
     height: 10px;
     border-radius: 20px;
+    width:50%;
+    margin-bottom:20px;
   }
   
   .survey-wrap__progress::-webkit-progress-bar {
@@ -197,4 +202,159 @@ section{
     height: 10px;
     border-radius: 20px;
     background-color: #121211;
+  }
+
+  /* plg-choice */
+.choice-wrap{
+    width:50%;
+}
+
+.survey-wrap__choiceIntro{
+    margin:20px;
+    
+    width:100%;
+    font-weight: 700;
+}
+
+.survey-wrap__choiceIntro > div{
+    margin-bottom:10px;
+}
+
+.survey-wrap__choiceIntro .choiceIntro-nameSpan{
+    font-size:20px;
+    color:#F39927;
+}
+
+.survey-wrap__choiceIntro > hr{
+    margin-top:20px;
+}
+
+.survey-wrap__choiceMain{
+    width:100%;
+}
+
+.choiceMain-title{
+    color:#F39927;
+    margin-bottom:20px;
+}
+
+.choiceMain-cards{
+    display: flex;
+    justify-content: space-between;
+    flex-flow : row wrap;
+    width:100%;
+    margin-bottom:40px;
+}
+
+.choiceMain-cards__card{
+    width:200px;
+    /* height:280px; */
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-bottom:20px;
+    padding:10px;
+    font-size: 14px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border:1px solid rgba(0,0,0,0.1);
+
+}
+
+.card-title{
+    margin-bottom:20px;
+    font-weight: 700;
+}
+
+.card-wrap{
+    width:100%;
+    display: flex;
+    justify-content:space-between;
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+.card-wrap__profile{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width:40%;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.1);
+    border-radius: 5px;
+    height:100px;
+    font-weight: 700;
+    border:1px solid rgba(0,0,0,0.1);
+
+}
+
+.card-wrap__profile > img{
+    width:90%;
+    border-radius: 50%;
+}
+
+.card-wrap__character{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:55%;
+    height:100px;
+}
+
+.card-wrap__character > div{
+    width:100%;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.1);
+    border-radius: 5px;
+    height:30px;
+    display: flex;
+    align-items: center;
+    border:1px solid rgba(0,0,0,0.1);
+
+}
+
+.card-wrap__character > div > ion-icon{
+    margin:0px 5px 0px 5px;
+    color:#F39927;
+}
+
+.card-temperature{
+    display:flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-temperature > div{
+    margin-bottom:10px;
+}
+
+.survey-wrap__form__button.choiceBtn{
+    width:30%;
+    font-size:12px;
+    height:30px;
+    margin-bottom:10px;
+}
+
+.survey-wrap__progress.choiceProgress {
+    border: 0;
+    height: 10px;
+    border-radius: 20px;
+    width:70%;
+    margin-bottom:20px;
+  }
+  
+  .survey-wrap__progress.choiceProgress::-webkit-progress-bar {
+    border: 0;
+    height: 10px;
+    border-radius: 20px;
+    background-color:black;
+  }
+  
+  ::-webkit-progress-value {
+    border: 0;
+    height: 10px;
+    border-radius: 20px;
+    background-color: #F39927;
   }
