@@ -64,6 +64,9 @@ ul, li{
 .project-section .project-card strong{
     font-size: 25px;
 }
+.project h1{
+    color:#F39927;
+}
 .project-section .project-card p{
     font-size: 15px;;
 }
