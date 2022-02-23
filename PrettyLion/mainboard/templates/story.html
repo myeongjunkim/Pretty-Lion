@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+
+<link rel="stylesheet" href="{% static 'css/storyStyle.css' %}">
+
+
+{% endblock %}
+
+{% block contents %}
+
+<section>
+    <div class="history-section">
+        <section class="base-section">
+        <div class="section-title">History</div>
+            <div class="section-title-box"></div>
+        </section>
+        <div class="history-img">
+            <div class="history-text text-first">
+                <p>😎</p>
+                <b>우리들의 첫 만남</b><br>
+                웃음 가득했던<br>
+                멋사 9기들의 첫 만남
+            </div>
+            <div class="history-text text-second">
+                <p>📃</p>
+                <b>우리들의 첫 세션</b><br>
+                첫 세션<br>
+                첫 오프라인 모임<br>
+                첫 자전거<br>
+                #성공적
+            </div>
+            <div class="history-text text-third">
+                <p>💻</p>
+                <b>우리들의 첫 모각코</b><br>
+                모여서 <br>
+                각자 <br>
+                코딩할 사람~ <br>
+                구글미트로 집합!
+            </div>
+            <div class="history-text text-fourth">
+                <b>아이디어톤</b><br>
+                <a href="#didi">디디</a><br>
+                <a href="#culturebook">컬처북</a><br>
+                <a href="#moiza">모의자</a><br>
+                <a href="#codehunter">코드헌터</a><br>
+            </div>
+            <div class="history-text text-fifth">
+                <b>해커톤</b><br>
+                <a href="#DoMain">DoMain</a><br>
+                <a href="#Nativing">Nativing</a><br>
+            </div>
+            <div class="history-text text-sixth">
+                <b>컨퍼런스</b><br>
+                <b>&</b><br>
+                <b>스터디 시작</b>
+            </div>
+            <div class="history-text text-seventh">
+                <b>우리들의</b><br>
+                <b>마지막</b><br>
+                멋FOREVER사 
+            </div>
+            <div class="history-text text-eighth">
+                <b>중커톤</b><br>
+                <a href="#StealRoutine">괴도루틴</a><br>
+                <a href="#LatteKing">LatteKing</a><br>
+                <a href="#Stargram">Stargram</a>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<br>
+<section class="base-section">
+    <div class="project-section">
+        <div class="section-title">Project</div>
+            <div class="section-title-box"></div>
+        <div class="project-cards">
+            <h1>아이디어톤</h1>
+            <ul>
+                <li class="project-card" id="didi">
+                    <img src="{% static 'img/didi-logo.png' %}" class="project-card-img" alt="X">
+                    <strong>디디</strong>&nbsp;
+                    <a href="https://youtu.be/wrfKeRoK1Ec"><img src="{% static 'img/youtube-icon.svg' %}" id="youtube-logo"></a>
+                    <p><b>사회적 기업과 학생 디자이너의 만남, 디디</b></p>
+                    <hr>
+                    <p>시안 공모를 통해 학생 디자인이 사회적 기업의 프로젝트와 연결 될 수 있는 플랫폼 서비스</p>
+                </li>
+                <li class="project-card" id="culturebook">
+                    <img src="{% static 'img/culturebook-logo.png' %}" class="project-card-img" alt="X">
+                    <strong>컬처북</strong>&nbsp;
+                    <a href="https://www.youtube.com/watch?app=desktop&v=O6mnKOauDdY&ab_channel=%EB%AF%BC%EC%A0%95%ED%98%B8"><img src="{% static 'img/youtube-icon.svg' %}" id="youtube-logo"></a>
+                    <p><b>전통문화체험 예약 플랫폼</b></p>
+                    <hr>
+                    <p>전통 문화, 특산물 체험 관련 콘텐츠를 쉽고, 빠르게 예약 할 수 있는 서비스</p>
+                </li>
+                <br>
+                <li class="project-card" id="moiza">
+                    <img src="{% static 'img/moiza-logo.png' %}" class="project-card-img" alt="X">
+                    <strong>모의자</strong>&nbsp;
+                    <a href="https://youtu.be/3K2CKHKzg3g"><img src="{% static 'img/youtube-icon.svg' %}" id="youtube-logo"></a>
+                    <p><b>의사결정이 필요할 땐, 여기로 모의자!</b></p>
+                    <hr>
+                    <p>더욱 투명하게 의견을 공유하고, 더욱 체계적으로 의사결정을 진행할 수 있는 서비스</p>
+                </li>
+                <li class="project-card" id="codehunter">
+                    <img src="{% static 'img/codehunter-logo.png' %}" class="project-card-img" alt="X">
+                    <strong>코드헌터</strong>&nbsp;
+                    <a href="https://youtu.be/TQGUG4ucuIE"><img src="{% static 'img/youtube-icon.svg' %}" id="youtube-logo"></a>
+                    <p><b>클린코드의 모든 것</b></p>
+                    <hr>
+                    <p>한국인을 위한 빠르고 간편한 코드리뷰 플랫폼<br>&nbsp;</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="project-cards">
+            <h1>해커톤</h1>
+            <ul>
+                <li class="project-card" id="DoMain">
+                    <img src="{% static 'img/domain-logo.png' %}" class="project-card-img" alt="X">
+                    <strong>DoMain</strong>&nbsp;&nbsp;
+                    <a href="https://github.com/LikeLion-CAU-9th/DoMain"><img src="{% static 'img/github-icon.svg' %}" id="github-icon"></a>
+                    <p><b>Better than Naver, more suitable than Google</b></p>
+                    <hr>
+                    <p>사용자가 원하는대로 커스터마이징하는 메인 웹페이지<br>&nbsp;</p>
+                </li>
+                <li class="project-card" id="Nativing">
+                    <img src="{% static 'img/nativing-logo.png' %}" class="project-card-img" alt="X">
+                    <strong>Nativing</strong>&nbsp;&nbsp;
+                    <a href="https://github.com/LikeLion-CAU-9th/Nativing2"><img src="{% static 'img/github-icon.svg' %}" id="github-icon"></a>
+                    <p><b>카톡으로 쉽게 배우는 한국인 멘토의 진짜 한국어</b></p>
+                    <hr>
+                    <p>한국인이 실제 사용하는 구어체를 배우고 싶을 때 사용하는 구독형 교육 웹페이지</p>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="project-cards">
+            <h1>중커톤</h1>
+            <ul>
+                <li class="project-card" id="StealRoutine">
+                    <img src="{% static 'img/routine-logo.png' %}" class="project-card-img" alt="X">
+                    <strong>괴도루틴</strong>&nbsp;&nbsp;
+                    <a href="#"><img src="{% static 'img/github-icon.svg' %}" id="github-icon"></a>
+                    <p><b>루틴을 훔치자, 괴도루틴</b></p>
+                    <hr>
+                    <p>헬린이들을 위한 루틴케어 서비스<br>&nbsp;</p>
+                </li>
+                <li class="project-card" id="LatteKing">
+                    <img src="{% static 'img/latteking-logo.png' %}" class="project-card-img" alt="X">
+                    <strong>라떼킹</strong>&nbsp;&nbsp;
+                    <a href="https://github.com/LikeLion-CAU-9th/latteking"><img src="{% static 'img/github-icon.svg' %}" id="github-icon"></a>
+                    <p><b>‘라떼는 말이야~이 노래가 유행이었어~’</b></p>
+                    <hr>
+                    <p>우리들의 그 때 그 시절, 더 옛날 노래 맞추기 게임<br>&nbsp;</p>
+                </li>
+                <br>
+                <li class="project-card" id="Stargram">
+                    <img src="{% static 'img/stargram-logo.png' %}" class="project-card-img" alt="X">
+                    <strong>스타그램</strong>&nbsp;&nbsp;
+                    <a href="https://github.com/LikeLion-CAU-9th/stargram"><img src="{% static 'img/github-icon.svg' %}" id="github-icon"></a>
+                    <p><b>별자리속 기억되는 나만의 여행</b></p>
+                    <hr>
+                    <p>여행속 곳곳의 사진들에서 찍은 위치를 통해  별자리 카드를 만들어 주는 서비스</p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+<br>
+    <div class="section-title">About Us</div>
+    <div class="section-title-box"></div>
+
+</section>
+
+{% endblock %}
