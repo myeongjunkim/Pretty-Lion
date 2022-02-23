@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/playground.css' %}">
+
+{% endblock %}
+
+{% block contents %}
+<section>
+    <div class="survey-wrap">
+        <div class="survey-wrap__back" onClick="javascript:history.go(-1);"><</div>
+        <h4>{{Question.title}}깐부의 취미를 적어주세요!</h4>
+        <form class="survey-wrap__form" method="POST" action="">
+            {% csrf_token %}
+            <div class="survey-wrap__input-wrap">
+                <label>
+                    <h5>취미</h5>
+                    <input type="text" placeholder="5자 이내로 적어주세요">
+                </label>
+            </div>
+
+            <button class="survey-wrap__form__button" type="submit">완료</button>
+        </form>
+        <progress class="survey-wrap__progress" value="90" max="100"></progress>
+        <a href="{% url 'plg-choice' %}">qna-last</a>
+    </div>
+    
+</section>
+{% endblock %}
