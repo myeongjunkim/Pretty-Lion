@@ -178,7 +178,7 @@ let ball = {
         newBall.x = carrierRadius + 40 * Math.cos(newBall.angle);
         newBall.y = carrierRadius + 40 * Math.sin(newBall.angle);
         newBall.contact = 0;
-
+        newBall.angleVelocity = angleVelocity;
         // imgPath 설정 후 아래 이미지 넣는 부분 주석 해제하면 이미지 들어감
         newBall.imgPath = '';
         newBall.element = document.createElement('div');
@@ -200,15 +200,27 @@ let ball = {
 
         let ball = this;
         setTimeout(() => {
-            ball.angle += 0.03;
+            ball.angle += ball.angleVelocity;
             ball.x = carrierRadius + ellipseRadiusA * Math.cos(ball.angle);
             ball.y = carrierRadius + ellipseRadiusB * Math.sin(ball.angle);
             ball.drawBall(ball.x, ball.y);
-        }, 10)
+            ball.element.addEventListener("mouseover", () => {
+                ball.angleVelocity = 0;
+                ball.element.style.width = 2 * 1.2 * ball.radius + 'px';
+                ball.element.style.height = 2 * 1.2 * ball.radius + 'px';
+                ball.element.style.zIndex = "100";
+            })
+            ball.element.addEventListener("mouseout", () => {
+                ball.angleVelocity = 0.03;
+                ball.element.style.width = 2 * ball.radius + 'px';
+                ball.element.style.height = 2 * ball.radius + 'px'
+            })
+        }, interval)
     }
 }
 
 let interval = 10;
+let angleVelocity = 0.03;
 const carrierRadius = 120;
 const ballRadius = 80;
 const numOfMembers = 24;
