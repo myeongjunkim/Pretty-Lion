@@ -7,9 +7,9 @@
 
 {% block contents %}
 <ul>
-    {% for MentorRoom in object_list %}
+    {% for mentor_room in object_list %}
         <form method="post">{% csrf_token %}
-            <h4>{{ MentorRoom.name }}</h4>
+            <h4>{{ mentor_room.name }}</h4>
             {{ form.as_p }}
             <input type="submit" value="깐부맺기">
         </form>

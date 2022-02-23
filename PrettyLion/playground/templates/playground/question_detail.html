@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block contents %}
+<h1>html 출력이 네비게이트바에 가려지네요</h1>
+<div>
+    <h4>Q{{object.order}}</h4>
+    <h4>{{object.text}}</h4>
+    {% for choice in object.choice_set.all %}
+        <div>
+            <h4>{{ choice.emoji }}</h4>
+            <h4>{{ choice.text }}</h4>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
