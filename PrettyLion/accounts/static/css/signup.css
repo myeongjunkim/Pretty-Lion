@@ -63,12 +63,16 @@
 }
 
 .signup-form__submit {
-    font-size: 20px;
+    font-size: 16px;
     color: #ffffff;
     border-radius: 0.2vw;
     background-color: #F39927;
-    width: 10vw;
+    width: 12vw;
     height: 5vh;
+}
+
+.signup-from__submit:hover {
+    cursor: pointer;
 }
 
 .signup-form__select__option {
