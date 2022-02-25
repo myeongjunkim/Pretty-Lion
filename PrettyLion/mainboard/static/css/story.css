@@ -79,22 +79,22 @@ ul, li{
     color: #0075BC;
     border: 0px;
     background-color: #0075BC;
-    width: 40vw;
+    width: 34vw;
     height: 2px;
     margin-top: -10px;
 }
 .project-card{
-    /* 3장씩 들어가도록 */
-    width:40vw;
+    /* 2장씩 들어가도록 */
+    width:34vw;
     display:inline-block;
-    margin-left:5vw;
+    margin-left:2vw;
 }
 .project-card:nth-child(3n-2){
     margin-left:0;
 }
 .project-card-img{
-    width: 40vw;
-    height: 20vw;
+    width: 34vw;
+    height: 22vw;
     border-radius: 10px;
     object-fit: cover;
 }
