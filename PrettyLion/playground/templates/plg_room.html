@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/playground.css' %}">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+{% endblock %}
+
+{% block contents %}
+<section>
+    <div class="survey-wrap room-wrap">
+
+        <div class="room-wrap__contents">
+            <div class="room-wrap__title">깐부방</div>
+            <div class="room-wrap__mento">
+                <img src="{% static 'img/lion_img.png' %}" alt="">
+                <div class="mento-textwrap">
+                    <div class="mento-textwrap__name">뷰맛집{{mento.name}}</div>
+                    <div class="mento-textwrap__intro">안녕 내이름을 소개하지! 나는 뷰맛집 포토그래퍼 김멋사야!</div>
+                </div>
+            </div>
+            <hr class="room-wrap__hr">
+
+            <div class="room-wrap__menti">
+                <div class="menti-title">10기 (N/4)</div>
+                <div class="menti-cardwrap">
+                    <div class="menti-cardwrap__card">
+                        <img src="{% static 'img/airpat.jpeg' %}" alt="">
+                        <div class="card__name">에어팟</div>
+                    </div>
+                    <div class="menti-cardwrap__card">
+                        <img src="{% static 'img/airpat.jpeg' %}" alt="">
+                        <div class="card__name">에어팟</div>
+                    </div>
+                    <div class="menti-cardwrap__card">
+                        <img src="{% static 'img/airpat.jpeg' %}" alt="">
+                        <div class="card__name">에어팟</div>
+                    </div>
+                    <div class="menti-cardwrap__card">
+                        <img src="{% static 'img/airpat.jpeg' %}" alt="">
+                        <div class="card__name">에어팟</div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <button class="survey-wrap__form__button" type="submit">대화방 입장</button>
+    </div>
+    
+</section>
+{% endblock %}
