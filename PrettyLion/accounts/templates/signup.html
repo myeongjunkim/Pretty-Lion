@@ -32,16 +32,21 @@ if (errorMessage.style.display == 'none') {
     <label for = "password" class = "signup-form__label__password"> 비밀번호</label><br>
     <input type ="password" id= "password" name = "password" class = "signup-form__input"><br>
 
-    <label for = "password_check" class = "signup-form__label__paswordcheck"> 비밀번호 확인</label><br>
+    <label for = "password_check" class = "signup-form__label__passwordcheck"> 비밀번호 확인</label><br>
     <input type = "password" id= "password_check" name = "password_check"  class = "signup-form__input"><br>
 
   <label for="nickname" class = "signup-form__label__nickname"> 닉네임 </label><br>
-    <input type = "text" id= "nickname" name ="nickname" class = "signup-form__input"><br>
-
-    <label for = "profile_photo" class = "signup-form__label__profile"> 프로필 사진등록
+    <input type = "text" id= "nickname" name ="nickname" class = "signup-form__input">
+    <p class = "signup__p__profile"> 프로필 사진 </p>
+    <label for = "profile_photo" class = "signup-form__label__profile" style = "margin-top: 1vh;"> 본인의 개성을 보여줄 수 있는 사진을 업로드해주세요!
         <span style="font-size: 9px; color: #DB4437;"> *실제 얼굴 사진 X </span>
     </label><br>
-    <input type = "file" id= "profile_photo" accept = "image/*" name = "profile_photo" class = "signup-form__input__image" alt = "..."><br>
+    <input type = "file" id= "profile_photo" accept = "image/*" name = "profile_photo" class = "signup-form__input__image" alt = "...">
+    <label for = "bio" class = "signup-form__label__bio"> 자기소개
+        <span style = "font-size: 9px; color: #DB4437;"> *멘토만 작성</span>
+    </label> <br>
+    <input type = "text" id= "bio" name = "bio" class = "signup-form__input" placeholder="멘티에게 어필할 한 줄 소개를 입력해주세요!.">
+    <br>
     <label for = "mento_selection" name="mento_selection" class = "signup-form__label__mento">
         멘토, 멘티 선택
     </label>
@@ -51,8 +56,6 @@ if (errorMessage.style.display == 'none') {
 
     </select>
 <br>
-    <label for = "bio" class = "signup-form__label__bio"> 자기소개</label><br>
-    <input type = "text" id= "bio" name = "bio" class = "signup-form__input">
 
 <br>
     <input type = "submit" value = "회원가입 완료" class="signup-form__submit">
