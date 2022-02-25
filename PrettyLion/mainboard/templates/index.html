@@ -51,25 +51,28 @@
         <div id="Who we are" class="section-title">Who we are</div>
         <div class="section-title-box"></div>
     </div>
-    <br>
     <div class="whoweare-section">
         <div class="whoweare-title">
-            <p>기획/디자인</p>
-            <p>개발</p>
+            <a href="#"><p>기획/디자인</p></a>
+            <a href="#"><p>개발</p></a>
         </div>
-        <hr>
+        <br>
+        <div class="whoweare-line">
+            <hr>
+        </div>
         <br>
         <div class="whoweare-box">
             <div class="whoweare-box--left">
-                <img src="{% static 'img/figma-icon.png' %}" class="stack-icon" alt="X"> 
-                <img src="{% static 'img/notion-icon.png' %}" class="stack-icon" alt="X">          
-                <img src="{% static 'img/photoshop.png' %}" class="stack-icon" alt="X">            
+                <img src="{% static 'img/figma-icon.png' %}" class="stack-icon" id="figma-icon" alt="X"> 
+                <img src="{% static 'img/notion-icon.png' %}" class="stack-icon" id="notion-icon" alt="X">          
+                <img src="{% static 'img/photoshop-icon.png' %}" class="stack-icon" id="photoshop-icon" alt="X">            
             </div>
             <div class="whoweare-box--right">
-                <img src="{% static 'img/django-icon.png' %}" class="stack-icon" alt="X"> 
-                <img src="{% static 'img/react-icon.png' %}" class="stack-icon" alt="X">          
-                <img src="{% static 'img/frontend-icon.png' %}" class="stack-icon" alt="X">            
-                <img src="{% static 'img/git-icon.png' %}" class="stack-icon" alt="X">            
+                <img src="{% static 'img/django-icon.png' %}" class="stack-icon" id="django-icon" alt="X"> 
+                <img src="{% static 'img/frontend-icon.png' %}" class="stack-icon" id="frontend-icon" alt="X">  
+                <br>        
+                <img src="{% static 'img/react-icon.png' %}" class="stack-icon" id="react-icon" alt="X">            
+                <img src="{% static 'img/git-icon.png' %}" class="stack-icon" id="git-icon" alt="X">            
             </div>
         </div>
     </div>

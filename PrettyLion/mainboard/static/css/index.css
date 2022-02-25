@@ -315,29 +315,47 @@ svg{
     margin-left: 14px;
 }
 /*  */
-.whoweare-title hr{
+.whoweare-section{
+    width: 100%;
+}
+.whoweare-line{
+    margin-bottom:25px;
+}
+.whoweare-line hr{
     color: #0075BC;
     border: 0px;
     background-color: #0075BC;
-    width: 5vw;
-    height: 3px;
-    margin-top: -10px;
+    height: 2px;
+    padding-left: 250px;
+    margin-top: -17px;
+    float: left;
+    margin-left: 225px;}
+.whoweare-title{
+    margin-left: 100px;
 }
 .whoweare-title p{
     font-size: 20px;
     font-weight: bold;
     float:left;
+    margin-left: 200px;
+
 }
 .whoweare-box{
-    border: 1 solid #4E4E4E;
+    border: 1px solid #4E4E4E;
     border-radius: 25px;
     background-color: #4E4E4E;
-    width:75vw;
-    padding:50px;
+    width:100%;
+    padding:100px 0px;
 }
 .stack-icon{
-    width:10vw;
+    width:15vw;
+    margin:0px 3px 3px 0px;
 }
 .whoweare-box--right{
+    text-align: center;
+}
+.whoweare-box--left{
     display:none;
+
+    text-align: center;
 }
