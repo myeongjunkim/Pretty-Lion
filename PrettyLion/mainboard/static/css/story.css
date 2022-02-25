@@ -79,22 +79,26 @@ ul, li{
     color: #0075BC;
     border: 0px;
     background-color: #0075BC;
-    width: 40vw;
+    width: 35vw;
     height: 2px;
     margin-top: -10px;
 }
 .project-card{
-    /* 3장씩 들어가도록 */
-    width:40vw;
+    /* 2장씩 들어가도록 */
+    width:35vw;
     display:inline-block;
-    margin-left:5vw;
+    margin-left: 35px;
+    margin-top: 10px;
 }
-.project-card:nth-child(3n-2){
-    margin-left:0;
+.project-card:nth-child(2n-1){
+    margin-left:0px;
+}
+.project-card:nth-child(-n+2){
+    margin-top:0px;
 }
 .project-card-img{
-    width: 40vw;
-    height: 20vw;
+    width: 35vw;
+    height: 22vw;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -102,8 +106,8 @@ ul, li{
     margin:-3px;
 }
 #github-icon{
-    margin: -12px;
-    width: 3vw;
+    margin: -17px;
+    width: 4vw;
 }
 .section-title{
     font-weight: bolder;
