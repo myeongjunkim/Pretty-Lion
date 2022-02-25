@@ -25,6 +25,9 @@ def view_plg_qna_last(request):
 def view_plg_choice(request):
     return render(request, 'plg_choice.html')
 
+def view_plg_room(request):
+    return render(request, 'plg_room.html')
+
 
 class MentorRoomDetailView(DetailView, LoginRequiredMixin):
     """
