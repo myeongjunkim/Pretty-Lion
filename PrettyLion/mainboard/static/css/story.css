@@ -79,21 +79,25 @@ ul, li{
     color: #0075BC;
     border: 0px;
     background-color: #0075BC;
-    width: 34vw;
+    width: 35vw;
     height: 2px;
     margin-top: -10px;
 }
 .project-card{
     /* 2장씩 들어가도록 */
-    width:34vw;
+    width:35vw;
     display:inline-block;
-    margin-left:2vw;
+    margin-left: 35px;
+    margin-top: 10px;
 }
-.project-card:nth-child(3n-2){
-    margin-left:0;
+.project-card:nth-child(2n-1){
+    margin-left:0px;
+}
+.project-card:nth-child(-n+2){
+    margin-top:0px;
 }
 .project-card-img{
-    width: 34vw;
+    width: 35vw;
     height: 22vw;
     border-radius: 10px;
     object-fit: cover;
