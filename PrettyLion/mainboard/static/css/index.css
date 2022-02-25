@@ -4,17 +4,44 @@ section{
     width:100%;
 }
 
-.main-section{
-    width:100%;
-    display:flex;
-    justify-content: space-between;
-    padding: 0px 100px 0px 100px;
-    margin-top:120px;
-
+/* 랜딩 대문 */
+.landing-door {
+    animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
+    -o-animation: fadein 3s; /* Opera */
 }
-
-.main-title{
-    width:600px;
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .triangle-wrap{
@@ -57,15 +84,6 @@ section{
 
 .slogan3{
     margin-left:410px;
-}
-
-.main-img{
-    margin-top:40px;
-}
-
-.cau-logo{
-    width:320px;
-    height:auto;
 }
 
 /*sub section */
