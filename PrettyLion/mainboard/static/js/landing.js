@@ -138,7 +138,7 @@ rotate(vangle1, vangle2, vangle3);
 let canvas = {
     element: document.getElementById('canvas'),
     width: 1440,
-    height: 1440,
+    height: 240,
     initialize: function () {
         canvas.element.style.width = canvas.width + 'px';
         canvas.element.style.height = canvas.height + 'px';
@@ -214,6 +214,7 @@ let ball = {
                 ball.angleVelocity = 0.03;
                 ball.element.style.width = 2 * ball.radius + 'px';
                 ball.element.style.height = 2 * ball.radius + 'px'
+                ball.element.style.zIndex = "0";
             })
         }, interval)
     }
@@ -223,7 +224,7 @@ let interval = 10;
 let angleVelocity = 0.03;
 const carrierRadius = 120;
 const ballRadius = 80;
-const numOfMembers = 24;
+const numOfMembers = 11;
 const speed = 0.5;
 const gravity = 0.1;
 const friction = 0.012;
@@ -245,16 +246,14 @@ const createCarriers = (num) => {
         if (carriers[i].x + 2 * carrierRadius >= canvas.width) {
             circleLevel += 1;
             posy += 120 * Math.sqrt(3);
-            posx = initx * (circleLevel % 2 + 1)
+            posx = initx * (circleLevel % 2 + 1);
+            canvas.height += 207.84;
+            document.getElementById('canvas').style.height = canvas.height + 'px';
         }
     }
 }
 
 const createMembers = (num) => {
-    let initx = 120;
-    let posx = 120;
-    let posy = 120;
-    let circleLevel = 0;
     for (let i = 0; i < num; i++) {
         members.push(ball.createBall());
         carriers[i].insertBall(members[i]);
