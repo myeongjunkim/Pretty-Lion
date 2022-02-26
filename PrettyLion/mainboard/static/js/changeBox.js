@@ -19,17 +19,3 @@ function changetoLeft(){
 
     console.log("change to left");
 }
-// function delay(){
-//     setTimeout(function () {
-//         console.log("time!");
-//     }, 3000);
-// }
-  
-// setInterval(function(){
-//     changetoRight();
-//     setTimeout(()=>{
-//         console.log("inside timeout");
-//     },3000);
-//     changetoLeft();
-// }, 5000 );
-

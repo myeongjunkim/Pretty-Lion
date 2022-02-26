@@ -21,21 +21,7 @@
 .whoweare-line{
     margin-bottom:2%;
 }
-.whoweare-line hr{
-    color: #0075BC;
-    border: 0px;
-    background-color: #0075BC;
-    height: 2px;
-    padding-left: 23%;
-    margin-top: -1.5%;
-    float: left;
-    margin-left: 27%;
-    transition-duration: 1s;
-    animation: underline-moving;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    transition-delay: 6s;
-}
+
 .whoweare-title{
     margin-left: 10%;
 }
@@ -67,35 +53,89 @@
 }
 .stack-icon--right{
     width:15vw;
-    margin:0px 3px 3px 0px;
+}
+#django-icon{
+    padding-bottom: 2%;
+}
+#frontend-icon{
+    padding-left: 5%;
+}
+#react-icon{
+
+}
+#git-icon{
+    padding-bottom: 5%;
+    padding-left: 5%;
+}
+/* 클릭 */
+#under-line{
+    color: #0075BC;
+    border: 0px;
+    background-color: #0075BC;
+    height: 2px;
+    padding-left: 23%;
+    margin-top: -1.5%;
+    float: left;
+    margin-left: 27%;
+    transition-duration: 1s;
 }
 #whoweare-box--right{
     display:none;
     text-align: center;
-    /* animation: fadein 2s; */
-    animation:change-to-left;
+    animation: fadein 2s; 
     transition-duration: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    transition-delay: 6s;
-
 
 }
 
 #whoweare-box--left{
     display:block;
     text-align: center;
-    /* animation: fadein 2s; */
-    animation:change-to-right;
+    animation:fadein 2s;
     transition-duration: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    transition-delay: 6s;
-
 
 }
+/* 자동 */
+/* .under-line{
+    color: #0075BC;
+    border: 0px;
+    background-color: #0075BC;
+    height: 2px;
+    padding-left: 23%;
+    margin-top: -1.5%;
+    float: left;
+    margin-left: 27%;
+    animation: underline-moving;
+    animation-duration: 10s;
+    animation-delay: 7s;
+    animation-iteration-count: infinite;
+    transition-delay: 6s;
+}  
 
-/* 
+.whoweare-box--right{
+    display:none;
+    text-align: center;
+    animation:change-to-right; 
+    transition-duration: 1s;
+    animation-duration: 10s;
+    animation-delay: 7s;
+    animation-iteration-count: infinite;
+
+} 
+
+
+.whoweare-box--left{
+    display:block;
+    text-align: center;
+    animation: change-to-left; 
+    transition-duration: 1s;
+    transition-duration: 1s; 
+    animation-duration: 10s;
+    animation-delay: 7s;
+    animation-iteration-count: infinite;
+
+} 
+ */
+
 @keyframes fadein {
     from {
         opacity:0;
@@ -111,17 +151,17 @@
     to {
         opacity:0;
     }
-} */
+}
 
 .whoweare-box p{
     text-align:left;
-    margin-left:10%;
     margin-top:5%;
     font-size:18px;
+    text-align: center;
 }
 @keyframes change-to-right{
     0%{
-        display:none;
+        display:block;
         opacity:0;
     }
     50%{
@@ -129,7 +169,7 @@
         opacity:1;
     }
     100%{
-        display:none;
+        display:block;
         opacity:0;
     }
 }
@@ -148,10 +188,13 @@
     }
 }
 @keyframes underline-moving{
-    from{
+    0%{
         margin-left: 27%;
     }
-    to{
+    50%{
         margin-left:59%;
+    }
+    100%{
+        margin-left:27%;
     }
 }
