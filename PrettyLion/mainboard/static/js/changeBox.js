@@ -3,10 +3,9 @@ let wbr=document.getElementById("whoweare-box--right");
 let underline=document.getElementById("under-line");
 
 function changetoRight(){
+    // wbl.style.animation="fadeout 1s";
     wbl.style.display ="none";		
-    wbr.style.display ="block";
-    wbl.style.opacity="0";
-    wbr.style.opacity="1";
+    wbr.style.display ="block";    
 
     underline.style.marginLeft="59%";
 
@@ -14,10 +13,10 @@ function changetoRight(){
 }
 
 function changetoLeft(){
+    // wbr.style.animation="fadeout 1s";
     wbl.style.display ="block";		
     wbr.style.display ="none";
-    wbl.style.opacity="1";
-    wbr.style.opacity="0";
+    // wbl.style.opacity="1";
 
     underline.style.marginLeft="27%";
 
