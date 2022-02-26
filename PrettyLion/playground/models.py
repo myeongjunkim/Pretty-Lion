@@ -17,6 +17,7 @@ class MentorRoom(models.Model):
     EXTRA_ROOM = NUMBER_OF_MENTEE % NUMBER_OF_MENTO
 
     name = models.CharField(max_length=64)
+    greeting = models.CharField(max_length=128, null=True, blank=True)
     limit = models.PositiveSmallIntegerField(default=set_limit, blank=True)
     chat_url = models.URLField()
     mentor = models.OneToOneField(get_user_model(), on_delete=models.CASCADE, blank=True)

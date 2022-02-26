@@ -26,14 +26,14 @@ def view_plg_choice(request):
     return render(request, 'plg_choice.html')
 
 
-class MentorRoomDetailView(DetailView, LoginRequiredMixin):
+class MentorRoomDetailView(LoginRequiredMixin, DetailView):
     """
     template file: playground/mentorroom_detail.html
     """
     model = MentorRoom
 
 
-class MentorRoomMatchView(ListView, LoginRequiredMixin):
+class MentorRoomMatchView(LoginRequiredMixin, ListView):
     """
     context variable: object_list
     template file: playground/mentorroom_match.html
@@ -41,13 +41,29 @@ class MentorRoomMatchView(ListView, LoginRequiredMixin):
     model = MentorRoom
     template_name = 'playground/mentorroom_match.html'
     paginate_by = 3
+    WEIGHT = 4
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        context = super().get_context_data()
+        # join mentor room, mentor
+        mentor_room_list = MentorRoom.objects.all().prefetch_related('mentor', 'mentor__answer_set')
+        context = super(MentorRoomMatchView, self).get_context_data(object_list=mentor_room_list, ** kwargs)
+        context['matching_temperature'] = self.calculate_matching_score(mentor_room_list)
+        print(context)
         return context
 
+    def calculate_matching_score(self, mentor_room_list):
+        user_answers = set(self.request.user.answer_set.values_list('choice', flat=True))
+        matching_score = {}
+        for mentor_room in mentor_room_list:
+            score = len(set(user_answers).intersection(mentor_room.mentor.answer_set.values_list('choice', flat=True)))
+            matching_score[mentor_room.id] = self.convert_temperature(score)
+        return matching_score
 
-class QuestionDetailView(DetailView, LoginRequiredMixin):
+    def convert_temperature(self, score):
+        return 36 + (score * self.WEIGHT)
+
+
+class QuestionDetailView(LoginRequiredMixin, DetailView):
     """
       context variable: object_list
       template file: playground/question_detail.html
@@ -58,7 +74,7 @@ class QuestionDetailView(DetailView, LoginRequiredMixin):
         return Question.objects.get(order=self.kwargs.get("order"))
 
 
-class AnswerCreateUpdateView(ModelFormMixin, ProcessFormView, LoginRequiredMixin):
+class AnswerCreateUpdateView(LoginRequiredMixin, ModelFormMixin, ProcessFormView):
     model = Answer
     fields = ['choice']
 

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load custom_filters %}
 
 {% block header %}
 
@@ -10,7 +11,7 @@
     {% for mentor_room in object_list %}
         <form method="post">{% csrf_token %}
             <h4>{{ mentor_room.name }}</h4>
-            {{ form.as_p }}
+            <h4>{{ matching_temperature|get_item:mentor_room.id }}</h4>
             <input type="submit" value="깐부맺기">
         </form>
     {% endfor %}
