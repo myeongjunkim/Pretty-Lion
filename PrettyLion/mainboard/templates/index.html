@@ -3,7 +3,7 @@
 
 {% block header %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
-
+<link rel="stylesheet" href="{% static 'css/indexBox.css' %}">
 {% endblock %}
 
 
@@ -38,6 +38,59 @@
         </div>
     </div>
 </section>
+<br>
+<div class="base-section">
+    <div>
+        <div id="What we do" class="section-title">What we do</div>
+        <div class="section-title-box"></div>
+    </div>
+</div>
+    <br>
+<div class="base-section">
+    <div>
+        <div id="Who we are" class="section-title">Who we are</div>
+        <div class="section-title-box"></div>
+    </div>
+    <div class="whoweare-section">
+        <div class="whoweare-title">
+            <a href="#a" onclick="javascript:changetoLeft()"><button type="button">기획/디자인</button></a>
+            <a href="#a" onclick="javascript:changetoRight()"><button type="button">개발</button></a>
+        </div>
+        <br>
+        <div class="whoweare-line">
+            <hr id="under-line">
+        </div>
+        <br>
+        <div class="whoweare-box">
+            <div id="whoweare-box--left">
+                <img src="{% static 'img/figma-icon.png' %}" class="stack-icon--left" id="figma-icon" alt="X"> 
+                <img src="{% static 'img/notion-icon.png' %}" class="stack-icon--left" id="notion-icon" alt="X">          
+                <img src="{% static 'img/photoshop-icon.png' %}" class="stack-icon--left" id="photoshop-icon" alt="X">            
+                <p>
+                    - 프로젝트에 대한 아이디어 구성 및 구체적인 프로세스를 성립합니다.
+                    <br>
+                    - 개발자와의 끊임없는 커뮤니케이션을 통해 프로젝트에서 생기는 각종 문제를 해결하고, 
+                    <br>사용자 친화적인 UX 및 UI를 제작합니다.
+                </p>
+            </div>
+            <div id="whoweare-box--right">
+                <img src="{% static 'img/django-icon.png' %}" class="stack-icon--right" id="django-icon" alt="X"> 
+                <img src="{% static 'img/frontend-icon.png' %}" class="stack-icon--right" id="frontend-icon" alt="X">  
+                <br>        
+                <img src="{% static 'img/react-icon.png' %}" class="stack-icon--right" id="react-icon" alt="X">            
+                <img src="{% static 'img/git-icon.png' %}" class="stack-icon--right" id="git-icon" alt="X">            
+                <p>
+                    - 프로젝트에 대한 아이디어 구성 및 구체적인 프로세스를 성립합니다.
+                    <br>
+                    - 끊임없는 개발자와의 커뮤니케이션을 통해 프로젝트에서 생기는 각종 문제를 해결하고, 
+                    <br>사용자 친화적인 UX 및 UI를 제작합니다.
+                </p>
+    
+            </div>
+        </div>
+    </div>
+
+</div>
 
 <section id="aboutus-10th">
     <div id="canvas">
@@ -47,5 +100,6 @@
     </div>
 </section>
 <script type="text/JavaScript" src="{% static 'js/landing.js' %}"></script>
+<script type="text/JavaScript" src="{% static 'js/changeBox.js' %}"></script>
 
 {% endblock %}
