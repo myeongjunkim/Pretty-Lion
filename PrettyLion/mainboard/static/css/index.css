@@ -319,25 +319,26 @@ svg{
     width: 100%;
 }
 .whoweare-line{
-    margin-bottom:25px;
+    margin-bottom:2%;
 }
 .whoweare-line hr{
     color: #0075BC;
     border: 0px;
     background-color: #0075BC;
     height: 2px;
-    padding-left: 250px;
-    margin-top: -17px;
+    padding-left: 26%;
+    margin-top: -1.5%;
     float: left;
-    margin-left: 225px;}
+    margin-left: 25%;
+}
 .whoweare-title{
-    margin-left: 100px;
+    margin-left: 10%;
 }
 .whoweare-title p{
     font-size: 20px;
     font-weight: bold;
     float:left;
-    margin-left: 200px;
+    margin-left: 25%;
 
 }
 .whoweare-box{
@@ -366,7 +367,7 @@ svg{
 }
 .whoweare-box p{
     text-align:left;
-    margin-left:100px;
-    margin-top:50px;
+    margin-left:10%;
+    margin-top:5%;
     font-size:18px;
 }
