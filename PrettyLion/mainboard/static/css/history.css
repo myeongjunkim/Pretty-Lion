@@ -1,7 +1,7 @@
 .history-image{
     background: url(../img/historyimg.png) no-repeat center center;
     background-size: contain;
-    width: 160%;
+    width: 160vw;
     height: 2000px;
     margin-left: -33%;
     margin-top: 0%;
