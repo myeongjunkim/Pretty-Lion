@@ -5,7 +5,7 @@
 .history-section{
     overflow-x: hidden;
 }
-.history-img{
+.history-image{
     background: url(../img/historyimg.png) no-repeat center center;
     background-size: contain;
     width: 160%;
