@@ -63,16 +63,29 @@
         <br>
         <div class="whoweare-box">
             <div class="whoweare-box--left">
-                <img src="{% static 'img/figma-icon.png' %}" class="stack-icon" id="figma-icon" alt="X"> 
-                <img src="{% static 'img/notion-icon.png' %}" class="stack-icon" id="notion-icon" alt="X">          
-                <img src="{% static 'img/photoshop-icon.png' %}" class="stack-icon" id="photoshop-icon" alt="X">            
+                <img src="{% static 'img/figma-icon.png' %}" class="stack-icon--left" id="figma-icon" alt="X"> 
+                <img src="{% static 'img/notion-icon.png' %}" class="stack-icon--left" id="notion-icon" alt="X">          
+                <img src="{% static 'img/photoshop-icon.png' %}" class="stack-icon--left" id="photoshop-icon" alt="X">            
+            <p>
+                - 프로젝트에 대한 아이디어 구성 및 구체적인 프로세스를 성립합니다.
+                <br>
+                - 개발자와의 끊임없는 커뮤니케이션을 통해 프로젝트에서 생기는 각종 문제를 해결하고, 
+                <br>사용자 친화적인 UX 및 UI를 제작합니다.
+            </p>
             </div>
             <div class="whoweare-box--right">
-                <img src="{% static 'img/django-icon.png' %}" class="stack-icon" id="django-icon" alt="X"> 
-                <img src="{% static 'img/frontend-icon.png' %}" class="stack-icon" id="frontend-icon" alt="X">  
+                <img src="{% static 'img/django-icon.png' %}" class="stack-icon--right" id="django-icon" alt="X"> 
+                <img src="{% static 'img/frontend-icon.png' %}" class="stack-icon--right" id="frontend-icon" alt="X">  
                 <br>        
-                <img src="{% static 'img/react-icon.png' %}" class="stack-icon" id="react-icon" alt="X">            
-                <img src="{% static 'img/git-icon.png' %}" class="stack-icon" id="git-icon" alt="X">            
+                <img src="{% static 'img/react-icon.png' %}" class="stack-icon--right" id="react-icon" alt="X">            
+                <img src="{% static 'img/git-icon.png' %}" class="stack-icon--right" id="git-icon" alt="X">            
+                <p>
+                    - 프로젝트에 대한 아이디어 구성 및 구체적인 프로세스를 성립합니다.
+                    <br>
+                    - 끊임없는 개발자와의 커뮤니케이션을 통해 프로젝트에서 생기는 각종 문제를 해결하고, 
+                    <br>사용자 친화적인 UX 및 UI를 제작합니다.
+                </p>
+    
             </div>
         </div>
     </div>
@@ -88,5 +101,5 @@
 </section>
 
 <script type="text/JavaScript" src="{% static 'js/landing.js' %}"></script>
-
+<script type="text/JavaScript" src="{% static 'js/index.js' %}"></script>
 {% endblock %}

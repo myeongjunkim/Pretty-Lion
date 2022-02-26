@@ -9,3 +9,7 @@ function changeImg(event,Img) {
     // read the image file as a data URL.
     reader.readAsDataURL(event.target.files[0]);
 };
+
+function changeStack(){
+    
+}
