@@ -4,17 +4,44 @@ section{
     width:100%;
 }
 
-.main-section{
-    width:100%;
-    display:flex;
-    justify-content: space-between;
-    padding: 0px 100px 0px 100px;
-    margin-top:120px;
-
+/* 랜딩 대문 */
+.landing-door {
+    animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
+    -o-animation: fadein 3s; /* Opera */
 }
-
-.main-title{
-    width:600px;
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .triangle-wrap{
@@ -57,15 +84,6 @@ section{
 
 .slogan3{
     margin-left:410px;
-}
-
-.main-img{
-    margin-top:40px;
-}
-
-.cau-logo{
-    width:320px;
-    height:auto;
 }
 
 /*sub section */
@@ -227,4 +245,56 @@ svg{
         margin-right:15vw;
         opacity: 1;
     }
+}
+
+/* aboutus-10th add button */
+#add-btn {
+    position:absolute;
+    right: 40px;
+    /* bottom: 103.92px; */
+    bottom: 40px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border:none;
+    transition: 0.5s;
+    z-index: 3;
+}
+
+#add-btn:hover{
+    background-color: orange;
+}
+
+#add-btn:hover #plus-logo::before{
+    color:#ffffff;
+}
+#add-btn:hover #plus-logo::after{
+    color:#ffffff;
+}
+#plus-logo::before{
+    color:#000000;
+    content: '';
+    position: absolute;
+    border-radius: 5px;
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    margin-left: -40px;
+    margin-top: -5px;
+    border-top: 10px solid;
+    transition:0.3s;
+}
+
+#plus-logo::after{
+    color:#000000;
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 5px;
+    height: 80px;
+    margin-left: -5px;
+    margin-top: -40px;
+    border-left: 10px solid;
+    transition:0.3s;
 }

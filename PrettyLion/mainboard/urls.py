@@ -9,4 +9,5 @@ urlpatterns = [
     path('delete-aboutus/<str:id>', delete_aboutus, name="delete_aboutus"),
     path('detail-aboutus/<str:id>', detail_aboutus, name="detail_aboutus"),
     path('update-aboutus/<str:id>', update_aboutus, name="update_aboutus"),
+    path('story/', view_story, name="story"),
 ]

@@ -22,7 +22,7 @@
                 <a href="{% url 'index' %}">LIKELION</a>
             </div>
             <div class="nav-right">
-                <a href="#">Story</a>
+                <a href="{% url 'story' %}">Story</a>
                 <a href="{% url 'plg-intro' %}">Playground</a>
                 <a href="#">FAQ</a>
                 {% if user.is_authenticated %}

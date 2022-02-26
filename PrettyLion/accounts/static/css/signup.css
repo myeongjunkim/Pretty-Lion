@@ -26,13 +26,61 @@
     background-color: #4E4E4E;
 }
 
-.signup-form__label {
-    color : #ffffff;
-    font-size : 16px;
-    float : left;
+.signup-form__label__id {
+    margin-right: 23vw;
+    margin-bottom: -0.5vh;
+    
+}
+
+.signup__form p {
+    margin-right: 21vw;
+    margin-bottom:1vh;
+}
+
+.signup-form__label__password {
+    margin-right: 22vw;
+    margin-bottom: -0.5vh;
+    
+}
+
+.signup-form__label__passwordcheck {
     margin-right: 20vw;
     margin-bottom: -0.5vh;
+    
 }
+
+.signup-form__label__nickname {
+    font-size : 16px;
+    margin-right: 23vw;
+    margin-bottom: -0.5vh;
+    
+}
+
+.signup-form__label__bio {
+    font-size : 16px;
+    margin-right: 18.5vw;
+    margin-bottom: -0.5vh;
+    
+}
+
+.signup-form__label__profile {
+    font-size : 13px;
+    height: 4vh;
+    width: 24.5vw;
+   margin-top: 2vh;
+   background-color: #4E4E4E;
+   border-radius: 0.2vw;
+   padding: 2vh 0.5vw 0.2vh 0.5vw;
+   
+}
+
+.signup-form__label__mento {
+    font-size : 16px;
+    margin-right: 19.5vw;
+    margin-bottom: -0.5vh;
+    
+}
+
 
 .signup-form__input {
     background-color: #000;
@@ -40,6 +88,7 @@
     height: 3vh;
     border-radius: 0.2vw;
     color : #ffffff;
+    margin-top: -0.5vh;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -52,14 +101,20 @@
     outline: none;
 }
 
+.signup-form__input__image {
+    display: none;
+}
+
 .signup-form__select {
-    width: 10vw;
-    height: 4vh;
+    width: 25.1vw;
+    height: 5vh;
     font-size: 16px;
-    font-weight: 800;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
     background-color: #4E4E4E;
     border-radius: 0.2vw;
-    color : #ffffff;    
+    color : #ffffff;
+    border : none; 
 }
 
 .signup-form__submit {
@@ -69,11 +124,14 @@
     background-color: #F39927;
     width: 12vw;
     height: 5vh;
+    border-right :none;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    cursor: pointer;
+
 }
 
-.signup-from__submit:hover {
-    cursor: pointer;
-}
 
 .signup-form__select__option {
     font-size: 16px;

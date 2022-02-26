@@ -1,0 +1,159 @@
+#history-img{
+    width:100%;
+    margin: 0vw -3vw;
+}
+.history-section{
+    overflow-x: hidden;
+}
+.history-img{
+    background: url(../img/historyimg.png) no-repeat center center;
+    background-size: contain;
+    width: 2000px;
+    height: 2000px;
+    margin-left: -400px;
+    margin-top: -100px;
+}
+.history-text{
+    color:white;
+    text-align: center;
+    float:left;
+}
+.history-section p{
+    font-size: 50px;
+    margin:0px;
+}
+.history-text a:hover{
+    color:#0075BC;
+    font-weight: bold;
+}
+.text-first{
+    padding-top: 130px;
+    padding-left: 740px;
+}
+.text-second{
+    padding-top: 390px;
+    margin-left: -100px;
+}
+.text-third{
+    padding-top: 300px;
+    padding-left: 180px;
+}
+.text-fourth{
+    padding-top: 870px;
+    padding-left: 150px;
+}
+.text-fifth{
+    padding-top: 200px;
+    padding-left: 900px;
+}
+.text-sixth{
+    padding-top: 430px;
+    margin-left: -120px;
+}
+.text-seventh{
+    padding-top: 430px;
+    padding-left: 1400px;
+}
+.text-eighth{
+    padding-top: 400px;
+    margin-left: -680px;
+
+}
+
+li {
+    margin: 0;
+    padding:0;
+    list-style-type: none;
+}
+
+.project-cards{
+    margin-top:40px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    row-gap: 40px;
+    column-gap: 40px;
+}
+
+.project-section .project-card strong{
+    font-size: 25px;
+}
+.project-section .project-cards h1{
+    color:#F39927;
+}
+.project-section .project-card p{
+    font-size: 15px;;
+    margin: 7px 0px 7px 0px;
+}
+.project-section .project-card hr{
+    color: #0075BC;
+    border: 0px;
+    background-color: #0075BC;
+    width: 30vw;
+    height: 2px;
+}
+.project-card{
+    /* 2장씩 들어가도록 */
+    width:100%;
+}
+.project-card:nth-child(2n-1){
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.project-card-img{
+    width: 100%;
+    height: 18vw;
+    border-radius: 10px;
+    object-fit: cover;
+}
+/* 
+.project-title {
+    padding:0 8px 0 0;
+} */
+
+.project-description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.project-github{
+    margin-left:3px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.project-youtube{
+    margin-left:8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+}
+
+#youtube-logo{
+    width: 100%;
+    display: flex;
+    
+}
+#github-icon{
+    width: 100%;
+    /* top:10px; */
+}
+.section-title{
+    font-weight: bolder;
+    font-size: xx-large;
+}
+.section-title-box{
+    border: 1px solid #F39927;
+    background-color: #F39927;
+    padding: 10px;
+    width: 9vw;
+    margin-top: -18px;
+    margin-left: 14px;
+}
+.base-section{
+    margin:0px 150px;
+}

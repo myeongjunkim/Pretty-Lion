@@ -45,3 +45,5 @@ def detail_aboutus(request, id):
     aboutus = get_object_or_404(AboutUs, pk = id)
     return render(request, 'aboutus_detail.html', {"aboutus":aboutus})
     
+def view_story(request):
+    return render(request, 'story.html')

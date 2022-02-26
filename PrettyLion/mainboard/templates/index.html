@@ -9,24 +9,9 @@
 
 {% block contents %}
 <section>
-    
-    <div class="main-section">
-        <div class="main-title">
-            <div class="triangle-wrap">
-                <div class="triangle-top"></div>
-                <div class="triangle-left"></div>
-            </div>
-            <div class="slogan-wrap">
-                <div class="slogan1">Hack</div>
-                <div class="slogan2">Your</div>
-                <div class="slogan3">Life</div>
-            </div>
-        </div>
-        <div class="main-img">
-            <img class="cau-logo" src="../static/img/likelion-logo.png" alt="">
-        </div>
+    <div class="landing-door">
+        <img src="{% static 'img/door.png' %}">
     </div>
-    
 </section>
 
 <section id="value-section">
@@ -55,7 +40,11 @@
 </section>
 
 <section id="aboutus-10th">
-    <div id="canvas"></div>
+    <div id="canvas">
+        <button id="add-btn" onclick="">
+            <div id="plus-logo"></div>
+        </button>
+    </div>
 </section>
 <script type="text/JavaScript" src="{% static 'js/landing.js' %}"></script>
 

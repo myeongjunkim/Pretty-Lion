@@ -7,6 +7,7 @@ urlpatterns = [
     path('qna/', view_plg_qna, name="plg-qna"),
     path('qna-last/', view_plg_qna_last, name="plg-qna-last"),
     path('choice/', view_plg_choice, name="plg-choice"),
+    path('room/', view_plg_room, name="plg-room"),
     path('mentor-rooms/<int:pk>/', MentorRoomDetailView.as_view(), name='mentor-room-detail'),
     path('mentor-rooms/match/', MentorRoomMatchView.as_view(), name='mentor-room-match'),
     path('questions/<int:order>/', QuestionDetailView.as_view(), name='question-detail'),
