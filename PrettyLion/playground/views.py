@@ -48,7 +48,6 @@ class MentorRoomMatchView(LoginRequiredMixin, ListView):
         mentor_room_list = MentorRoom.objects.all().prefetch_related('mentor', 'mentor__answer_set')
         context = super(MentorRoomMatchView, self).get_context_data(object_list=mentor_room_list, ** kwargs)
         context['matching_temperature'] = self.calculate_matching_score(mentor_room_list)
-        print(context)
         return context
 
     def calculate_matching_score(self, mentor_room_list):
