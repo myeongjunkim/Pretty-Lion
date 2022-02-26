@@ -11,6 +11,7 @@ li {
 
 .project-cards{
     margin-top:40px;
+    margin-left:8%;
 }
 
 .project-container {
@@ -19,7 +20,6 @@ li {
     row-gap: 40px;
     column-gap: 40px;
 }
-
 .project-section .project-card strong{
     font-size: 25px;
 }
