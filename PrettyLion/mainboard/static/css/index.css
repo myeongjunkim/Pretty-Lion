@@ -44,20 +44,7 @@ section{
     }
 }
 
-.orange-btn {
-    display : inline-block;
-    position : relative;
-    padding : 15px 30px;
-    border-radius: 30px;
-    background-color: #F39927;
-    transition: 0.25s;
-    cursor: pointer;
-}
 
-.orange-btn:hover {
-    transform : scale(1.1);
-
-}
 
 .triangle-wrap{
     position:relative;
