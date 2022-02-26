@@ -25,11 +25,11 @@ function changetoLeft(){
 //     }, 3000);
 // }
   
-setInterval(function(){
-    changetoRight();
-    setTimeout(()=>{
-        console.log("inside timeout");
-    },3000);
-    changetoLeft();
-}, 5000 );
+// setInterval(function(){
+//     changetoRight();
+//     setTimeout(()=>{
+//         console.log("inside timeout");
+//     },3000);
+//     changetoLeft();
+// }, 5000 );
 

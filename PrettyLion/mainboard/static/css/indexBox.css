@@ -31,6 +31,10 @@
     float: left;
     margin-left: 27%;
     transition-duration: 1s;
+    animation: underline-moving;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transition-delay: 6s;
 }
 .whoweare-title{
     margin-left: 10%;
@@ -68,16 +72,30 @@
 #whoweare-box--right{
     display:none;
     text-align: center;
-    animation: fadein 2s;
+    /* animation: fadein 2s; */
+    animation:change-to-left;
+    transition-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transition-delay: 6s;
+
+
 }
 
 #whoweare-box--left{
     display:block;
     text-align: center;
-    animation: fadein 2s;
+    /* animation: fadein 2s; */
+    animation:change-to-right;
+    transition-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transition-delay: 6s;
+
+
 }
 
-
+/* 
 @keyframes fadein {
     from {
         opacity:0;
@@ -93,11 +111,47 @@
     to {
         opacity:0;
     }
-}
+} */
 
 .whoweare-box p{
     text-align:left;
     margin-left:10%;
     margin-top:5%;
     font-size:18px;
+}
+@keyframes change-to-right{
+    0%{
+        display:none;
+        opacity:0;
+    }
+    50%{
+        display:block;
+        opacity:1;
+    }
+    100%{
+        display:none;
+        opacity:0;
+    }
+}
+@keyframes change-to-left{
+    0%{
+        display:block;
+        opacity:1;
+    }
+    50%{
+        display:none;
+        opacity:0;
+    }
+    100%{
+        display:block;
+        opacity:1;
+    }
+}
+@keyframes underline-moving{
+    from{
+        margin-left: 27%;
+    }
+    to{
+        margin-left:59%;
+    }
 }
