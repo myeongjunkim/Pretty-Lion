@@ -6,7 +6,8 @@ function changetoRight(){
     wbl.style.display ="none";		
     wbr.style.display ="block";    
 
-    underline.style.marginLeft="59%";
+    underline.style.animation = "line-slide--right 1s";
+    underline.style.marginLeft = "250px";
 
     console.log("change to right");
 }
@@ -15,7 +16,8 @@ function changetoLeft(){
     wbl.style.display ="block";		
     wbr.style.display ="none";
 
-    underline.style.marginLeft="27%";
+    underline.style.animation = "line-slide--left 1s";
+    underline.style.marginLeft = "0px";
 
     console.log("change to left");
 }
