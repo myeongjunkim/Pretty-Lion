@@ -20,6 +20,10 @@ li {
     row-gap: 40px;
     column-gap: 40px;
 }
+
+.project-section{
+    margin-bottom:80px;
+}
 .project-section .project-card strong{
     font-size: 25px;
 }
