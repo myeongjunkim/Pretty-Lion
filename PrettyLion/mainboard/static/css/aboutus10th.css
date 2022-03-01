@@ -97,10 +97,68 @@
     position:absolute;
     box-shadow:         inset 12px 12px 24px rgba(0, 0, 0, 0.4),
         inset -24px -24px 48px rgba(0, 0, 0, 0.4);
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:  repeat(6, 1fr);
 }
 
 #modal-section{
     margin-top:100px;
+}
+
+#input-image{
+    grid-column: 2/4;
+    grid-row:2/4;
+}
+
+#close-modal{
+    grid-column: 4/5;
+    grid-row: 1/2;
+    background: none;
+    border:none;
+    width:45px;
+    height:45px;
+    margin-left:100px;
+    cursor:pointer;
+    padding:0;
+}
+
+.close:after{
+    content:'\00d7';
+    font-size:45px;
+    color:#f7f7f7;
+    width:100%;
+}
+
+#input-name{
+    grid-column: 2/4;
+    grid-row:4/5;
+    width:50%;
+    height:25px;
+    margin:auto auto;
+    font-size: 18px;
+}
+
+#input-introduction{
+    grid-column: 2/4;
+    grid-row:4/6;
+    width:80%;
+    height:100px;
+    margin:80px auto 0 auto;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#input-modal{
+    grid-column: 2/4;
+    grid-row: 6/7;
+    width:  50%;
+    height: 40px;
+    margin:0 auto;
+    border: none;
+    background-color: orange;
+    border-radius: 20px;
+    cursor:pointer;
 }
 
 @keyframes pop-modal {
