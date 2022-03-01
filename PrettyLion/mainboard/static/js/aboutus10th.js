@@ -7,6 +7,7 @@ let canvas = {
     initialize: function () {
         canvas.element.style.width = canvas.width + 'px';
         canvas.element.style.height = canvas.height + 'px';
+        canvas.element.style.minHeight = 800 + 'px';
         document.body.appendChild(canvas.element);
     }
 }
@@ -89,7 +90,7 @@ let interval = 10;
 let angleVelocity = 0.03;
 const carrierRadius = 120;
 const ballRadius = 80;
-const numOfMembers = 11;
+const numOfMembers = 5;
 const speed = 0.5;
 const gravity = 0.1;
 const friction = 0.012;
@@ -135,6 +136,29 @@ const drawMembers = () => {
     for (let i = 0; i < numOfMembers; i++) {
         members[i].drawBall(members[i].x, members[i].y);
     }
+}
+
+// modal part
+const showModal = () => {
+    canvas = document.getElementById('canvas')
+    modal = document.getElementById('aboutus-10th-modal');
+    input = document.getElementById('modal-section');
+    modal.style.opacity = "1";
+    modal.style.zIndex = '50';
+    canvas.style.filter = 'blur(5px)';
+    modal.style.animation = 'pop-modal 0.5s';
+    setTimeout(()=>{
+        input.style.opacity = '1';
+    }, 250)
+}
+
+const closeModal = () => {
+    canvas = document.getElementById('canvas')
+    modal = document.getElementById('aboutus-10th-modal');
+    modal.style.animation = 'close-modal 1s'
+    modal.style.opacity = '0';
+    modal.style.zIndex = '-1';
+    canvas.style.filter = 'none';
 }
 
 canvas.initialize();
