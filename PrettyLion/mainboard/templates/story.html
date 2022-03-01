@@ -210,16 +210,27 @@
         </div>
 
     </div>
+    
+    <!-- About us 10th section -->
     <div id="aboutus" class="section-title">About Us</div>
     <div class="section-title-box"></div>
     <div id="aboutus-10th">
         <div id="canvas">
-            <button id="add-btn" onclick="">
+            <button id="add-btn" onclick="showModal()">
                 <div id="plus-logo"></div>
             </button>
         </div>
+
+        <!-- Modal -->
+        <div id="aboutus-10th-modal" style="opacity:0; z-index: -1;">
+            <div id="modal-section" style="opacity:0;">
+                <input id="modal-10th-image">
+                <button id="close-modal" onclick="closeModal()">
+            </div>
+        </div>
     </div>
-</section> 
+</section>
+
 <script type="text/JavaScript" src="{% static 'js/aboutus10th.js' %}"></script>
 
 {% endblock %}
