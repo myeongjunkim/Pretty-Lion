@@ -12,7 +12,7 @@ def view_plg_intro(request):
 
 def view_plg_info(request):
     if request.method == "POST":
-        return redirect('plg-qna')
+        return redirect('question-detail',1)
     return render(request, 'plg_info.html')
 
 
