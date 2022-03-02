@@ -6,7 +6,9 @@
 <link rel="stylesheet" href="{% static 'css/story.css' %}">
 <link rel="stylesheet" href="{% static 'css/history.css' %}">
 <link rel="stylesheet" href="{% static 'css/aboutus10th.css' %}">
-
+<style>
+    *{margin:0; padding:0;}
+</style>
 
 {% endblock %}
 
@@ -18,63 +20,65 @@
         <div id="history" class="section-title">History</div>
             <div class="section-title-box"></div>
         </section>
-        <div class="history-image">
-            <p class="history-text text-first">
-                <p>😎</p>
+        <img src="{% static 'img/history-img2.png' %}"  class="history-image">
+        <div class="history-texts">
+            <p class="text-first">
+                <h1>😎</h1>
                 <b>우리들의 첫 만남</b><br>
                 웃음 가득했던<br>
                 멋사 9기들의 첫 만남
             </p>
-            <p class="history-text text-second">
-                <p>📃</p>
+            <div class="text-second">
+                <h1>📃</h1>
                 <b>우리들의 첫 세션</b><br>
                 첫 세션<br>
                 첫 오프라인 모임<br>
                 첫 자전거<br>
                 #성공적
-            </p>
-            <p class="history-text text-third">
-                <p>💻</p>
+            </div>
+            <div class="text-third">
+                <h1>💻</h1>
                 <b>우리들의 첫 모각코</b><br>
                 모여서 <br>
                 각자 <br>
                 코딩할 사람~ <br>
                 구글미트로 집합!
-            </p>
-            <p class="history-text text-fourth">
+            </div>
+            <div class="text-fourth">
                 <b>아이디어톤</b><br>
                 <a href="#didi">디디</a><br>
                 <a href="#culturebook">컬처북</a><br>
                 <a href="#moiza">모의자</a><br>
                 <a href="#codehunter">코드헌터</a><br>
-            </p>
-            <p class="history-text text-fifth">
+            </div>
+            <div class="text-fifth">
                 <b>해커톤</b><br>
                 <a href="#DoMain">DoMain</a><br>
                 <a href="#Nativing">Nativing</a><br>
-            </p>
-            <p class="history-text text-sixth">
+            </div>
+            <div class="text-sixth">
                 <b>컨퍼런스</b><br>
                 <b>&</b><br>
                 <b>스터디 시작</b>
-            </p>
-            <p class="history-text text-seventh">
+            </div>
+            <div class="text-seventh">
                 <b>우리들의</b><br>
                 <b>마지막</b><br>
                 멋FOREVER사 
-            </p>
-            <p class="history-text text-eighth">
+            </div>
+            <div class="text-eighth">
                 <b>중커톤</b><br>
                 <a href="#StealRoutine">괴도루틴</a><br>
                 <a href="#LatteKing">LatteKing</a><br>
                 <a href="#Stargram">Stargram</a>
-            </p>
+            </div>
 
 
         </div>
     </div>
 </section>
-<section class="base-section">
+
+<div class="base-section" style="margin-top:80%;">
     <div class="project-section">
         <div id="project" class="section-title">Project</div>
             <div class="section-title-box"></div>
@@ -235,7 +239,8 @@
         </div>
     </div>
 
-</section>
+
+</div>
 
 <script type="text/JavaScript" src="{% static 'js/aboutus10th.js' %}"></script>
 

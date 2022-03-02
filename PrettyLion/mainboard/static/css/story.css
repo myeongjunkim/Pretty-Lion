@@ -103,4 +103,5 @@ li {
 }
 .base-section{
     margin:0px 150px;
+    max-width: 100%;
 }
