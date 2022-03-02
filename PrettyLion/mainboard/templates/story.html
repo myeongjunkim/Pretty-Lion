@@ -223,13 +223,15 @@
 
         <!-- Modal -->
         <div id="aboutus-10th-modal" style="opacity:0; z-index: -1;">
-            <input id="input-image">
+            <input class="modal-input" id="input-image" style="opacity: 0;">
             <button id="close-modal" onclick="closeModal()">
                 <div class="close"></div>
             </button>
-            <input id="input-name">
-            <input id="input-introduction">
-            <button id="input-modal" onclick="closeModal()"></button>
+            <input class="modal-input" id="input-name" style="opacity: 0;">
+            <div class="modal-input" id="input-introduction" style="opacity: 0;">
+                <textarea placeholder="About U"></textarea>
+            </div>
+            <button class="modal-input" id="input-modal" onclick="closeModal()" style="opacity: 0;"></button>
         </div>
     </div>
 </section>

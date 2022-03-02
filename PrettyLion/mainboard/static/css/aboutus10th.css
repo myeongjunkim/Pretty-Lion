@@ -149,6 +149,12 @@
     font-size: 18px;
 }
 
+#input-introduction textarea{
+    width:100%; 
+    height: 100%; 
+    font-size: 18px;
+}
+
 #input-modal{
     grid-column: 2/4;
     grid-row: 6/7;
