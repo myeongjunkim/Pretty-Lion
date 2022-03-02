@@ -1,14 +1,14 @@
 .history-image{
-    background: url(../img/historyimg.png) no-repeat center center;
+    background: url(../img/history-img2.png) no-repeat center center;
     background-size: contain;
-    width: 160vw;
+    width: 100%;
     height: 2000px;
-    margin-left: -33%;
     margin-top: 0%;
 }
 
 .history-section{
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 .history-text{
