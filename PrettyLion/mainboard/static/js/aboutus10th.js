@@ -142,23 +142,29 @@ const drawMembers = () => {
 const showModal = () => {
     canvas = document.getElementById('canvas')
     modal = document.getElementById('aboutus-10th-modal');
-    input = document.getElementById('modal-section');
+    input = document.getElementsByClassName('modal-input');
     modal.style.opacity = "1";
     modal.style.zIndex = '50';
     canvas.style.filter = 'blur(5px)';
     modal.style.animation = 'pop-modal 0.5s';
     setTimeout(()=>{
-        input.style.opacity = '1';
+        for (let i = 0 ; i < input.length; i++){
+            input[i].style.opacity = '1';
+        }
     }, 250)
 }
 
 const closeModal = () => {
     canvas = document.getElementById('canvas')
     modal = document.getElementById('aboutus-10th-modal');
+    input = document.getElementsByClassName('modal-input');
     modal.style.animation = 'close-modal 1s'
     modal.style.opacity = '0';
     modal.style.zIndex = '-1';
     canvas.style.filter = 'none';
+    for (let i = 0 ; i < input.length; i++){
+        input[i].style.opacity = '0';
+    }
 }
 
 canvas.initialize();
