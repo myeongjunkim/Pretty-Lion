@@ -19,7 +19,9 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(10, 1fr);
 }
-
+.history-texts a:hover{
+    color:#0075BC;
+}
 .history-texts > div {
     text-align: center;
     height:fit-content;
