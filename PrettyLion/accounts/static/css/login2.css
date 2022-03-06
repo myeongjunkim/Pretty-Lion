@@ -1,0 +1,86 @@
+.login-form {
+    max-width: 50vmax;
+    max-height: 100vmin;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.login-form__label__login {
+    font-size: 20px;
+    color: white;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+
+}
+
+.login-form__label__password {
+    font-size: 20px;
+    color: white;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+
+}
+
+.login-form__username__input{
+    background-color: #000;
+    color: white;
+    width: 25vw;
+    height: 3vh;
+    font-size: 18px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #4E4E4E;
+    
+}
+
+.login-form__password__input {
+    background-color: #000;
+    color: white;
+    width: 25vw;
+    height: 3vh;
+    font-size: 18px;
+    margin-top: 2vh;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #4E4E4E;
+}
+
+.login-form__username__input:focus {
+    border-bottom: 3px solid #F39927;
+    outline: none;
+}
+
+.login-form__password__input:focus {
+    border-bottom: 3px solid #F39927;
+    outline: none;
+}
+
+.login-form__submit {
+    justify-content: center;
+    margin-left: 6.5vw;
+    margin-top: 5vh;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 0.2vw;
+    background-color: #F39927;
+    width: 12vw;
+    height: 5vh;
+    border-right :none; 
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    cursor: pointer;
+
+}
