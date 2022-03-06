@@ -1,6 +1,6 @@
 from django.contrib import admin, messages
 
-from .models import MentorRoom, Mentee, Question, Choice
+from .models import MentorRoom, Mentee, Question, Choice, Answer
 
 import logging
 logger = logging.getLogger('django.server')
@@ -50,3 +50,4 @@ class QuestionAdmin(admin.ModelAdmin):
 
 admin.site.register(MentorRoom, MentorRoomAdmin)
 admin.site.register(Question, QuestionAdmin)
+admin.site.register(Answer)

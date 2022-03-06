@@ -5,6 +5,7 @@
 
 body{
     background-color:#F39927;
+    margin:0;
 }
 
 h4, h5 {
@@ -37,7 +38,7 @@ section{
 
 .survey-wrap__intro{
     text-align: center;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -52,7 +53,7 @@ section{
 
 .survey-wrap__explain{
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom:40px;
 }
 
@@ -65,7 +66,7 @@ section{
     width:250px;
     height: 30px;
     line-height: 30px;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 5px;
     background-color:#F39927;
     margin-bottom:20px;
@@ -149,6 +150,11 @@ section{
     width:80%;
     text-align: center;
     margin-bottom: 20px;
+    height:350px;
+}
+
+.survey-wrap__form-cards > form{
+    display:inline-block;
 }
 
 .form__card{
@@ -161,7 +167,9 @@ section{
     margin:10px;
     text-align:center;
     font-size:12px;
+    border:none;
 }
+
 
 /* .form__card:after {
     content: "";
@@ -175,11 +183,10 @@ section{
     height: 100%;
 } */
 
-.form__card > img{
-    width:50px;
-    height:50px;
-    margin-top:50px;
-    margin-bottom: 20px;
+.form__card > .iconify{
+    display: inline-block;
+    margin-top:20px;
+    margin-bottom: 25px;
 }
 
 .survey-wrap__progress {
