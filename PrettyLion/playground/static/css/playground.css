@@ -53,7 +53,7 @@ section{
 
 .survey-wrap__explain{
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom:40px;
 }
 
@@ -66,7 +66,7 @@ section{
     width:250px;
     height: 30px;
     line-height: 30px;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 5px;
     background-color:#F39927;
     margin-bottom:20px;
@@ -150,13 +150,12 @@ section{
     width:80%;
     text-align: center;
     margin-bottom: 20px;
+    height:350px;
 }
 
 .survey-wrap__form-cards > form{
     display:inline-block;
 }
-
-
 
 .form__card{
     display:inline-block;
