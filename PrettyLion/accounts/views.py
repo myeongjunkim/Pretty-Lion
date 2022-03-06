@@ -31,8 +31,8 @@ def signup(request):
 
 def login(request):
     if request.method == "POST":
-        userid = request.POST['username']
-        pw = request.POST['password']
+        userid = request.POST["username"]
+        pw = request.POST["password"]
         user = auth.authenticate(request, username=userid, password=pw)
         if user is not None:
             auth.login(request, user)
@@ -40,7 +40,9 @@ def login(request):
         else:
             return render(request, 'login.html')
     else:
+        
         return render(request, 'login.html')
+        
 
 
 def logout(request):
