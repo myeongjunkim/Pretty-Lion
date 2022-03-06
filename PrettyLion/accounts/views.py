@@ -31,13 +31,16 @@ def signup(request):
 
 def login(request):
     if request.method == "POST":
-        userid = request.POST["username"]
-        pw = request.POST["password"]
+        userid = request.POST.get("username")
+        pw = request.POST.get("password")
         user = auth.authenticate(request, username=userid, password=pw)
+        print(userid, pw)
         if user is not None:
+            print("user존재")
             auth.login(request, user)
             return redirect('index')
         else:
+            print("user 없음")
             return render(request, 'login.html')
     else:
         
@@ -47,5 +50,5 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect(request, 'index')
+    return redirect('index')
 
