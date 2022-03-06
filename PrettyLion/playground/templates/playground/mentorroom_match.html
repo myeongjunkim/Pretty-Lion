@@ -67,15 +67,15 @@
                         </div>
                         <div class="card-wrap__character">
                             {% for answer in mentor_room.mentor.answer_set.all | slice:":2" %}
-                            <div><ion-icon name="{{ answer.choice.emoji }}"></ion-icon></ion-icon>새벽형 인간</div>
-                            <div><ion-icon name="location"></ion-icon>서울대입구</div>
-                            <div><ion-icon name="accessibility"></ion-icon>기타치기</div>
+                            <div><ion-icon name="{{ answer.choice.emoji }}"></ion-icon></ion-icon>{{ answer.choice.text }}</div>
+                            <div><ion-icon name="{{ answer.choice.emoji }}"></ion-icon>{{ answer.choice.text }}</div>
+                            <div><ion-icon name="{{ answer.choice.emoji }}"></ion-icon>{{ answer.choice.text }}</div>
                             {% endfor %}
                         </div>
                     </div>
                     <div class="card-temperature">
-                        <div>궁합온도 {{persent}}90.2 도 </div>
-                        <progress class="survey-wrap__progress choiceProgress" value="90" max="100"></progress>
+                        <div>궁합온도 {{ matching_temperature|get_item:mentor_room.id }} 도 </div>
+                        <progress class="survey-wrap__progress choiceProgress" value="{{ matching_temperature|get_item:mentor_room.id }}" max="100"></progress>
                     </div>
                     <button class="survey-wrap__form__button choiceBtn" type="submit">깐부 맺기</button>
                 </form>
