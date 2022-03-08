@@ -15,21 +15,32 @@
     margin-left: 14px;
 }
 /* what we do */
+.whatwedo-section{
+    width: 80%;
+    margin:10px auto;
+}
+
+
 .ideaton-box{
     border: 1px solid #4E4E4E;
     border-radius: 25px;
     background-color: #4E4E4E;
-    width:20%;
-    height:25%;
+    width:25%;
+    height:30%;
     padding:100px 0px;
     margin-top: 2%;
+    display:inline-block;
 }
 
-.what-we-do p{
+.whatwedo-section span{
     text-align:center;
-    font-size: large;
+    font-size: 23px;
     font-weight: bold;
+    padding:10px;
 }
+
+
+
 /*  */
 .whoweare-section{
     width: 80%;
