@@ -44,50 +44,6 @@ section{
     }
 }
 
-
-
-.triangle-wrap{
-    position:relative;
-    top:0;
-    left:0;
-}
-
-.triangle-top {
-    position:absolute;
-    width: 0px;
-    height: 0px;
-    border-top: 120px solid orange;
-    border-left: 0px solid transparent;
-    border-right: 360px solid transparent;
-  }
-
-.triangle-left {
-    position:absolute;
-    width: 0px;
-    height: 0px;
-    border-top: 360px solid orange;
-    border-left: 0px solid transparent;
-    border-right: 120px solid transparent;
-}
-
-.slogan-wrap{
-    position:absolute;
-    margin-top:20px;
-    font-size:100px;
-}
-
-.slogan1{
-    margin-left:50px;
-}
-
-.slogan2{
-    margin-left:230px;
-}
-
-.slogan3{
-    margin-left:410px;
-}
-
 /*sub section */
 #value-section{
     margin-top: 150px;
