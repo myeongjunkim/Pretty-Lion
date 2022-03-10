@@ -21,3 +21,30 @@
     text-align:center;
     margin-top: 15%;
 }
+
+.aboutus-staff{
+    width: 200px;
+    height : 200px;
+    color:black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.aboutus-staff:hover{
+    width: 200px;
+    height : 200px;
+    color:black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    box-shadow: 0 1px 20px 0 rgb(255, 255, 255);
+    text-align: center;
+}
