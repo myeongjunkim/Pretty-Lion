@@ -5,6 +5,7 @@ from .views import *
 urlpatterns = [
     path('', view_index, name="index"),
     path('aboutus/', view_aboutus, name="aboutus"),
+    path('get-aboutus/', get_aboutus, name="get_aboutus"),
     path('create-aboutus/', create_aboutus, name="create_aboutus"),
     path('delete-aboutus/<str:id>', delete_aboutus, name="delete_aboutus"),
     path('detail-aboutus/<str:id>', detail_aboutus, name="detail_aboutus"),
