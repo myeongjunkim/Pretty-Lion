@@ -320,9 +320,8 @@ section{
 
 }
 
-.card-wrap__character > div > ion-icon{
+.card-wrap__character .iconify{
     margin:0px 5px 0px 5px;
-    color:#F39927;
 }
 
 .card-temperature{
