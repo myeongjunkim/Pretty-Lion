@@ -1,4 +1,23 @@
 
+// 여기서 members 선언함!!!!
+$.ajax({
+    url: '../get-aboutus/',
+    type: "GET",
+    data: {},
+    dataType : "json",
+    async: false,
+    success: function(response) {
+        // 이게 aboutus 객체 가져오는거
+        let members = response;
+        console.log(members)
+    },
+    error: function() {
+        let members = []
+        console.log("error")
+    }
+});
+
+
 // orbiting aboutus 10th profiles
 let canvas = {
     element: document.getElementById('canvas'),
@@ -95,7 +114,6 @@ const ellipseRadiusA = 1.6;
 const ellipseRadiusB = 1.2;
 
 let carriers = [];
-let members = [];
 
 const createCarriers = (num) => {
     let initx = 8;
@@ -165,6 +183,9 @@ const closeModal = () => {
 }
 
 canvas.initialize();
+
+
+
 
 createCarriers(numOfMembers);
 createMembers(numOfMembers);
