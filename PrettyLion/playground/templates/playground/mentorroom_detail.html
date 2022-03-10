@@ -2,16 +2,53 @@
 {% load static %}
 
 {% block header %}
-
+<link rel="stylesheet" href="{% static 'css/playground.css' %}">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 {% endblock %}
 
 {% block contents %}
-<h2>방 이름: {{object.name}}</h2>
+<!-- <h2>방 이름: {{object.name}}</h2>
 <h4>10기 ({{object.mentee_set.count}}/{{object.limit}})</h4>
 <h4>멘토: {{object.mentor}}</h4>
 <ul>
     {% for mentee in object.mentee_set.all %}
         <li>{{ mentee.user }}</li>
     {% endfor %}
-</ul>
+</ul> -->
+<section>
+    <div class="survey-wrap room-wrap">
+
+        <div class="room-wrap__contents">
+            <div class="room-wrap__title">깐부방</div>
+            <div class="room-wrap__mento">
+                <img src="{% static 'img/lion_img.png' %}" alt="">
+                <div class="mento-textwrap">
+                    <div class="mento-textwrap__name">{{object.mentor}}</div>
+                    <div class="mento-textwrap__intro">{{object.name}}</div>
+                </div>
+            </div>
+            <hr class="room-wrap__hr">
+
+            <div class="room-wrap__menti">
+                <div class="menti-title">10기 ({{object.mentee_set.count}}/{{object.limit}})</div>
+                <div class="menti-cardwrap">
+                    {% for mentee in object.mentee_set.all %}
+                    <div class="menti-cardwrap__card">
+                        <img src="{% static 'img/airpat.jpeg' %}" alt="">
+                        <div class="card__name">{{ mentee.user }}</div>
+                    </div>
+                    {% endfor %}
+                    
+                    
+                </div>
+    
+            </div>
+        </div>
+        <a class="survey-wrap__form__button" href="{{object.chat_url}}">대화방 입장</a>
+    </div>
+    
+</section>
+
+
 {% endblock %}
