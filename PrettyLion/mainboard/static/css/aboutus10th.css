@@ -40,8 +40,8 @@
     right: 40px;
     /* bottom: 103.92px; */
     bottom: 40px;
-    width: 160px;
-    height: 160px;
+    width: 12vw;
+    height: 12vw;
     border-radius: 50%;
     border:none;
     transition: 0.5s;
@@ -62,12 +62,12 @@
     color:#000000;
     content: '';
     position: absolute;
-    border-radius: 5px;
+    border-radius: 0.375vw;
     left: 50%;
     top: 50%;
-    width: 80px;
-    margin-left: -40px;
-    margin-top: -5px;
+    width: 6vw;
+    margin-left: -3vw;
+    margin-top: -0.375vw;
     border-top: 10px solid;
     transition:0.3s;
 }
@@ -78,10 +78,10 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    border-radius: 5px;
-    height: 80px;
-    margin-left: -5px;
-    margin-top: -40px;
+    border-radius: 0.375vw;
+    height: 6vw;
+    margin-left: -0.375vw;
+    margin-top: -3vw;
     border-left: 10px solid;
     transition:0.3s;
 }
