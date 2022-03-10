@@ -70,16 +70,19 @@ section{
 
 #left-text--top{
     margin-left:15vw;
+    white-space:nowrap; 
 }
 
 #right-text{
     text-align: right;
     margin-right:15vw;
+    white-space:nowrap; 
 }
 
 #left-text--bottom{
-    margin-left:25vw;
-
+    margin-left:15vw;
+    text-align: left;
+    white-space:nowrap; 
 }
 @keyframes slide-left--top{
     from{
@@ -93,11 +96,11 @@ section{
 }
 @keyframes slide-left--bottom{
     from{
-        margin-left:0px;
+        margin-left:0vw;
         opacity: 0;
     }
     to{
-        margin-left:25vw;
+        margin-left:15vw;
         opacity: 1;
     }
 }
