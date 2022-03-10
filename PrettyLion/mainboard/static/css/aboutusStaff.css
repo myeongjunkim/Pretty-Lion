@@ -27,19 +27,27 @@
     height : 200px;
     color:black;
     background-color: white;
+    position:relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 50%;
     text-align: center;
+    animation: rotate_image 14s linear infinite;
+    transform-origin: 50% 50%;
 }
-
+@keyframes rotate_image{ 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+}
 .aboutus-staff:hover{
     width: 200px;
     height : 200px;
     color:black;
     background-color: white;
+    position:relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,4 +60,17 @@
 	-ms-transform:scale(1.1);	
 	-o-transform:scale(1.1);
 	transform:scale(1.1);
+}
+
+#staff-image{
+    z-index:100;
+    width: 100px;
+    height: 100px;
+    position:absolute;
+}
+
+.aboutus-staff > p{
+    color:black;
+    font-weight: bold;
+    font-size: 25px;
 }
