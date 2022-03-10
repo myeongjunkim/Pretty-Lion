@@ -67,21 +67,25 @@
     justify-content: center;
     align-items:center;
     flex-direction: column;
+    /* margin: 0 auto; */
+    grid-column: 2/3;
+    grid-row: 1/2;
 }
 
 #aboutus_plus{
     border-radius: 10px;
-    width:200px;
+    width:15vw;
     cursor: pointer;
 }
 
 #aboutus_img{
     display:none;
+    width: 15vw;
 }
 
 #aboutus_name{
-    width:250px;
-    height:40px;
+    width:20vw;
+    height:18px;
     margin:10px;
     text-align: center;
     border: 1px solid black;
@@ -90,6 +94,8 @@
 }
 
 .aboutus_form textarea{
+    width:20vw;
+    height:60px;
     margin:20px;
     margin-top:0px;
     text-align: center;
@@ -98,12 +104,12 @@
 }
 
 .aboutus_form > button, .aboutus_form-delete{
-    width:150px;
+    width:10vw;
     height:40px;
     border:none;
     border-radius: 50px;
     color:white;
-    font-size:25px;
+    font-size:18px;
     background-color: orange;
     display:flex;
     justify-content: center;
@@ -113,9 +119,9 @@
 }
 
 .aboutus_form > button > img{
-    width:40px;
+    width:5vw;
 }
-
+/* 
 {
     color:black;
-}
+} */

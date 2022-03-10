@@ -90,7 +90,7 @@ let interval = 10;
 let angleVelocity = 0.03;
 const carrierRadius = 8;
 const ballRadius = 6;
-const numOfMembers = 11;
+const numOfMembers = 5;
 const ellipseRadiusA = 1.6;
 const ellipseRadiusB = 1.2;
 

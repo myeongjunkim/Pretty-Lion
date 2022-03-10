@@ -98,27 +98,27 @@
     box-shadow:         inset 12px 12px 24px rgba(0, 0, 0, 0.4),
         inset -24px -24px 48px rgba(0, 0, 0, 0.4);
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows:  repeat(6, 1fr);
+    grid-template-columns: 10vw 20vw 10vw;
+    /* grid-template-rows:  repeat(6, 1fr); */
 }
 
 #modal-section{
     margin-top:100px;
 }
 
-#input-image{
+/* #input-image{
     grid-column: 2/4;
     grid-row:2/4;
-}
+} */
 
 #close-modal{
-    grid-column: 4/5;
-    grid-row: 1/2;
+    grid-column: 3/4;
+    /* grid-row: 1/2; */
     background: none;
     border:none;
     width:45px;
     height:45px;
-    margin-left:100px;
+    margin-left:70px;
     cursor:pointer;
     padding:0;
 }
@@ -130,7 +130,7 @@
     width:100%;
 }
 
-#input-name{
+/* #input-name{
     grid-column: 2/4;
     grid-row:4/5;
     width:50%;
@@ -165,7 +165,7 @@
     background-color: orange;
     border-radius: 20px;
     cursor:pointer;
-}
+} */
 
 @keyframes pop-modal {
     from{
