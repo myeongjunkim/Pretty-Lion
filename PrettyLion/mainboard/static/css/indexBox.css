@@ -101,6 +101,7 @@ div.whatwedo-section p{
     width:100%;
     padding:100px 0px;
     margin-top: 2%;
+    margin-bottom:5%;
 }
 .stack-icon--left{
     width:10vw;
@@ -237,7 +238,8 @@ div.whatwedo-section p{
 .whoweare-box p{
     text-align:left;
     margin-top:5%;
-    font-size:18px;
+    font-size:20px;
+    font-weight:530;
     text-align: center;
 }
 @keyframes change-to-right{
