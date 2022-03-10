@@ -14,6 +14,11 @@
 <p class = "password-error-message" style = "display: none">  </p>
 {% endif %}
 
+{% if id_unique_error %}
+<script>
+    alert("아이디가 이미 존재합니다.")
+</script>
+{% endif %}
 <script>
 const errorMessage = document.querySelector(".password-error-message");
 if (errorMessage.style.display == 'none') {
