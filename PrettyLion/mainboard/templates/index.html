@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block header %}
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/indexdetail.css' %}">
 <link rel="stylesheet" href="{% static 'css/indexBox.css' %}">
 {% endblock %}
 
@@ -73,12 +73,12 @@
         <div class="whoweare-title">
             <div class="whoweare-title-tab">
                 <div id="whoweare-title-btn--left">
-                    <a class="whoweare-title-btn" href="#a" onclick="javascript:changetoLeft()">
+                    <a class="whoweare-title-btn" id="left-title" href="#a" onclick="javascript:changetoLeft()">
                         기획/디자인
                     </a>
                 </div>
                 <div id="whoweare-title-btn--right">
-                    <a class="whoweare-title-btn" href="#a" onclick="javascript:changetoRight()">
+                    <a class="whoweare-title-btn" id="right-title" href="#a" onclick="javascript:changetoRight()">
                         개발
                     </a>
                 </div>
@@ -125,5 +125,6 @@
 
 <script type="text/JavaScript" src="{% static 'js/landing.js' %}"></script>
 <script type="text/JavaScript" src="{% static 'js/changeBox.js' %}"></script>
+<script type="text/JavaScript" src="{% static 'js/slidetext.js' %}"></script>
 
 {% endblock %}
