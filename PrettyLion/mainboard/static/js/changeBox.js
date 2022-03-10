@@ -22,22 +22,33 @@ function changetoLeft(){
     console.log("change to left");
 }
 
-setTimeout(function(){
-    console.log("2초후에 한번 실행됩니다.");
-}, 2000 );
+// setTimeout(function(){
+//     console.log("2초후에 한번 실행됩니다.");
+// }, 2000 );
 
 
-window.onload=function(){
-    while(true){
-        setTimeout();
-        changetoRight();
-        setTimeout();
-        changetoLeft();
+// window.onload=function(){
+//     while(true){
+
+//         setTimeout(function(){
+//             changetoRight();
+//             console.log("오른쪽");
+
+//         },3000);
+//         setTimeout(function(){
+//             changetoLeft();
+//             console.log("왼쪽");
+
+//         },3000);
+
+//     }
+// }
+
+        // setTimeout();
+        // changetoRight();
+        // setTimeout();
+        // changetoLeft();
         // setTimeout();
         // document.getElementById("right-title").click();
         // setTimeout();
         // document.getElementById("left-title").click();
-
-    }
-}
-
