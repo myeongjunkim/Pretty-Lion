@@ -33,6 +33,7 @@
 }
 
 .whatwedo-section span{
+    display : inline-block;
     text-align:center;
     font-size: 23px;
     font-weight: bold;
