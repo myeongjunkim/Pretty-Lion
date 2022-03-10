@@ -4,8 +4,7 @@
 
 {% block header %}
 <link rel="stylesheet" href="{% static 'css/playground.css' %}">
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
 {% endblock %}
 
 {% block contents %}
@@ -43,7 +42,7 @@
 <section>
     <div class="survey-wrap choice-wrap">
         <div class="survey-wrap__choiceIntro">
-            <div><span class="choiceIntro-nameSpan">김땡땡</span> 10기와</div>
+            <div><span class="choiceIntro-nameSpan">{{request.user.username}}</span> 10기와</div>
             <div>찰떡궁합인 깐부들이에요</div>
             <div>마음에 드는 깐부를 픽 해주세요!</div>
             <hr>
@@ -58,7 +57,6 @@
                     {% csrf_token %}
                     <div class="card-title">
                         <div>{{ mentor_room.name }}</div>
-                        <div>{{ matching_temperature|get_item:mentor_room.id }}</div>
                     </div>
                     <div class="card-wrap">
                         <div class="card-wrap__profile"> 
@@ -66,10 +64,11 @@
                             <div class="profile-name">프로열정러</div>
                         </div>
                         <div class="card-wrap__character">
-                            {% for answer in mentor_room.mentor.answer_set.all | slice:":2" %}
-                            <div><ion-icon name="{{ answer.choice.emoji }}"></ion-icon></ion-icon>{{ answer.choice.text }}</div>
-                            <div><ion-icon name="{{ answer.choice.emoji }}"></ion-icon>{{ answer.choice.text }}</div>
-                            <div><ion-icon name="{{ answer.choice.emoji }}"></ion-icon>{{ answer.choice.text }}</div>
+                            {% for answer in mentor_room.mentor.answer_set.all %}
+                            <div>
+                                <span class="iconify" data-icon="{{ answer.choice.emoji }}" style="color: white; font-size: 10px;"></span>
+                                {{ answer.choice.text }}
+                            </div>
                             {% endfor %}
                         </div>
                     </div>
