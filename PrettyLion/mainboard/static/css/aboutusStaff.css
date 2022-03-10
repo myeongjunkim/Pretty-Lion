@@ -81,3 +81,18 @@ div.aboutus-staff p{
     padding-top: 10px;
     position:absolute;
 }
+
+.white-10th{
+    font-weight: 600;
+    font-size: 30px;
+    color:white;
+    margin-top: 25px;
+    text-align:center;
+}
+
+.orange-10th{
+    font-weight: bold;
+    font-size: 40px;
+    color: #F39927;
+    text-align: center;
+}

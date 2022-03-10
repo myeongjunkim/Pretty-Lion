@@ -18,22 +18,27 @@
 .whatwedo-section{
     width: 80%;
     margin:10px auto;
+    display: flex;
+    align-items: center; /* 수직 정렬 */
+    flex-direction: row; /* default: row */
+    justify-content: center;
 }
 
+.whatwedo-middle{
+    margin: 40px 35px;
+}
 
 .ideaton-box{
     border: 1px solid #4E4E4E;
     border-radius: 25px;
     background-color: #4E4E4E;
-    width:25%;
-    height:30%;
+    width:270px;
+    height:180px;
     padding:100px 0px;
     margin-top: 2%;
-    display:inline-block;
 }
 
-.whatwedo-section span{
-    display : inline-block;
+div.whatwedo-section p{
     text-align:center;
     font-size: 23px;
     font-weight: bold;
