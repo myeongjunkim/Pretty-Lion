@@ -1,0 +1,98 @@
+/* About us 운영진 멘트 */
+.orange{
+    font-weight: bold;
+    font-size: 40px;
+    color: #F39927;
+    margin-top:25px;
+    margin-left: 8%;
+}
+
+.white{
+    font-weight: 600;
+    font-size: 30px;
+    color:white;
+    margin-top: 25px;
+}
+
+.staff{
+    font-weight: bold;
+    font-size: 40px;
+    color:#F39927;
+    text-align:center;
+    margin-top: 15%;
+}
+
+.staff-bubble{
+    margin-top: 20px;
+    animation: rotate_image 14s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes rotate_image{ 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+}
+
+.aboutus-staff{
+    width: 200px;
+    height : 200px;
+    color:black;
+    background-color: white;
+    position:relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.aboutus-staff:hover{
+    width: 200px;
+    height : 200px;
+    color:black;
+    background-color: white;
+    position:relative;
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    box-shadow: 0 1px 20px 0 rgb(255, 255, 255);
+    text-align: center;
+    -webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	-ms-transform:scale(1.1);	
+	-o-transform:scale(1.1);
+	transform:scale(1.1);
+}
+
+div.aboutus-staff img{
+    width: 150px;
+    height: 150px;
+    position:absolute;
+}
+
+div.aboutus-staff p{
+    color:black;
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 10px;
+    position:absolute;
+}
+
+.white-10th{
+    font-weight: 600;
+    font-size: 30px;
+    color:white;
+    margin-top: 25px;
+    text-align:center;
+}
+
+.orange-10th{
+    font-weight: bold;
+    font-size: 40px;
+    color: #F39927;
+    text-align: center;
+}

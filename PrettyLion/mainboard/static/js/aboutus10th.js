@@ -2,12 +2,12 @@
 // orbiting aboutus 10th profiles
 let canvas = {
     element: document.getElementById('canvas'),
-    width: 1440,
-    height: 240,
+    width: 80,
+    height: 30,
     initialize: function () {
-        canvas.element.style.width = canvas.width + 'px';
-        canvas.element.style.height = canvas.height + 'px';
-        canvas.element.style.minHeight = 800 + 'px';
+        canvas.element.style.width = canvas.width + 'vw';
+        canvas.element.style.height = canvas.height + 'vw';
+        canvas.element.style.minHeight = 30 + 'vw';
         document.body.appendChild(canvas.element);
     }
 }
@@ -20,16 +20,16 @@ let ballCarrier = {
         carrier.radius = carrierRadius;
         carrier.element = document.createElement('div');
         carrier.element.style.backgroundColor = "#000000";
-        carrier.element.style.width = 2 * carrierRadius + 'px';
-        carrier.element.style.height = 2 * carrierRadius + 'px';
+        carrier.element.style.width = 2 * carrierRadius + 'vw';
+        carrier.element.style.height = 2 * carrierRadius + 'vw';
         carrier.element.className += 'carrier';
         canvas.element.appendChild(carrier.element);
         return carrier;
     },
     drawCarrier: function (x, y) {
         // 여기에 입력받는 x, y는 중심 기준
-        this.element.style.left = x - carrierRadius + 'px';
-        this.element.style.top = y - carrierRadius + 'px';
+        this.element.style.left = x - carrierRadius + 'vw';
+        this.element.style.top = y - carrierRadius + 'vw';
     },
     insertBall: function (ball) {
         this.element.appendChild(ball.element);
@@ -49,8 +49,8 @@ let ball = {
         newBall.imgPath = '';
         newBall.element = document.createElement('div');
         newBall.element.backgroundColor = '#f7f7f7';
-        newBall.element.style.width = 2 * ballRadius + 'px';
-        newBall.element.style.height = 2 * ballRadius + 'px';
+        newBall.element.style.width = 2 * ballRadius + 'vw';
+        newBall.element.style.height = 2 * ballRadius + 'vw';
         newBall.element.className += 'ball';
 
         // 내부 내용과 이미지 넣는 부분
@@ -58,8 +58,8 @@ let ball = {
         return newBall;
     },
     moveTo: function (x, y) {
-        this.element.style.left = x - ballRadius + 'px';
-        this.element.style.top = y - ballRadius + 'px';
+        this.element.style.left = x - ballRadius + 'vw';
+        this.element.style.top = y - ballRadius + 'vw';
     },
     drawBall: function (x, y) {
         this.moveTo(x, y);
@@ -72,14 +72,14 @@ let ball = {
             ball.drawBall(ball.x, ball.y);
             ball.element.addEventListener("mouseover", () => {
                 ball.angleVelocity = 0;
-                ball.element.style.width = 2 * 1.2 * ball.radius + 'px';
-                ball.element.style.height = 2 * 1.2 * ball.radius + 'px';
+                ball.element.style.width = 2 * 1.2 * ball.radius + 'vw';
+                ball.element.style.height = 2 * 1.2 * ball.radius + 'vw';
                 ball.element.style.zIndex = "100";
             })
             ball.element.addEventListener("mouseout", () => {
                 ball.angleVelocity = 0.03;
-                ball.element.style.width = 2 * ball.radius + 'px';
-                ball.element.style.height = 2 * ball.radius + 'px'
+                ball.element.style.width = 2 * ball.radius + 'vw';
+                ball.element.style.height = 2 * ball.radius + 'vw'
                 ball.element.style.zIndex = "0";
             })
         }, interval)
@@ -88,22 +88,19 @@ let ball = {
 
 let interval = 10;
 let angleVelocity = 0.03;
-const carrierRadius = 120;
-const ballRadius = 80;
-const numOfMembers = 5;
-const speed = 0.5;
-const gravity = 0.1;
-const friction = 0.012;
-const ellipseRadiusA = 35;
-const ellipseRadiusB = 25;
+const carrierRadius = 8;
+const ballRadius = 6;
+const numOfMembers = 11;
+const ellipseRadiusA = 1.6;
+const ellipseRadiusB = 1.2;
 
 let carriers = [];
 let members = [];
 
 const createCarriers = (num) => {
-    let initx = 120;
-    let posx = 120;
-    let posy = 120;
+    let initx = 8;
+    let posx = 8;
+    let posy = 8;
     let circleLevel = 0;
     for (let i = 0; i < num; i++) {
         carriers.push(ballCarrier.createCarrier(posx, posy));
@@ -111,10 +108,10 @@ const createCarriers = (num) => {
 
         if (carriers[i].x + 2 * carrierRadius >= canvas.width) {
             circleLevel += 1;
-            posy += 120 * Math.sqrt(3);
+            posy += carrierRadius * Math.sqrt(3);
             posx = initx * (circleLevel % 2 + 1);
-            canvas.height += 207.84;
-            document.getElementById('canvas').style.height = canvas.height + 'px';
+            canvas.height += 13.85;
+            document.getElementById('canvas').style.height = canvas.height + 'vw';
         }
     }
 }

@@ -18,7 +18,7 @@ def signup(request):
                 password =request.POST['password'],
                 nickname =request.POST['nickname'],
                 bio=request.POST['bio'],
-                profile_photo =request.FILES['profile_photo'],
+                profile_photo =request.FILES.get('profile_photo'),
                 is_staff  =is_mento)
 
                 auth.login(request, user)

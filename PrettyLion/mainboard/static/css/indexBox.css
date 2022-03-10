@@ -14,9 +14,44 @@
     margin-top: -18px;
     margin-left: 14px;
 }
+/* what we do */
+.whatwedo-section{
+    width: 80%;
+    margin:10px auto;
+    display: flex;
+    align-items: center; /* 수직 정렬 */
+    flex-direction: row; /* default: row */
+    justify-content: center;
+}
+
+.whatwedo-middle{
+    margin: 40px 35px;
+}
+
+.ideaton-box{
+    border: 1px solid #4E4E4E;
+    border-radius: 25px;
+    background-color: #4E4E4E;
+    width:270px;
+    height:180px;
+    padding:100px 0px;
+    margin-top: 2%;
+}
+
+div.whatwedo-section p{
+    text-align:center;
+    font-size: 23px;
+    font-weight: bold;
+    padding:10px;
+}
+
+
+
 /*  */
 .whoweare-section{
-    width: 100%;
+    width: 80%;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 
@@ -66,6 +101,7 @@
     width:100%;
     padding:100px 0px;
     margin-top: 2%;
+    margin-bottom:5%;
 }
 .stack-icon--left{
     width:10vw;
@@ -202,7 +238,8 @@
 .whoweare-box p{
     text-align:left;
     margin-top:5%;
-    font-size:18px;
+    font-size:20px;
+    font-weight:530;
     text-align: center;
 }
 @keyframes change-to-right{

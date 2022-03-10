@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="{% static 'css/story.css' %}">
 <link rel="stylesheet" href="{% static 'css/history.css' %}">
 <link rel="stylesheet" href="{% static 'css/aboutus10th.css' %}">
+<link rel="stylesheet" href="{% static 'css/aboutusStaff.css' %}">
 <style>
     * {
         margin: 0;
@@ -256,9 +257,45 @@
 
     </div>
 
-    <!-- About us 10th section -->
+    <!-- About us section -->
     <div id="aboutus" class="section-title">About Us</div>
     <div class="section-title-box"></div>
+
+    <!-- About us 운영진 section -->
+
+    <!-- 운영진 관련 text -->
+    <div class="section-content">
+        <span class="orange">'멋쟁이 사자'</span>
+        <span class="white">들을 소개합니다!</span>
+    </div>
+
+    <div class="staff">
+        <span>운영진</span>
+    </div>
+
+    <!-- 운영진 bubble rotation -->
+    <div class="staff-bubble">
+        <div class="aboutus-staff">
+            <img src="{% static 'img/성민.png' %}">
+            <p>이성민</p>
+        </div>
+
+        <div class="aboutus-staff">
+            <img src="{% static 'img/성민.png' %}">
+            <p>윤선영</p>
+        </div>
+
+        <div class="aboutus-staff">
+            <img src="{% static 'img/성민.png' %}">
+            <p>최윤한</p>
+        </div>
+    </div>
+
+    <!-- About us 10th section -->
+    <div class="section-content-10th">
+        <p class="white-10th">멋쟁이 사자처럼</p>
+        <p class="orange-10th">10기</p>
+    </div>
     <div id="aboutus-10th">
         <div id="canvas">
             <button id="add-btn" onclick="showModal()">
