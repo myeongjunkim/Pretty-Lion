@@ -112,6 +112,7 @@ const ballRadius = 6;
 const numOfMembers = 5;
 const ellipseRadiusA = 1.6;
 const ellipseRadiusB = 1.2;
+let members = []
 
 let carriers = [];
 
