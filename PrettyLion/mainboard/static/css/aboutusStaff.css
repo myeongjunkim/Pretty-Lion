@@ -1,8 +1,23 @@
 /* About us 운영진 멘트 */
-.section-content .orange{
+.orange{
     font-weight: bold;
     font-size: 40px;
     color: #F39927;
-    margin-top:14px;
+    margin-top:25px;
     margin-left: 8%;
+}
+
+.white{
+    font-weight: 600;
+    font-size: 30px;
+    color:white;
+    margin-top: 25px;
+}
+
+.staff{
+    font-weight: bold;
+    font-size: 40px;
+    color:#F39927;
+    text-align:center;
+    margin-top: 15%;
 }
