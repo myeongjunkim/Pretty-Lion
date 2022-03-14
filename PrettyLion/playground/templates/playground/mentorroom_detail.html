@@ -20,12 +20,12 @@
     <div class="survey-wrap room-wrap">
 
         <div class="room-wrap__contents">
-            <div class="room-wrap__title">깐부방</div>
+            <div class="room-wrap__title">{{object.name}}</div>
             <div class="room-wrap__mento">
                 <img src="{% static 'img/lion_img.png' %}" alt="">
                 <div class="mento-textwrap">
                     <div class="mento-textwrap__name">{{object.mentor}}</div>
-                    <div class="mento-textwrap__intro">{{object.name}}</div>
+                    <div class="mento-textwrap__intro">{{object.greeting}}</div>
                 </div>
             </div>
             <hr class="room-wrap__hr">
