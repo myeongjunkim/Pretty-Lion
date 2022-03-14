@@ -50,10 +50,14 @@ let textRight = document.getElementById('talent-text--right');
 
 const initx = 29;
 const inity = 12;
+// const initx2 = 10;
+// const inity2 = 15;
+// const initx3 = 40;
+// const inity3 = 20;
 
-const radius1 = 5;
-const radius2 = 10;
-const radius3 = 15;
+const radius1 = 10;
+const radius2 = 15;
+const radius3 = 20;
 
 let vangle1 = 0;
 let vangle2 = 0;
