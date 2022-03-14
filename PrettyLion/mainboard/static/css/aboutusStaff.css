@@ -40,7 +40,7 @@
 
 .staff-bubble{
     margin-top: 20px;
-    animation: rotate_image 14s linear infinite;
+    animation: rotate_image 30s linear infinite;
     transform-origin: 50% 50%;
     margin:20px 20px;
 }
@@ -63,6 +63,14 @@
     flex-direction: column;
     border-radius: 50%;
     text-align: center;
+    animation: norotate_image 30s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes norotate_image{ 
+    0% { 
+        transform: rotate(360deg); 
+    } 
 }
 
 div.aboutus-staff-transparent img{
@@ -76,6 +84,8 @@ div.aboutus-staff-transparent img{
     flex-direction: column;
     border-radius: 50%;
     text-align: center;
+    animation: norotate_image 30s linear infinite;
+    transform-origin: 50% 50%;
 }
 
 .aboutus-staff:hover{
@@ -96,6 +106,8 @@ div.aboutus-staff-transparent img{
 	-ms-transform:scale(1.1);	
 	-o-transform:scale(1.1);
 	transform:scale(1.1);
+    animation: norotate_image 32s linear infinite;
+    transform-origin: 50% 50%;
 }
 
 div.aboutus-staff img{
@@ -103,7 +115,7 @@ div.aboutus-staff img{
     height: 130px;
     position:absolute;
     margin-top:2px;
-    margin-bottom: 60px;
+    margin-bottom: 60px;    
 }
 
 div.aboutus-staff p{
@@ -111,8 +123,7 @@ div.aboutus-staff p{
     font-weight: bold;
     font-size: 25px;
     margin-top:100px;
-    position:absolute;
-
+    position:absolute;    
 }
 
 .white-10th{
