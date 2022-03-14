@@ -8,12 +8,12 @@ from .models import MentorRoom, Question, Answer, Mentee
 
 
 def view_plg_intro(request):
-    if not request.user.is_authenticated:
-        return redirect('login')
     return render(request, 'plg_intro.html')
 
 
 def view_plg_info(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
     if hasattr(request.user, 'mentee'):
         return redirect('mentor-room-detail', request.user.mentee.mentor_room.id)
     if request.method == "POST":
