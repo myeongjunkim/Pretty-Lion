@@ -14,7 +14,20 @@
     margin-top: 25px;
 }
 
-.staff{
+.staff {
+    width : 800px;
+    height: 800px;
+    border-radius: 50%;
+    background-color:rgba(65, 65, 65, 0.774);
+    position:relative;
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#bold{
     font-weight: bold;
     font-size: 40px;
     color:#F39927;
@@ -26,6 +39,7 @@
     margin-top: 20px;
     animation: rotate_image 14s linear infinite;
     transform-origin: 50% 50%;
+    margin:20px 20px;
 }
 
 @keyframes rotate_image{ 
