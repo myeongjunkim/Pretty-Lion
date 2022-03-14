@@ -21,7 +21,8 @@
                 </label>
                 <input id="aboutus_img" type="file" onchange="changeImg(event,'aboutus_plus')" name="aboutus_image" />
                 <input id="aboutus_name" type="text" value="{{aboutus.name}}" placeholder="name" name="aboutus_name">
-                <textarea id="" cols="30" rows="10" placeholder="About U" name="aboutus_aboutu">{{aboutus.aboutu}}</textarea>
+                <!-- <textarea id="" cols="30" rows="10" placeholder="About U" name="aboutus_aboutu">{{aboutus.aboutu}}</textarea> -->
+                <a href="{{aboutus.pdf.url}}" style="color:black" target="_blank">자기소개 보러가기</a>
                 <button type="submit"><span>Update</span><img src="{% static 'img/lion_img.png' %}" alt=""></button>
                 <a class="aboutus_form-delete" href="{% url 'delete_aboutus' aboutus.id %}">Delete</a>
             </form>

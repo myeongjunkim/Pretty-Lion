@@ -26,9 +26,12 @@ def create_aboutus(request):
     
     if request.method == "POST":
         new_aboutus = AboutUs()
-        new_aboutus.image = request.FILES['aboutus_image']
+        if request.FILES['aboutus_image']:
+            new_aboutus.image = request.FILES['aboutus_image']
+        if request.FILES['aboutus_pdf']:
+            new_aboutus.pdf = request.FILES['aboutus_pdf']
         new_aboutus.name = request.POST['aboutus_name']
-        new_aboutus.aboutu = request.POST['aboutus_aboutu']
+        # new_aboutus.aboutu = request.POST['aboutus_aboutu']
         new_aboutus.user = request.user
         new_aboutus.save()
         return redirect('story')
