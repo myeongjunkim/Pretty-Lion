@@ -5,7 +5,6 @@ from django.views.generic.edit import ModelFormMixin, ProcessFormView
 from django.http import HttpResponseRedirect
 
 from .models import MentorRoom, Question, Answer, Mentee
-from accounts.models import User
 
 
 def view_plg_intro(request):
@@ -13,15 +12,19 @@ def view_plg_intro(request):
         return redirect('login')
     return render(request, 'plg_intro.html')
 
+
 def view_plg_info(request):
+    if hasattr(request.user, 'mentee'):
+        return redirect('mentor-room-detail', request.user.mentee.mentor_room.id)
     if request.method == "POST":
-        update_user = get_object_or_404(User, pk = request.user.id)
+        update_user = request.user
         update_user.realname = request.POST['name']
         update_user.major = request.POST['major']
         update_user.grade = request.POST['grade']
         update_user.save()
         return redirect('question-detail', 1)
     return render(request, 'plg_info.html')
+
 
 def view_plg_qna(request):
     return render(request, 'plg_qna.html')
@@ -99,7 +102,7 @@ class QuestionDetailView(LoginRequiredMixin, DetailView):
     model = Question
 
     def get_object(self, queryset=None):
-        return Question.objects.get(order=self.kwargs.get("order"))
+        return get_object_or_404(Question, order=self.kwargs.get("order"))
 
 
 class AnswerCreateUpdateView(LoginRequiredMixin, ModelFormMixin, ProcessFormView):
@@ -121,5 +124,9 @@ class AnswerCreateUpdateView(LoginRequiredMixin, ModelFormMixin, ProcessFormView
         return super().form_valid(form)
 
     def get_success_url(self):
+        next_id = self.object.choice.question.order + 1
         """Returns the url to access next question."""
-        return reverse('question-detail', kwargs={"order": self.object.choice.question.order + 1})
+        if Question.objects.filter(id=next_id).exists():
+            return reverse('question-detail', kwargs={"order": next_id})
+        else:
+            return reverse('mentor-room-match')
