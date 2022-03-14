@@ -1,5 +1,7 @@
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from .views import *
 
 urlpatterns = [
@@ -12,3 +14,4 @@ urlpatterns = [
     path('update-aboutus/<str:id>', update_aboutus, name="update_aboutus"),
     path('story/', view_story, name="story"),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
