@@ -98,30 +98,30 @@ div.whatwedo-section p{
     border: 1px solid #4E4E4E;
     border-radius: 25px;
     background-color: #4E4E4E;
-    width:100%;
-    padding:100px 0px;
-    margin-top: 2%;
-    margin-bottom:5%;
+    width: 100%;
+    padding: 50px 0px;
+    /* margin-top: 2%; */
+    margin-bottom: 5%;
+    height: 22vw;
 }
 .stack-icon--left{
     width:10vw;
-    margin:0px 3px 3px 0px;
+    margin:0px 1px 1px 0px;
 }
 .stack-icon--right{
-    width:15vw;
+    width:10vw;
 }
 #django-icon{
-    padding-bottom: 2%;
+    padding-bottom: 1.5%;
 }
 #frontend-icon{
-    padding-left: 5%;
+    padding-left: 1%;
 }
 #react-icon{
 
 }
 #git-icon{
-    padding-bottom: 5%;
-    padding-left: 5%;
+    padding-bottom: 3%;
 }
 
 .whoweare-line-container{

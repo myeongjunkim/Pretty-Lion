@@ -1,5 +1,8 @@
+import json
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import AboutUs
+from django.http.response import JsonResponse
+import json
 
 # Create your views here.
 def view_index(request):
@@ -9,6 +12,10 @@ def view_aboutus(request):
     
     aboutus_data = AboutUs.objects.all()
     return render(request, 'aboutus.html', {"aboutus_data":aboutus_data})
+
+def get_aboutus(request):
+    aboutus_data = AboutUs.objects.values()
+    return JsonResponse(list(aboutus_data), safe=False)
 
 def create_aboutus(request):
     if not request.user.is_authenticated:
