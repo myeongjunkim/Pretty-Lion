@@ -5,6 +5,7 @@ from django.contrib.auth import get_user_model
 
 class AboutUs(models.Model):
     image = models.ImageField(null=True, upload_to="aboutus/", blank=True)
+    pdf = models.FileField(null=True, upload_to="aboutus/", blank=True)
     name = models.CharField(max_length=20)
     aboutu = models.TextField()
     user = models.OneToOneField(get_user_model(), on_delete=models.CASCADE, blank=True)
