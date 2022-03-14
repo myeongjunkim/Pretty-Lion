@@ -1,20 +1,26 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import ModelFormMixin, ProcessFormView
 
 from .models import MentorRoom, Question, Answer
+from accounts.models import User
 
 
 def view_plg_intro(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
     return render(request, 'plg_intro.html')
-
 
 def view_plg_info(request):
     if request.method == "POST":
-        return redirect('question-detail',1)
+        update_user = get_object_or_404(User, pk = request.user.id)
+        update_user.realname = request.POST['name']
+        update_user.major = request.POST['major']
+        update_user.grade = request.POST['grade']
+        update_user.save()
+        return redirect('question-detail', 1)
     return render(request, 'plg_info.html')
-
 
 def view_plg_qna(request):
     return render(request, 'plg_qna.html')
