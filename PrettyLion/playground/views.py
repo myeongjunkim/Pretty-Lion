@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import ModelFormMixin, ProcessFormView
+from django.http import HttpResponseRedirect
 
-from .models import MentorRoom, Question, Answer
+from .models import MentorRoom, Question, Answer, Mentee
 
 
 def view_plg_intro(request):
@@ -19,14 +20,27 @@ def view_plg_info(request):
 def view_plg_qna(request):
     return render(request, 'plg_qna.html')
 
+
 def view_plg_qna_last(request):
     return render(request, 'plg_qna_last.html')
+
 
 def view_plg_choice(request):
     return render(request, 'plg_choice.html')
 
+
 def view_plg_room(request):
     return render(request, 'plg_room.html')
+
+
+def mentoring(request):
+    """
+    create mentee on mentor_room
+    """
+    mentor_room_id = request.POST["mentor_room"]
+    mentor_room = get_object_or_404(MentorRoom, id=mentor_room_id)
+    Mentee.objects.create(user=request.user, mentor_room=mentor_room)
+    return HttpResponseRedirect(reverse('mentor-room-detail', kwargs={"pk": mentor_room_id}))
 
 
 class MentorRoomDetailView(LoginRequiredMixin, DetailView):

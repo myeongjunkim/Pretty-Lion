@@ -53,7 +53,7 @@
             <div class="choiceMain-cards">
 
                 {% for mentor_room in object_list %}
-                <form class="choiceMain-cards__card" method="POST">
+                <form class="choiceMain-cards__card" action="{% url 'mentee-create' %}" method="POST">
                     {% csrf_token %}
                     <div class="card-title">
                         <div>{{ mentor_room.name }}</div>
@@ -76,8 +76,8 @@
                         <div>궁합온도 {{ matching_temperature|get_item:mentor_room.id }} 도 </div>
                         <progress class="survey-wrap__progress choiceProgress" value="{{ matching_temperature|get_item:mentor_room.id }}" max="100"></progress>
                     </div>
-                    <input type="hidden" value="{{mentor_room.id}}">
                     <button class="survey-wrap__form__button choiceBtn" type="submit">깐부 맺기</button>
+                    <input type="hidden" name="mentor_room" value="{{mentor_room.id}}">
                 </form>
                 {% endfor %}
 
