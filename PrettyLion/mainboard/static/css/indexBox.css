@@ -29,13 +29,22 @@
 }
 
 .ideaton-box{
+    position:relative;
     border: 1px solid #4E4E4E;
     border-radius: 25px;
     background-color: #4E4E4E;
     width:270px;
-    height:180px;
-    padding:100px 0px;
+    height:360px;
     margin-top: 2%;
+    overflow:hidden;
+}
+
+div.ideaton-box img{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
 }
 
 div.whatwedo-section p{
@@ -44,6 +53,54 @@ div.whatwedo-section p{
     font-weight: bold;
     padding:10px;
 }
+
+.top-text{
+    position:absolute;
+    text-decoration: none;
+    bottom: 150%;
+    left: 28px;
+    z-index: 2;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 900;
+    transition: all .35s;
+}
+
+.ideaton-box:hover .top-text{
+    bottom:57%;
+}
+
+.bottom-text{
+    position:absolute;
+    text-decoration: none;
+    top: 150%;
+    margin: 0 28px;
+    z-index: 2;
+    color: #fff;
+    font-size: 15px;
+    transition: all .35s;
+}
+
+.ideaton-box:hover .bottom-text{
+    top:50%;
+}
+
+.after-content::after{
+    content:'';
+    display:block;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    z-index:1;
+    opacity:0;
+    transition:all .35s;
+}
+
+.ideaton-box:hover .after-content::after{
+    opacity:1;
+}
+
 
 
 
