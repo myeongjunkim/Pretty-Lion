@@ -29,6 +29,7 @@
 }
 
 .ideaton-box{
+    position:relative;
     border: 1px solid #4E4E4E;
     border-radius: 25px;
     background-color: #4E4E4E;
@@ -39,9 +40,11 @@
 }
 
 div.ideaton-box img{
+    position:absolute;
     width: 100%;
     height: 100%;
     object-fit:cover;
+    
 }
 
 div.whatwedo-section p{
@@ -50,6 +53,37 @@ div.whatwedo-section p{
     font-weight: bold;
     padding:10px;
 }
+
+.top-text{
+    position:absolute;
+    bottom: 150%;
+    left: 30px;
+    z-index: 2;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 900;
+    transition: all .35s;
+}
+
+.ideaton-box:hover .top-text{
+    bottom:52%;
+}
+
+.bottom-text{
+    position:absolute;
+    top: 150%;
+    left: 30px;
+    z-index: 2;
+    color: #fff;
+    font-size: 12px;
+    transition: all .35s;
+}
+
+.ideaton-box:hover .bottom-text{
+    top:52%;
+}
+
+
 
 
 
