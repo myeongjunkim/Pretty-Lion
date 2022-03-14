@@ -14,7 +14,23 @@
     margin-top: 25px;
 }
 
-.staff{
+.staff {
+    margin-top:50px;
+    margin-bottom:70px;
+    width : 800px;
+    height: 800px;
+    border-radius: 50%;
+    background-color:rgba(65, 65, 65, 0.774);
+    position:relative;
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+#bold{
     font-weight: bold;
     font-size: 40px;
     color:#F39927;
@@ -24,8 +40,9 @@
 
 .staff-bubble{
     margin-top: 20px;
-    animation: rotate_image 14s linear infinite;
+    animation: rotate_image 30s linear infinite;
     transform-origin: 50% 50%;
+    margin:20px 20px;
 }
 
 @keyframes rotate_image{ 
@@ -46,6 +63,29 @@
     flex-direction: column;
     border-radius: 50%;
     text-align: center;
+    animation: norotate_image 30s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes norotate_image{ 
+    0% { 
+        transform: rotate(360deg); 
+    } 
+}
+
+div.aboutus-staff-transparent img{
+    width: 200px;
+    height :200px;
+    background-color: transparent;
+    position:relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    text-align: center;
+    animation: norotate_image 30s linear infinite;
+    transform-origin: 50% 50%;
 }
 
 .aboutus-staff:hover{
@@ -66,20 +106,24 @@
 	-ms-transform:scale(1.1);	
 	-o-transform:scale(1.1);
 	transform:scale(1.1);
+    animation: norotate_image 32s linear infinite;
+    transform-origin: 50% 50%;
 }
 
 div.aboutus-staff img{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     position:absolute;
+    margin-top:2px;
+    margin-bottom: 60px;    
 }
 
 div.aboutus-staff p{
     color:black;
     font-weight: bold;
     font-size: 25px;
-    padding-top: 10px;
-    position:absolute;
+    margin-top:100px;
+    position:absolute;    
 }
 
 .white-10th{
