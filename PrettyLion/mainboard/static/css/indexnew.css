@@ -148,7 +148,8 @@ section{
 
 /* triangle section */
 #triangle-rotation {
-    height: 32vw;
+    height: 40vw;
+    margin:80px 0 50px 0;
 }
 
 #triangle-section{
@@ -180,9 +181,13 @@ svg{
     overflow-x: hidden;
 }
 
+/* .talent-text-box div{
+    font-size:20px;
+} */
+
 #talent-text--top{
     position: relative;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: 900;
     width:fit-content;
 }
@@ -190,14 +195,14 @@ svg{
 
 #talent-text--left{
     position: relative;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: 900;
     width:fit-content;
 }
 
 #talent-text--right{
     position: relative;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: 900;
     width:fit-content;
 }
