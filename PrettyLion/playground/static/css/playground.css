@@ -139,6 +139,8 @@ section{
     color:white;
     cursor:pointer;
     margin-bottom:20px;
+    text-align: center;
+    line-height: 32px;
 
 }
 
@@ -390,18 +392,20 @@ section{
 
 .room-wrap__mento{
     display: flex;
-    justify-content: space-around;
+    width:100%;
+    justify-content: space-between;
     align-items: center;
 }
 
 .room-wrap__mento > img{
-    width:30%;
+    width:25%;
     border-radius: 50%;
 }
 
 .mento-textwrap{
     height:70%;
     display:flex;
+    width:70%;
     flex-direction: column;
     justify-content: space-evenly;
 }
