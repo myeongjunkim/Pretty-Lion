@@ -3,7 +3,17 @@
 
 {% block header %}
 <link rel="stylesheet" href="{% static 'css/playground.css' %}">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>  
+<script>	 
+	$(document).ready(function(){  
+		$("#submit").click(function(){ 
+				if($("#name").val().length==0){ alert("이름을 입력하세요."); $("#Name").focus(); return false; } 
+				if($("#major").val().length==0){ alert("전공을 입력하세요."); $("#Email").focus(); return false; } 
+				if($("#grade").val().length==0){ alert("학년를 입력하세요."); $("#Phone").focus(); return false; } 
+				if($("#year").val().length==0){ alert("나이를 입력하세요."); $("#Message").focus(); return false; } 
+			});		 
+	}); 
+</script> 
 {% endblock %}
 
 {% block contents %}
@@ -16,22 +26,22 @@
             <div class="survey-wrap__input-wrap">
                 <label>
                     <h5>이름</h5>
-                    <input type="text" placeholder="김깐부">
+                    <input type="text" placeholder="김깐부" name ="name" id ="name">
                 </label>
                 <label>
                     <h5>학과</h5>
-                    <input type="text" placeholder="경영학부">
+                    <input type="text" placeholder="경영학부" name ="major" id="major">
                 </label>
                 <label>
                     <h5>학년</h5>
-                    <input type="text" placeholder="숫자만 입력해 주세요! (ex : 3 )">
+                    <input type="text" placeholder="숫자만 입력해 주세요! (ex : 3 )" name ="grade" id="grade">
                 </label>
                 <label>
                     <h5>나이</h5>
-                    <input type="text" placeholder="23">
+                    <input type="text" placeholder="23" name ="year" id ="year">
                 </label>
             </div>
-            <button class="survey-wrap__form__button" type="submit">완료</button>
+            <button class="survey-wrap__form__button" type="submit" id="submit">완료</button>
         </form>
     </div>
     
