@@ -1,32 +1,52 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import ModelFormMixin, ProcessFormView
+from django.http import HttpResponseRedirect
 
-from .models import MentorRoom, Question, Answer
+from .models import MentorRoom, Question, Answer, Mentee
+from accounts.models import User
 
 
 def view_plg_intro(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
     return render(request, 'plg_intro.html')
-
 
 def view_plg_info(request):
     if request.method == "POST":
-        return redirect('question-detail',1)
+        update_user = get_object_or_404(User, pk = request.user.id)
+        update_user.realname = request.POST['name']
+        update_user.major = request.POST['major']
+        update_user.grade = request.POST['grade']
+        update_user.save()
+        return redirect('question-detail', 1)
     return render(request, 'plg_info.html')
-
 
 def view_plg_qna(request):
     return render(request, 'plg_qna.html')
 
+
 def view_plg_qna_last(request):
     return render(request, 'plg_qna_last.html')
+
 
 def view_plg_choice(request):
     return render(request, 'plg_choice.html')
 
+
 def view_plg_room(request):
     return render(request, 'plg_room.html')
+
+
+def mentoring(request):
+    """
+    create mentee on mentor_room
+    """
+    mentor_room_id = request.POST["mentor_room"]
+    mentor_room = get_object_or_404(MentorRoom, id=mentor_room_id)
+    Mentee.objects.create(user=request.user, mentor_room=mentor_room)
+    return HttpResponseRedirect(reverse('mentor-room-detail', kwargs={"pk": mentor_room_id}))
 
 
 class MentorRoomDetailView(LoginRequiredMixin, DetailView):
@@ -50,16 +70,22 @@ class MentorRoomMatchView(LoginRequiredMixin, ListView):
         # join mentor room, mentor
         mentor_room_list = MentorRoom.objects.all().prefetch_related('mentor', 'mentor__answer_set')
         context = super(MentorRoomMatchView, self).get_context_data(object_list=mentor_room_list, ** kwargs)
-        context['matching_temperature'] = self.calculate_matching_score(mentor_room_list)
+        # get match data
+        matching_answer, matching_temperature = self.calculate_matching_score(mentor_room_list)
+        context['matching_answer'] = matching_answer
+        context['matching_temperature'] = matching_temperature
         return context
 
     def calculate_matching_score(self, mentor_room_list):
         user_answers = set(self.request.user.answer_set.values_list('choice', flat=True))
-        matching_score = {}
+        matching_answer = {}
+        matching_temperature = {}
         for mentor_room in mentor_room_list:
-            score = len(set(user_answers).intersection(mentor_room.mentor.answer_set.values_list('choice', flat=True)))
-            matching_score[mentor_room.id] = self.convert_temperature(score)
-        return matching_score
+            answer = set(user_answers).intersection(mentor_room.mentor.answer_set.values_list('choice', flat=True))
+            score = len(answer)
+            matching_answer[mentor_room.id] = list(answer)
+            matching_temperature[mentor_room.id] = self.convert_temperature(score)
+        return matching_answer, matching_temperature
 
     def convert_temperature(self, score):
         return 36 + (score * self.WEIGHT)

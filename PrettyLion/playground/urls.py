@@ -12,5 +12,6 @@ urlpatterns = [
     path('mentor-rooms/match/', MentorRoomMatchView.as_view(), name='mentor-room-match'),
     path('questions/<int:order>/', QuestionDetailView.as_view(), name='question-detail'),
     path('answer/', AnswerCreateUpdateView.as_view(), name='answer-edit'),
+    path('mentoring/', mentoring, name='mentee-create'),
 ]
   

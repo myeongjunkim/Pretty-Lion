@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="{% static 'css/history.css' %}">
 <link rel="stylesheet" href="{% static 'css/aboutus10th.css' %}">
 <link rel="stylesheet" href="{% static 'css/aboutusStaff.css' %}">
+<link rel="stylesheet" href="{% static 'css/aboutusModal.css' %}">
+
 <style>
     * {
         margin: 0;
@@ -268,25 +270,54 @@
         <span class="white">들을 소개합니다!</span>
     </div>
 
+    <p id="bold">운영진</p>
     <div class="staff">
-        <span>운영진</span>
-    </div>
+        <!-- 운영진 bubble rotation -->
+        <div class="staff-bubble">
+            <div class="aboutus-staff">
+                <img src="{% static 'img/성민.png' %}">
+                <p>이성민</p>
+            </div>
 
-    <!-- 운영진 bubble rotation -->
-    <div class="staff-bubble">
-        <div class="aboutus-staff">
-            <img src="{% static 'img/성민.png' %}">
-            <p>이성민</p>
-        </div>
+            <div class="aboutus-staff">
+                <img src="{% static 'img/선영.png' %}">
+                <p>윤선영</p>
+            </div>
 
-        <div class="aboutus-staff">
-            <img src="{% static 'img/성민.png' %}">
-            <p>윤선영</p>
-        </div>
+            <div class="aboutus-staff">
+                <img src="{% static 'img/윤한.png' %}">
+                <p>최윤한</p>
+            </div>
 
-        <div class="aboutus-staff">
-            <img src="{% static 'img/성민.png' %}">
-            <p>최윤한</p>
+            <div class="aboutus-staff">
+                <img src="{% static 'img/지원.png' %}">
+                <p>정지원</p>
+            </div>
+
+            <div class="aboutus-staff-transparent">
+                <img src="{% static 'img/lion.png' %}">
+                
+            </div>
+            
+            <div class="aboutus-staff">
+                <img src="{% static 'img/명준.png' %}">
+                <p>김명준</p>
+            </div>
+
+            <div class="aboutus-staff">
+                <img src="{% static 'img/승아.png' %}">
+                <p>김승아</p>
+            </div>
+
+            <div class="aboutus-staff">
+                <img src="{% static 'img/영권.png' %}">
+                <p>김영권</p>
+            </div>
+
+            <div class="aboutus-staff">
+                <img src="{% static 'img/지수.png' %}">
+                <p>서지수</p>
+            </div>
         </div>
     </div>
 
@@ -304,21 +335,25 @@
 
         <!-- Modal -->
         <div id="aboutus-10th-modal" style="opacity:0; z-index: -1;">
-            <input class="modal-input" id="input-image" style="opacity: 0;">
             <button id="close-modal" onclick="closeModal()">
                 <div class="close"></div>
             </button>
-            <input class="modal-input" id="input-name" style="opacity: 0;">
-            <div class="modal-input" id="input-introduction" style="opacity: 0;">
-                <textarea placeholder="About U"></textarea>
-            </div>
-            <button class="modal-input" id="input-modal" onclick="closeModal()" style="opacity: 0;"></button>
+
+            <form class="aboutus_form" action="{% url 'create_aboutus' %}" method="POST" enctype="multipart/form-data"?>
+                {% csrf_token %}
+                <label for="aboutus_img">
+                    <img src="{% static 'img/aboutus_plus.png' %}" id="aboutus_plus" alt="X">
+                </label>
+                <input id="aboutus_img" type="file" onchange="changeImg(event, 'aboutus')" name="aboutus_image"/>
+                <input id="aboutus_name" type="text" placeholder="name" name="aboutus_name"/>
+                <textarea id="" cols="30" rows="10" placeholder="About U" name="aboutus_aboutu"></textarea>
+                <button type="submit"><span>join</span></button>
+            </form>
         </div>
     </div>
-
 
 </div>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/JavaScript" src="{% static 'js/aboutus10th.js' %}"></script>
-
+<script type="text/JavaScript" src="{% static 'js/index.js' %}"></script>
 {% endblock %}

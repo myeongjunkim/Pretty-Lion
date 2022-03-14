@@ -1,21 +1,24 @@
 
 // 여기서 members 선언함!!!!
-$.ajax({
-    url: '../get-aboutus/',
-    type: "GET",
-    data: {},
-    dataType : "json",
-    async: false,
-    success: function(response) {
-        // 이게 aboutus 객체 가져오는거
-        let members = response;
-        console.log(members)
-    },
-    error: function() {
-        let members = []
-        console.log("error")
-    }
-});
+const getData = () => {
+    $.ajax({
+        url: '../get-aboutus/',
+        type: "GET",
+        data: {},
+        dataType: "json",
+        async: false,
+        success: function (response) {
+            // 이게 aboutus 객체 가져오는거
+            members = response;
+            console.log(members)
+        },
+        error: function () {
+            members = []
+            console.log("error")
+        }
+    });
+
+}
 
 
 // orbiting aboutus 10th profiles
@@ -56,7 +59,7 @@ let ballCarrier = {
 }
 
 let ball = {
-    createBall: function () {
+    createBall: function (id, name, img, aboutu) {
         let newBall = Object.create(ball);
         newBall.radius = ballRadius;
         newBall.angle = (Math.random() + 1) * 2 * Math.PI;
@@ -64,8 +67,14 @@ let ball = {
         newBall.y = carrierRadius + 40 * Math.sin(newBall.angle);
         newBall.contact = 0;
         newBall.angleVelocity = angleVelocity;
+
+        // 10th data
+        newBall.id = id;
+        newBall.name = name;
+        newBall.aboutu = aboutu;
         // imgPath 설정 후 아래 이미지 넣는 부분 주석 해제하면 이미지 들어감
-        newBall.imgPath = '';
+        newBall.imgPath = '/media/'+img;
+
         newBall.element = document.createElement('div');
         newBall.element.backgroundColor = '#f7f7f7';
         newBall.element.style.width = 2 * ballRadius + 'vw';
@@ -73,7 +82,10 @@ let ball = {
         newBall.element.className += 'ball';
 
         // 내부 내용과 이미지 넣는 부분
-        // newBall.element.innerHTML = `<img class="member_img" src=${newBall.imgPath}>` + '<p>따봉!</p>';
+        newBall.element.innerHTML = 
+        `<img class="member_img" src=${newBall.imgPath}>` + 
+        `<p class="member_name">${newBall.aboutu}</p>`;
+
         return newBall;
     },
     moveTo: function (x, y) {
@@ -102,6 +114,10 @@ let ball = {
                 ball.element.style.zIndex = "0";
             })
         }, interval)
+    },
+    showDetail: function () {
+        let ball = this;
+        console.log("hello");
     }
 }
 
@@ -109,12 +125,13 @@ let interval = 10;
 let angleVelocity = 0.03;
 const carrierRadius = 8;
 const ballRadius = 6;
-const numOfMembers = 11;
+// const numOfMembers = 5;
 const ellipseRadiusA = 1.6;
 const ellipseRadiusB = 1.2;
-let members = []
-
+let balls = [];
 let carriers = [];
+
+let members = []
 
 const createCarriers = (num) => {
     let initx = 8;
@@ -137,20 +154,20 @@ const createCarriers = (num) => {
 
 const createMembers = (num) => {
     for (let i = 0; i < num; i++) {
-        members.push(ball.createBall());
-        carriers[i].insertBall(members[i]);
+        balls.push(ball.createBall(members[i].id, members[i].name, members[i].image, members[i].aboutu));
+        carriers[i].insertBall(balls[i]);
     }
 }
 
-const drawCarriers = () => {
-    for (let i = 0; i < numOfMembers; i++) {
+const drawCarriers = (num) => {
+    for (let i = 0; i < num; i++) {
         carriers[i].drawCarrier(carriers[i].x, carriers[i].y);
     }
 }
 
-const drawMembers = () => {
-    for (let i = 0; i < numOfMembers; i++) {
-        members[i].drawBall(members[i].x, members[i].y);
+const drawMembers = (num) => {
+    for (let i = 0; i < num; i++) {
+        balls[i].drawBall(balls[i].x, balls[i].y);
     }
 }
 
@@ -163,8 +180,8 @@ const showModal = () => {
     modal.style.zIndex = '50';
     canvas.style.filter = 'blur(5px)';
     modal.style.animation = 'pop-modal 0.5s';
-    setTimeout(()=>{
-        for (let i = 0 ; i < input.length; i++){
+    setTimeout(() => {
+        for (let i = 0; i < input.length; i++) {
             input[i].style.opacity = '1';
         }
     }, 250)
@@ -178,17 +195,17 @@ const closeModal = () => {
     modal.style.opacity = '0';
     modal.style.zIndex = '-1';
     canvas.style.filter = 'none';
-    for (let i = 0 ; i < input.length; i++){
+    for (let i = 0; i < input.length; i++) {
         input[i].style.opacity = '0';
     }
 }
 
+
 canvas.initialize();
+getData();
+createCarriers(members.length);
+createMembers(members.length);
+drawCarriers(members.length);
+drawMembers(members.length);
 
-
-
-
-createCarriers(numOfMembers);
-createMembers(numOfMembers);
-drawCarriers();
-drawMembers();
+console.log(members);

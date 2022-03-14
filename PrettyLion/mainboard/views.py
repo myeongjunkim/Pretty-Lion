@@ -34,7 +34,7 @@ def create_aboutus(request):
         # new_aboutus.aboutu = request.POST['aboutus_aboutu']
         new_aboutus.user = request.user
         new_aboutus.save()
-        return redirect('aboutus')
+        return redirect('story')
 
 def delete_aboutus(request, id):
     delete_aboutus = get_object_or_404(AboutUs, pk = id)
