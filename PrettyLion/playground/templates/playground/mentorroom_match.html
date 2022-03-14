@@ -64,7 +64,7 @@
                             <div class="profile-name">{{ mentor_room.mentor.nickname }}</div>
                         </div>
                         <div class="card-wrap__character">
-                            {% for answer in mentor_room.mentor.answer_set.all %}
+                            {% for answer in mentor_room.mentor.answer_set.all|slice:":4" %}
                             <div>
                                 <span class="iconify" data-icon="{{ answer.choice.emoji }}" style="color: white; font-size: 10px;"></span>
                                 {{ answer.choice.text }}
