@@ -50,6 +50,14 @@
 
         <div class="survey-wrap__choiceMain">
             <div class="choiceMain-title">멘토 추천</div>
+
+            {% if messages %}
+            {% for message in messages  %}
+                <div class="message-alram">{{message}}</div>
+                <!-- 방금 클릭한 멘토는 정원이 꽉 찼어요ㅜㅜ 다른 멘토와 깐부를 맺어주세요!  -->
+            {% endfor %}
+            {% endif %}
+
             <div class="choiceMain-cards">
 
                 {% for mentor_room in object_list %}
@@ -84,7 +92,7 @@
             </div>
 
         </div>
-        <button class="survey-wrap__form__button" type="button">재추천</button>
+        <button class="survey-wrap__form__button"><a href="{% url 'mentor-room-match' %}">재추천</a></button>
     </div>
     
 </section>

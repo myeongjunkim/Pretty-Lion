@@ -141,6 +141,7 @@ section{
     margin-bottom:20px;
     text-align: center;
     line-height: 32px;
+    font-size:12px;
 
 }
 
@@ -245,6 +246,16 @@ section{
 .choiceMain-title{
     color:#F39927;
     margin-bottom:20px;
+}
+
+.message-alram{
+    background-color:black;
+    color:white;
+    width:100%;
+    text-align: center;
+    font-size: 16px;
+    padding:5px;
+    margin-bottom:10px;
 }
 
 .choiceMain-cards{
@@ -397,9 +408,19 @@ section{
     align-items: center;
 }
 
-.room-wrap__mento > img{
+
+
+.mento-img__wrap-img{
+    display: block;
     width:25%;
     border-radius: 50%;
+    overflow: hidden;
+}
+
+.mento-img__wrap-img:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
 }
 
 .mento-textwrap{
