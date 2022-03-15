@@ -54,10 +54,8 @@
             {% if messages %}
             {% for message in messages  %}
                 <div class="message-alram">{{message}}</div>
-                <!-- 방금 클릭한 멘토는 정원이 꽉 찼어요ㅜㅜ 다른 멘토와 깐부를 맺어주세요!  -->
             {% endfor %}
             {% endif %}
-            <!-- <div class="message-alram">방금 클릭한 멘토는 정원이 꽉 찼어요ㅜㅜ 다른 멘토와 깐부를 맺어주세요! </div> -->
                 
 
             <div class="choiceMain-cards">
@@ -84,7 +82,7 @@
                     </div>
                     <div class="card-temperature">
                         <div>궁합온도 {{ matching_temperature|get_item:mentor_room.id }} 도 </div>
-                        <progress class="survey-wrap__progress choiceProgress" value="{{ matching_temperature|get_item:mentor_room.id }}" max="100"></progress>
+                        <progress class="survey-wrap__progress choiceProgress" value="{{ matching_temperature|get_item:mentor_room.id }}" max="76"></progress>
                     </div>
                     <button class="survey-wrap__form__button choiceBtn" type="submit">깐부 맺기</button>
                     <input type="hidden" name="mentor_room" value="{{mentor_room.id}}">
