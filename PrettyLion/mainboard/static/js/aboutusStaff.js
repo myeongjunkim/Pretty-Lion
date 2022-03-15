@@ -1,7 +1,12 @@
 
-const staffX = 34;
+const convertPXToVW = (px) => {
+	return px * (100 / document.documentElement.clientWidth);
+}
+
+const sideMarginVW = convertPXToVW(150);
+const staffX = 44-sideMarginVW;
 const staffY = 27;
-const radius = 20;
+const radius = 17;
 const angleInt = Math.PI / 4;
 
 let vInt = 0.008;
