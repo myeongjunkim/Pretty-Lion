@@ -9,7 +9,7 @@ const staffY = 27;
 const radius = 17;
 const angleInt = Math.PI / 4;
 
-let vInt = 0.008;
+let vInt = 0.005;
 let lion = document.getElementById('aboutus-staff-transparent')
 lion.style.left = staffX + 'vw';
 lion.style.top = staffY + 'vw';
@@ -59,7 +59,7 @@ const isMouseOver = () => {
     })
     document.querySelectorAll(".staff-detail").forEach(item=>{
         item.addEventListener('mouseout', ()=>{
-            vInt = 0.008;
+            vInt = 0.005;
         })
     })
 }
