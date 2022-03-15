@@ -82,7 +82,7 @@
                     </div>
                     <div class="card-temperature">
                         <div>궁합온도 {{ matching_temperature|get_item:mentor_room.id }} 도 </div>
-                        <progress class="survey-wrap__progress choiceProgress" value="{{ matching_temperature|get_item:mentor_room.id }}" max="100"></progress>
+                        <progress class="survey-wrap__progress choiceProgress" value="{{ matching_temperature|get_item:mentor_room.id }}" max="76"></progress>
                     </div>
                     <button class="survey-wrap__form__button choiceBtn" type="submit">깐부 맺기</button>
                     <input type="hidden" name="mentor_room" value="{{mentor_room.id}}">
