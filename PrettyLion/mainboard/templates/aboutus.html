@@ -13,7 +13,7 @@ $(document).ready(function(){
       var cur=$(".filebox input[type='file']").val();
     $(".upload-name").val(cur);
   }); 
-}); 
+});
 </script>
 {% endblock %}
 
@@ -40,7 +40,7 @@ $(document).ready(function(){
                 <!-- <textarea id="" cols="30" rows="10" placeholder="About U" name="aboutus_aboutu"></textarea> -->
                 <div class="filebox">
                     <input class="upload-name" value="첨부파일" placeholder="자기소개 pdf">
-                    <label for="file">파일찾기</label> 
+                    <label for="file">파일찾기</label>
                     <input type="file" id="file" name="aboutus_pdf">
                 </div>
                 <button type="submit"><span>join</span><img src="{% static 'img/lion_img.png' %}" alt=""></button>

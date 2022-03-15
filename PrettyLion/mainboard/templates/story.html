@@ -345,7 +345,11 @@
                 </label>
                 <input id="aboutus_img" type="file" onchange="changeImg(event, 'aboutus')" name="aboutus_image"/>
                 <input id="aboutus_name" type="text" placeholder="name" name="aboutus_name"/>
-                <textarea id="" cols="30" rows="10" placeholder="About U" name="aboutus_aboutu"></textarea>
+                <div class="filebox">
+                    <input class="upload-name" value="첨부파일" placeholder="자기소개 pdf">
+                    <label for="file">파일찾기</label>
+                    <input type="file" id="file" name="aboutus_pdf">
+                </div>
                 <button type="submit"><span>join</span></button>
             </form>
         </div>
@@ -356,4 +360,5 @@
 <script type="text/JavaScript" src="{% static 'js/aboutus10th.js' %}"></script>
 <script type="text/JavaScript" src="{% static 'js/index.js' %}"></script>
 <script type="text/JavaScript" src="{% static 'js/aboutusStaff.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 {% endblock %}

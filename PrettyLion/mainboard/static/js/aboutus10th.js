@@ -1,3 +1,10 @@
+$(document).ready(function(){ 
+    var fileTarget = $('#file'); 
+    fileTarget.on('change', function(){ // 값이 변경되면
+        var cur=$(".filebox input[type='file']").val();
+      $(".upload-name").val(cur);
+    }); 
+  });
 
 // 여기서 members 선언함!!!!
 const getData = () => {
@@ -59,7 +66,7 @@ let ballCarrier = {
 }
 
 let ball = {
-    createBall: function (id, name, img, aboutu) {
+    createBall: function (id, name, img, pdf) {
         let newBall = Object.create(ball);
         newBall.radius = ballRadius;
         newBall.angle = (Math.random() + 1) * 2 * Math.PI;
@@ -71,9 +78,9 @@ let ball = {
         // 10th data
         newBall.id = id;
         newBall.name = name;
-        newBall.aboutu = aboutu;
         // imgPath 설정 후 아래 이미지 넣는 부분 주석 해제하면 이미지 들어감
         newBall.imgPath = '/media/'+img;
+        newBall.pdf = '/media/'+pdf;
 
         newBall.element = document.createElement('div');
         newBall.element.backgroundColor = '#f7f7f7';
@@ -83,8 +90,11 @@ let ball = {
 
         // 내부 내용과 이미지 넣는 부분
         newBall.element.innerHTML = 
+        `<a href=${newBall.pdf}>`+
         `<img class="member_img" src=${newBall.imgPath}>` + 
-        `<p class="member_name">${newBall.aboutu}</p>`;
+        `<p class="member_name">${newBall.name}</p></a>`;
+
+        // <a href="{{aboutus.pdf.url}}" style="color:black" target="_blank">자기소개 보러가기</a>
 
         return newBall;
     },
@@ -103,16 +113,16 @@ let ball = {
             ball.drawBall(ball.x, ball.y);
             ball.element.addEventListener("mouseover", () => {
                 ball.angleVelocity = 0;
-                ball.element.style.width = 2 * 1.1 * ball.radius + 'vw';
-                ball.element.style.height = 2 * 1.1 * ball.radius + 'vw';
-                ball.element.style.zIndex = "100";
+                // ball.element.style.width = 2 * 1.1 * ball.radius + 'vw';
+                // ball.element.style.height = 2 * 1.1 * ball.radius + 'vw';
+                // ball.element.style.zIndex = "100";
                 // ball.element.style.boxShadow = "0px 1px 20px 0 rgb(255, 255, 255);"
             })
             ball.element.addEventListener("mouseout", () => {
                 ball.angleVelocity = 0.03;
-                ball.element.style.width = 2 * ball.radius + 'vw';
-                ball.element.style.height = 2 * ball.radius + 'vw'
-                ball.element.style.zIndex = "0";
+                // ball.element.style.width = 2 * ball.radius + 'vw';
+                // ball.element.style.height = 2 * ball.radius + 'vw'
+                // ball.element.style.zIndex = "0";
             })
         }, interval)
     }
@@ -151,7 +161,7 @@ const createCarriers = (num) => {
 
 const createMembers = (num) => {
     for (let i = 0; i < num; i++) {
-        balls.push(ball.createBall(members[i].id, members[i].name, members[i].image, members[i].aboutu));
+        balls.push(ball.createBall(members[i].id, members[i].name, members[i].image, members[i].pdf));
         carriers[i].insertBall(balls[i]);
     }
 }
