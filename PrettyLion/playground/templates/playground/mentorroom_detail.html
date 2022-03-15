@@ -24,7 +24,7 @@
             <div class="room-wrap__mento">
                 <img src="{{object.mentor.profile_photo.url}}" alt="">
                 <div class="mento-textwrap">
-                    <div class="mento-textwrap__name">{{object.mentor}}</div>
+                    <div class="mento-textwrap__name">{{object.mentor.nickname}}</div>
                     <div class="mento-textwrap__intro">{{object.greeting}}</div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                     {% for mentee in object.mentee_set.all %}
                     <div class="menti-cardwrap__card">
                         <img src="{{mentee.user.profile_photo.url}}" alt="">
-                        <div class="card__name">{{ mentee.user }}</div>
+                        <div class="card__name">{{ mentee.user.nickname }}</div>
                     </div>
                     {% endfor %}
                     
