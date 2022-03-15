@@ -3,6 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import ModelFormMixin, ProcessFormView
 from django.http import HttpResponseRedirect
+from django.db.models import Count, F
 
 from .models import MentorRoom, Question, Answer, Mentee
 
@@ -70,8 +71,8 @@ class MentorRoomMatchView(LoginRequiredMixin, ListView):
     WEIGHT = 4
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        # join mentor room, mentor
-        mentor_room_list = MentorRoom.objects.all().prefetch_related('mentor', 'mentor__answer_set')
+        # join mentor room, mentor, except full limit room
+        mentor_room_list = MentorRoom.objects.annotate(num_mentee=Count('mentee')).filter(num_mentee__lt=F('limit')).prefetch_related('mentor', 'mentor__answer_set')
         context = super(MentorRoomMatchView, self).get_context_data(object_list=mentor_room_list, ** kwargs)
         # get match data
         matching_answer, matching_temperature = self.calculate_matching_score(mentor_room_list)
