@@ -53,12 +53,17 @@ def mentoring(request):
     """
     mentor_room_id = request.POST["mentor_room"]
     mentor_room = get_object_or_404(MentorRoom, id=mentor_room_id)
-    try:
-        Mentee.objects.create(user=request.user, mentor_room=mentor_room)
-    except IntegrityError:
-        messages.add_message(request, messages.ERROR, '방금 클릭한 멘토는 정원이 꽉 찼어요ㅜㅜ 다른 멘토와 깐부를 맺어주세요!')
-        return redirect('mentor-room-match')
-    return HttpResponseRedirect(reverse('mentor-room-detail', kwargs={"pk": mentor_room_id}))
+    if mentor_room.limit <= mentor_room.mentee_set.count():
+        msg = '방금 클릭한 멘토는 정원이 꽉 찼어요ㅜㅜ 다른 멘토와 깐부를 맺어주세요!'
+    else:
+        try:
+            Mentee.objects.create(user=request.user, mentor_room=mentor_room)
+            return HttpResponseRedirect(reverse('mentor-room-detail', kwargs={"pk": mentor_room_id}))
+        except IntegrityError:
+            msg = '이미 참여한 멘토방이 존재합니다.'
+
+    messages.add_message(request, messages.ERROR, msg)
+    return redirect('mentor-room-match')
 
 
 class MentorRoomDetailView(LoginRequiredMixin, DetailView):
