@@ -29,12 +29,22 @@
     justify-content: center;
 }
 
+.ball:hover{
+    background-color: #f7f7f7;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    box-shadow: 0 1px 20px 0 rgb(255, 255, 255);
+}
+
 .member_img {
     width: 80%;
     height: 80%;
     object-fit: contain;
     border-radius: 5%;
-    
 }
 
 .member_name {
@@ -59,15 +69,15 @@
 }
 
 #add-btn:hover{
-    background-color: orange;
+    box-shadow: 0 1px 20px 0 rgb(255, 255, 255);
 }
 
-#add-btn:hover #plus-logo::before{
+/* #add-btn:hover #plus-logo::before{
     color:#ffffff;
 }
 #add-btn:hover #plus-logo::after{
     color:#ffffff;
-}
+} */
 #plus-logo::before{
     color:#000000;
     content: '';
@@ -105,8 +115,7 @@
     background-color: #f7f7f7;
     text-align: center;
     position:absolute;
-    box-shadow:         inset 12px 12px 24px rgba(0, 0, 0, 0.4),
-        inset -24px -24px 48px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 20px 0 rgb(255, 255, 255);
     display:grid;
     grid-template-columns: 10vw 20vw 10vw;
     /* grid-template-rows:  repeat(6, 1fr); */

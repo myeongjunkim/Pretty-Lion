@@ -14,7 +14,7 @@
     margin-top: 25px;
 }
 
-.staff {
+/* .staff {
     margin-top:50px;
     margin-bottom:70px;
     width : 800px;
@@ -28,7 +28,7 @@
     text-align: center;
     margin-left : auto;
     margin-right : auto;
-}
+} */
 
 #bold{
     font-weight: bold;
@@ -40,38 +40,43 @@
 
 .staff-bubble{
     margin-top: 20px;
-    animation: rotate_image 30s linear infinite;
-    transform-origin: 50% 50%;
+    /* animation: rotate_image 30s linear infinite; */
+    /* transform-origin: 50% 50%; */
     margin:20px 20px;
 }
 
-@keyframes rotate_image{ 
+/* @keyframes rotate_image{ 
     100% { 
         transform: rotate(360deg); 
     } 
-}
+} */
 
-.aboutus-staff{
+.staff-bubble div{
     width: 200px;
     height : 200px;
     color:black;
     background-color: white;
     position:relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    /* display: inline-flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-direction: column; */
     border-radius: 50%;
     text-align: center;
-    animation: norotate_image 30s linear infinite;
-    transform-origin: 50% 50%;
+    /* animation: norotate_image 30s linear infinite;
+    transform-origin: 50% 50%; */
 }
 
-@keyframes norotate_image{ 
+.staff-bubble div img {
+    width: 80%;
+    height:80%;
+}
+
+/* @keyframes norotate_image{ 
     0% { 
         transform: rotate(360deg); 
     } 
-}
+} */
 
 div.aboutus-staff-transparent img{
     width: 200px;
@@ -84,8 +89,8 @@ div.aboutus-staff-transparent img{
     flex-direction: column;
     border-radius: 50%;
     text-align: center;
-    animation: norotate_image 30s linear infinite;
-    transform-origin: 50% 50%;
+    /* animation: norotate_image 30s linear infinite; */
+    /* transform-origin: 50% 50%; */
 }
 
 .aboutus-staff:hover{
@@ -106,8 +111,8 @@ div.aboutus-staff-transparent img{
 	-ms-transform:scale(1.1);	
 	-o-transform:scale(1.1);
 	transform:scale(1.1);
-    animation: norotate_image 32s linear infinite;
-    transform-origin: 50% 50%;
+    /* animation: norotate_image 32s linear infinite;
+    transform-origin: 50% 50%; */
 }
 
 div.aboutus-staff img{
