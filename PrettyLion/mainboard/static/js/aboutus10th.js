@@ -25,11 +25,11 @@ const getData = () => {
 let canvas = {
     element: document.getElementById('canvas'),
     width: 80,
-    height: 30,
+    height: 40,
     initialize: function () {
         canvas.element.style.width = canvas.width + 'vw';
         canvas.element.style.height = canvas.height + 'vw';
-        canvas.element.style.minHeight = 30 + 'vw';
+        canvas.element.style.minHeight = 40 + 'vw';
         document.body.appendChild(canvas.element);
     }
 }
@@ -103,9 +103,10 @@ let ball = {
             ball.drawBall(ball.x, ball.y);
             ball.element.addEventListener("mouseover", () => {
                 ball.angleVelocity = 0;
-                ball.element.style.width = 2 * 1.2 * ball.radius + 'vw';
-                ball.element.style.height = 2 * 1.2 * ball.radius + 'vw';
+                ball.element.style.width = 2 * 1.1 * ball.radius + 'vw';
+                ball.element.style.height = 2 * 1.1 * ball.radius + 'vw';
                 ball.element.style.zIndex = "100";
+                // ball.element.style.boxShadow = "0px 1px 20px 0 rgb(255, 255, 255);"
             })
             ball.element.addEventListener("mouseout", () => {
                 ball.angleVelocity = 0.03;
@@ -114,10 +115,6 @@ let ball = {
                 ball.element.style.zIndex = "0";
             })
         }, interval)
-    },
-    showDetail: function () {
-        let ball = this;
-        console.log("hello");
     }
 }
 
