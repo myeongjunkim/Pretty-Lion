@@ -124,9 +124,9 @@ class AnswerCreateUpdateView(LoginRequiredMixin, ModelFormMixin, ProcessFormView
         return super().form_valid(form)
 
     def get_success_url(self):
-        next_id = self.object.choice.question.order + 1
+        next_order = self.object.choice.question.order + 1
         """Returns the url to access next question."""
-        if Question.objects.filter(id=next_id).exists():
-            return reverse('question-detail', kwargs={"order": next_id})
+        if Question.objects.filter(order=next_order).exists():
+            return reverse('question-detail', kwargs={"order": next_order})
         else:
             return reverse('mentor-room-match')
