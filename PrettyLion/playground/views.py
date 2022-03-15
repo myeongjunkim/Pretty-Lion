@@ -1,8 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import ModelFormMixin, ProcessFormView
 from django.http import HttpResponseRedirect
+from django.db.models import Count, F
+from django.db import IntegrityError
+
 
 from .models import MentorRoom, Question, Answer, Mentee
 
@@ -48,7 +52,11 @@ def mentoring(request):
     """
     mentor_room_id = request.POST["mentor_room"]
     mentor_room = get_object_or_404(MentorRoom, id=mentor_room_id)
-    Mentee.objects.create(user=request.user, mentor_room=mentor_room)
+    try:
+        Mentee.objects.create(user=request.user, mentor_room=mentor_room)
+    except IntegrityError:
+        messages.add_message(request, messages.ERROR, '이미 참여한 멘토방이 존재합니다.')
+        return redirect('mentor-room-match')
     return HttpResponseRedirect(reverse('mentor-room-detail', kwargs={"pk": mentor_room_id}))
 
 
@@ -70,8 +78,8 @@ class MentorRoomMatchView(LoginRequiredMixin, ListView):
     WEIGHT = 4
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        # join mentor room, mentor
-        mentor_room_list = MentorRoom.objects.all().prefetch_related('mentor', 'mentor__answer_set')
+        # join mentor room, mentor, except full limit room
+        mentor_room_list = MentorRoom.objects.annotate(num_mentee=Count('mentee')).filter(num_mentee__lt=F('limit')).prefetch_related('mentor', 'mentor__answer_set')
         context = super(MentorRoomMatchView, self).get_context_data(object_list=mentor_room_list, ** kwargs)
         # get match data
         matching_answer, matching_temperature = self.calculate_matching_score(mentor_room_list)
