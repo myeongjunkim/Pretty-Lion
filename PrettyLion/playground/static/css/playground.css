@@ -310,6 +310,7 @@ section{
 
 .card-wrap__profile > img{
     width:90%;
+    height:70px;
     border-radius: 50%;
 }
 
@@ -351,7 +352,7 @@ section{
 
 .survey-wrap__form__button.choiceBtn{
     width:30%;
-    font-size:12px;
+    font-size:10px;
     height:30px;
     margin-bottom:10px;
 }
@@ -480,6 +481,8 @@ section{
 
 .menti-cardwrap__card > img{
     width:80%;
+    height:100px;
+    overflow: hidden;
     border-radius: 50%;
     margin-bottom:10px;
 
