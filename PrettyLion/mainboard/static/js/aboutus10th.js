@@ -90,7 +90,7 @@ let ball = {
 
         // 내부 내용과 이미지 넣는 부분
         newBall.element.innerHTML = 
-        `<a href=${newBall.pdf}>`+
+        `<a href=${newBall.pdf} target=_blanck>`+
         `<img class="member_img" src=${newBall.imgPath}>` + 
         `<p class="member_name">${newBall.name}</p></a>`;
 
