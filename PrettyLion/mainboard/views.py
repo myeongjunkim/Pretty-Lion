@@ -22,7 +22,7 @@ def create_aboutus(request):
         return redirect('login')
     if AboutUs.objects.filter(user=request.user).exists():
         print("중복 생성 금지")
-        return redirect('aboutus')
+        return redirect('story')
     
     if request.method == "POST":
         new_aboutus = AboutUs()
